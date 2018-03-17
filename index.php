@@ -55,11 +55,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Logo</a>
+            <a class="navbar-brand" href="#">FAke News</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">FAke News Twitter</a></li>
+                <li class="active"><a href="#">FAke News via Twitter Analysis</a></li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
