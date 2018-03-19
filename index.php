@@ -63,7 +63,7 @@
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> About</a></li>
             </ul>
         </div>
     </div>
@@ -72,9 +72,9 @@
 <div class="container-fluid text-center">
     <div class="row content">
         <div class="col-sm-2 sidenav">
-            <p><a href="#">Link</a></p>
-            <p><a href="#">Link</a></p>
-            <p><a href="#">Link</a></p>
+            <p><a href="#">tweets</a></p>
+            <p><a href="#">tweets</a></p>
+            <p><a href="#">tweets</a></p>
         </div>
         <div class="col-sm-8 text-left">
             <h1>Welcome</h1>
@@ -85,10 +85,10 @@
         </div>
         <div class="col-sm-2 sidenav">
             <div class="well">
-                <p>ADS</p>
+                <p>Source Score</p>
             </div>
             <div class="well">
-                <p>ADS</p>
+                <p>News Score</p>
             </div>
         </div>
     </div>
