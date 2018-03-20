@@ -23,7 +23,7 @@
 
         /* Set gray background color and 100% height */
         .sidenav {
-            padding-top: 50px;
+            padding-top: 20px;
             background-color: #f1f1f1;
             height: 100%;
         }
@@ -71,7 +71,7 @@
 
 <div class="container-fluid text-center">
     <div class="row content">
-        <div class="col-sm-2 sidenav">
+        <div class="col-sm-4 sidenav">
             <p><a class="twitter-timeline"  href="https://twitter.com/hashtag/news" data-widget-id="975926019680022528">#news Tweets</a>
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
                     if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
