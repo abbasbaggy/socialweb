@@ -88,7 +88,7 @@
             <h3>Test</h3>
             <p>Lorem ipsum...</p>
         </div>
-        <div class="col-sm-2 sidenav">
+        <div class="col-sm-3 sidenav">
             <div class="well">
                 <p>Source Score</p>
             </div>
