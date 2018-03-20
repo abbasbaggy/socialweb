@@ -71,13 +71,14 @@
 
 <div class="container-fluid text-center">
     <div class="row content">
-        <div class="col-sm-4 sidenav">
+        <div class="col-sm-3 sidenav">
             <p><a class="twitter-timeline"  href="https://twitter.com/hashtag/news" data-widget-id="975926019680022528">#news Tweets</a>
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
                     if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
                     fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                 </a></p>
-            <p><a href="#">tweets</a></p>
+            <p><a <a href="https://twitter.com/intent/tweet?button_hashtag=news&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #news</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></a></p>
             <p><a href="#">tweets</a></p>
         </div>
         <div class="col-sm-8 text-left">
