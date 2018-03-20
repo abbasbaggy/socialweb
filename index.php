@@ -71,7 +71,7 @@
 
 <div class="container-fluid text-center">
     <div class="row content">
-        <div class="col-sm-2 sidenav">
+        <div class="col-sm-3 sidenav">
             <p><a class="twitter-timeline"  href="https://twitter.com/hashtag/news" data-widget-id="975926019680022528">#news Tweets</a>
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
                     if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
@@ -81,7 +81,7 @@
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></a></p>
             <p><a href="#">tweets</a></p>
         </div>
-        <div class="col-sm-8 text-left">
+        <div class="col-sm-7 text-left">
             <h1>Welcome</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing  t.</p>
             <hr>
