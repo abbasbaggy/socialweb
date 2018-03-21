@@ -83,7 +83,7 @@
         </div>
         <div class="col-sm-7 text-left">
             <h1>Welcome</h1>
-            <?php include_once ('twitterGet.php') ?>
+            <?php include ('twitterGet.php'); ?>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing  t.</p>
             <hr>
             <h3>Test</h3>
