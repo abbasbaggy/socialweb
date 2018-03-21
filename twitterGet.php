@@ -20,7 +20,7 @@ $requestMethod = "GET";
 if (isset($_GET['user']))  {$user = $_GET['user'];}  else {$user  = "iagdotme";}
 if (isset($_GET['count'])) {$count = $_GET['count'];} else {$count = 20;}
 $getfield = "?screen_name=$user&count=$count";
-$twitter = new twitter-apiExchange($settings);
+$twitter = new TwitterAPIExchange($settings);
 $string = json_decode($twitter->setGetfield($getfield)
     ->buildOauth($url, $requestMethod)
     ->performRequest(),$assoc = TRUE);
