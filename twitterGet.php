@@ -25,7 +25,8 @@ $getfield = "?screen_name=$user&count=$count";
 
 $url = "http://api.twitter.com/1.1/search/tweets.json";
 $requestMethod = "GET";
-$getfield = "?q=#news&result_type=recent";
+if (isset($_GET['count'])) {$count = $_GET['count'];} else {$count = 20;}
+$getfield = "?q=%23news&result_type=recent&count=$count";
 
 $twitter = new TwitterAPIExchange($settings);
 $string = json_decode($twitter->setGetfield($getfield)
