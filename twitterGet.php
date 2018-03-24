@@ -45,7 +45,8 @@ foreach($string as $items)
 foreach($string as $items)
 {
     echo $items['created_at']."<br />";
-    echo $items['text']."<br />";
+    echo "Tweet: ".$items['text']."<br />";
+
 }
 
 ?>
