@@ -34,6 +34,7 @@ $string = json_decode($twitter->setGetfield($getfield)
     ->performRequest(),$assoc = TRUE);
 if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p>
 <p><em>".$string[errors][0]["message"]."</em></p>";exit();}
+/*
 foreach($string as $items)
 {
     echo "Time and Date of Tweet: ".$items['created_at']."<br />";
@@ -43,5 +44,9 @@ foreach($string as $items)
     echo "Followers: ". $items['user']['followers_count']."<br />";
     echo "Friends: ". $items['user']['friends_count']."<br />";
     echo "Listed: ". $items['user']['listed_count']."<br /><hr />";
-}
+}*/
+echo "<pre>";
+print_r($string);
+echo "</pre>";
+
 ?>
