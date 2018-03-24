@@ -16,7 +16,8 @@ $settings = array(
     'consumer_secret' => "c87nNbExVMMMzO0gVALSPD9pTyz6IQZZKsP5p2B6VkikQwP6Lp"
 );
 
-$url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
+//$url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
+$url = "https://api.twitter.com/1.1/search/tweets.json";
 $requestMethod = "GET";
 //if (isset($_GET['user']))  {$user = $_GET['user'];}
 //else {$user  = "iagdotme";}
