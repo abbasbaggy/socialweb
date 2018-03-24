@@ -23,10 +23,10 @@ if (isset($_GET['count'])) {$count = $_GET['count'];} else {$count = 20;}
 $getfield = "?screen_name=$user&count=$count";
 */
 
-$url = "http://api.twitter.com/1.1/search/tweets.json";
+$url = "http://api.twitter.com/1.1/search/tweets.json?q=%23news";
 $requestMethod = "GET";
 
-$getfield = "?q=%23news";
+//$getfield = "?q=%23news";
 
 $twitter = new TwitterAPIExchange($settings);
 $string = json_decode($twitter->setGetfield($getfield)
