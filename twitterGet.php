@@ -15,18 +15,14 @@ $settings = array(
     'consumer_key' => "S9EgClegmEbWUOkuZd7TtUClC",
     'consumer_secret' => "c87nNbExVMMMzO0gVALSPD9pTyz6IQZZKsP5p2B6VkikQwP6Lp"
 );
-/*
+
 $url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
 $requestMethod = "GET";
-if (isset($_GET['user']))  {$user = $_GET['user'];}  else {$user  = "iagdotme";}
+//if (isset($_GET['user']))  {$user = $_GET['user'];}
+//else {$user  = "iagdotme";}
 if (isset($_GET['count'])) {$count = $_GET['count'];} else {$count = 20;}
-$getfield = "?screen_name=$user&count=$count";
-*/
-
-$url = "http://api.twitter.com/1.1/search/tweets.json?q=%23news";
-$requestMethod = "GET";
-
-//$getfield = "?q=%23news";
+//$getfield = "?screen_name=$user&count=$count";
+$getfield = "?q=%23news&count=$count";
 
 $twitter = new TwitterAPIExchange($settings);
 $string = json_decode($twitter->setGetfield($getfield)
