@@ -42,8 +42,10 @@ foreach($string as $items)
     echo "Friends: ". $items['user']['friends_count']."<br />";
     echo "Listed: ". $items['user']['listed_count']."<br /><hr />";
 }*/
-echo "<pre>";
-print_r($string);
-echo "</pre>";
+foreach($string as $items)
+{
+    echo $items['created_at']."<br />";
+    echo $items['text']."<br />";
+}
 
 ?>
