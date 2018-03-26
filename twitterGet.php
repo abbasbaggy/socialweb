@@ -23,7 +23,7 @@ $requestMethod = "GET";
 //else {$user  = "iagdotme";}
 if (isset($_GET['count'])) {$count = $_GET['count'];} else {$count = 20;}
 //$getfield = "?screen_name=$user&count=$count";
-$getfield = "?q=#news&count=$count";
+$getfield = "?q=%23#news&count=$count";
 
 $twitter = new TwitterAPIExchange($settings);
 $string = json_decode($twitter->setGetfield($getfield)
@@ -41,16 +41,18 @@ foreach($string as $items)
     echo "Followers: ". $items['user']['followers_count']."<br />";
     echo "Friends: ". $items['user']['friends_count']."<br />";
     echo "Listed: ". $items['user']['listed_count']."<br /><hr />";
-}
+}*/
 foreach($string as $items)
 {
     echo $items['created_at']."<br />";
     echo "Tweet: ".$items['text']."<br />";
+    echo "Tweeted by: ". $items['user']['name']."<br />";
+    echo "Description: ". $items['description']."<br />";
 
-}*/
-
+}
+/*
 echo "<pre>";
 print_r($string);
 echo "</pre>";
-
+*/
 ?>
