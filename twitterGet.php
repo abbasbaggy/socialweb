@@ -41,7 +41,7 @@ foreach($string as $items)
     echo "Followers: ". $items['user']['followers_count']."<br />";
     echo "Friends: ". $items['user']['friends_count']."<br />";
     echo "Listed: ". $items['user']['listed_count']."<br /><hr />";
-}*/
+}*
 foreach($string as $items)
 {
     echo $items['created_at']."<br />";
@@ -50,9 +50,9 @@ foreach($string as $items)
     echo "Description: ". $items['description']."<br />";
 
 }
-/*
+*/
 echo "<pre>";
 print_r($string);
 echo "</pre>";
-*/
+
 ?>
