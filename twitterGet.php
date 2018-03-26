@@ -23,7 +23,7 @@ $requestMethod = "GET";
 //else {$user  = "iagdotme";}
 if (isset($_GET['count'])) {$count = $_GET['count'];} else {$count = 20;}
 //$getfield = "?screen_name=$user&count=$count";
-$getfield = "?q=news&result_type=popular&count=$count";
+$getfield = "?q=%23news&result_type=popular&count=$count";
 
 $twitter = new TwitterAPIExchange($settings);
 $string = json_decode($twitter->setGetfield($getfield)
