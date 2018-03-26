@@ -17,13 +17,13 @@ $settings = array(
 );
 
 //$url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
-$url = "https://api.twitter.com/1.1/statuses/filter.json";
+$url = "https://api.twitter.com/1.1/search/tweets.json";
 $requestMethod = "GET";
 //if (isset($_GET['user']))  {$user = $_GET['user'];}
 //else {$user  = "iagdotme";}
 if (isset($_GET['count'])) {$count = $_GET['count'];} else {$count = 20;}
 //$getfield = "?screen_name=$user&count=$count";
-$getfield = "?q=%23news&count=$count";
+$getfield = "?q=news&result_type=popular&count=$count";
 
 $twitter = new TwitterAPIExchange($settings);
 $string = json_decode($twitter->setGetfield($getfield)
