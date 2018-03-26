@@ -48,7 +48,7 @@ foreach($string as $items)
     echo "Tweet: ".$items['text']."<br />";
 
 
-}
+}//
 */
 echo "<pre>";
 print_r($string);
