@@ -25,7 +25,7 @@ $requestMethod = "GET";
 //if (isset($_GET['count'])) {$count = $_GET['count'];} else {$count = 20;}
 //$getfield = "?screen_name=$user&count=$count";
 //$getfield = "?q=%23news&result_type=popular&count=$count";
-$getfield = "?q=%23news&src=typd";
+$getfield = "?vertical=news&q=%23news&near=me&src=typd";
 
 $twitter = new TwitterAPIExchange($settings);
 $string = json_decode($twitter->setGetfield($getfield)
@@ -46,7 +46,8 @@ foreach($string as $items)
 }*/
 foreach($string as $items)
 {
-    echo $items['id']."<br />";
+    echo "Time and Date of Tweet: ".$items['created_at']."<br />";
+    echo $items['screen_name']."<br />";
     echo "TWEET: ".$items['text']."<br />";
 
 
