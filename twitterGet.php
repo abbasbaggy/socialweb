@@ -43,16 +43,17 @@ foreach($string as $items)
     echo "Followers: ". $items['user']['followers_count']."<br />";
     echo "Friends: ". $items['user']['friends_count']."<br />";
     echo "Listed: ". $items['user']['listed_count']."<br /><hr />";
-}*
+}*/
 foreach($string as $items)
 {
     echo $items['id']."<br />";
-    echo "Name: ".$items['screen_name']."<br />";
+    echo "TWEET: ".$items['text']."<br />";
 
 
-}*/
+}
+/*
 echo "<pre>";
 print_r($string);
 echo "</pre>";
-
+*/
 ?>
