@@ -18,7 +18,7 @@ $settings = array(
 
 //$url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
 //$url = "https://api.twitter.com/1.1/search/tweets.json";
-$url = "https://stream.twitter.com/1.1/statusess/filter.json";
+$url = "https://api.twitter.com/1.1/statusess/filter.json";
 $requestMethod = "GET";
 //if (isset($_GET['user']))  {$user = $_GET['user'];}
 //else {$user  = "iagdotme";}
