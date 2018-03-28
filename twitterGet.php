@@ -25,7 +25,7 @@ $requestMethod = "GET";
 //if (isset($_GET['count'])) {$count = $_GET['count'];} else {$count = 20;}
 //$getfield = "?screen_name=$user&count=$count";
 //$getfield = "?q=%23news&result_type=popular&count=$count";
-$getfield = "?vertical=news&q=%23news&near=me&src=typd";
+$getfield = "?q=%23news&src=typd";
 
 $twitter = new TwitterAPIExchange($settings);
 $string = json_decode($twitter->setGetfield($getfield)
