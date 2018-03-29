@@ -28,15 +28,14 @@ $requestMethod = "GET";
 $getfield = "?q=%23news&src=typd";
 
 $twitter = new TwitterAPIExchange($settings);
-echo $twitter->setGetfield($getfield)
-    ->buildOauth($url, $requestMethod)
-    ->performRequest();
-/*$string = json_decode($twitter->setGetfield($getfield)
+
+$string = json_decode($twitter->setGetfield($getfield)
     ->buildOauth($url, $requestMethod)
     ->performRequest(),$assoc = TRUE);
 if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p>
 <p><em>".$string[errors][0]["message"]."</em></p>";exit();}
 
+/*
 foreach($string as $items)
 {
     echo "Time and Date of Tweet: ". $items['created_at']."<br />";
@@ -55,9 +54,9 @@ foreach($string as $items)
 
 
 }
-*
+*/
 echo "<pre>";
 print_r($string);
 echo "</pre>";
-*/
+
 ?>
