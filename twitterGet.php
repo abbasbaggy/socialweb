@@ -56,7 +56,7 @@ foreach($string as $items)
     echo "5" .$items['statuses']['created_at']."<br />";
     echo "6" .$items['statuses']['user']['screen_name']."<br />";
     echo "7" .$items['user_mentions']['name']."<br />";
-    echo "TWEET: ".$items['text']."<br />";
+    echo "TWEETs: ".$items['text']."<br />";
 
 
 }
