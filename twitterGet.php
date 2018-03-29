@@ -48,16 +48,17 @@ foreach($string as $items)
 }*/
 foreach($string as $items)
 {
-    echo "Time and Date of Tweet: ".$items['created_at']."<br />";
-    echo "1" .$items['screen_name']."<br />";
-    echo "2" .$items['name']."<br />";
-    echo "3" .$items['statuses_count']."<br />";
-    echo "4" .$items['favourites_count']."<br />";
-    echo "5" .$items['statuses'][]['created_at']."<br />";
-    echo "6" .$items['statuses'][0]['user']['screen_name']."<br />";
-    echo "7" .$items['user_mentions']['name']."<br />";
-    echo "TWEETs: ".$items['text']."<br />";
-
+    foreach ($items as $item) {
+        echo "Time and Date of Tweet: " . $items['created_at'] . "<br />";
+        echo "1" . $items['screen_name'] . "<br />";
+        echo "2" . $items['name'] . "<br />";
+        echo "3" . $items['statuses_count'] . "<br />";
+        echo "4" . $items['favourites_count'] . "<br />";
+        echo "5" . $items['created_at'] . "<br />";
+        echo "6" . $items['user']['screen_name'] . "<br />";
+        echo "7" . $items['user']['favourites_count'] . "<br />";
+        echo "TWEETs: " . $items['text'] . "<br />";
+    }
 
 }/*
 echo "<pre>";
