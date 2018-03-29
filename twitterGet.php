@@ -16,16 +16,16 @@ $settings = array(
     'consumer_secret' => "c87nNbExVMMMzO0gVALSPD9pTyz6IQZZKsP5p2B6VkikQwP6Lp"
 );
 
-$url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
-//$url = "https://api.twitter.com/1.1/search/tweets.json";
+//$url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
+$url = "https://api.twitter.com/1.1/search/tweets.json";
 
 $requestMethod = "GET";
-if (isset($_GET['user']))  {$user = $_GET['user'];}
-else {$user  = "iagdotme";}
+//if (isset($_GET['user']))  {$user = $_GET['user'];}
+//else {$user  = "iagdotme";}
 if (isset($_GET['count'])) {$count = $_GET['count'];} else {$count = 20;}
-$getfield = "?screen_name=$user&count=$count";
+//$getfield = "?screen_name=$user&count=$count";
 //$getfield = "?q=%23news&result_type=popular&count=$count";
-//$getfield = "?q=%23news&src=typd";
+$getfield = "?q=%23news&src=typd&count=$count";
 
 $twitter = new TwitterAPIExchange($settings);
 
