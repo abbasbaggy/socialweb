@@ -17,7 +17,8 @@ $settings = array(
 );
 
 //$url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
-$url = "https://api.twitter.com/1.1/search/tweets.json";
+//$url = "https://api.twitter.com/1.1/search/tweets.json";
+$url = "https://api.twitter.com/1.1/tweets/search/fullachive/NewsSand.json";
 
 $requestMethod = "GET";
 //if (isset($_GET['user']))  {$user = $_GET['user'];}
@@ -46,9 +47,11 @@ foreach($string as $items)
     echo "Friends: ". $items['user']['friends_count']."<br />";
     echo "Listed: ". $items['user']['listed_count']."<br /><hr />";
 }*/
+/*
 foreach($string as $items)
 {
     foreach ($items as $item) {
+
         echo "Time and Date of Tweet: " . $item['created_at'] . "<br />";
         echo "1" . $item['screen_name'] . "<br />";
         echo "2" . $item['name'] . "<br />";
@@ -60,9 +63,9 @@ foreach($string as $items)
         echo "TWEETs: " . $item['text'] . "<br />";
     }
 
-}/*
+}*/
 echo "<pre>";
 print_r($string);
 echo "</pre>";
-*/
+
 ?>
