@@ -12,8 +12,9 @@ require_once('twitter-apiExchange.php');
 $settings = array(
     'oauth_access_token' => "215707565-hWZf8wu2u3gs5g6pLDr5BFOSSwiqR67FexvM37FK",
     'oauth_access_token_secret' => "ULaMd5FfPewZSxzhtdMINme4PZDQboTmdkKHe8ovLHuv4",
-    'consumer_key' => "S9EgClegmEbWUOkuZd7TtUClC",
-    'consumer_secret' => "c87nNbExVMMMzO0gVALSPD9pTyz6IQZZKsP5p2B6VkikQwP6Lp"
+    'consumer_key' => "	lGhCJ1BGN72tnGs6qjTjdpFZN",
+    'consumer_secret' => "EbgkvPYegk0qFi0rmP3Ul6fJ4W6okTldugajTvDBdiTl3hfQPB
+"
 );
 
 //$url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
