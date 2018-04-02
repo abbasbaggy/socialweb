@@ -55,14 +55,14 @@ foreach($string as $items)
     foreach ($items as $item) {
 
         echo "Time and Date of Tweet: " . $item['created_at'] . "<br />";
-        echo "1 :" . $item['user']['description'] . "<br />";
-        echo "2 :" . $item['user']['name'] . "<br />";
-        echo "3 :" . $item['user']['statuses_count'] . "<br />";
-        echo "4 :" . $item['favourites_count'] . "<br />";
-        echo "6" . $item['user']['screen_name'] . "<br />";
-        echo "7" . $item['user']['favourites_count'] . "<br />";
+        echo "User Description :" . $item['user']['description'] . "<br />";
+        echo "name :" . $item['user']['name'] . "<br />";
+        echo "Status count :" . $item['user']['statuses_count'] . "<br />";
+        echo "Screen name :" . $item['user']['screen_name'] . "<br />";
+        echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
         echo "TWEETs: " . $item['text'] . "<br />";
-        "</n>";
+        "<br />";
+        "<br />";
 
     }
 
