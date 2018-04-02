@@ -62,8 +62,8 @@ foreach($string as $items)
         echo "Screen name :" . $item['user']['screen_name'] . "<br />";
         echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
         echo "TWEETs: " . $item['text'] . "<br />";
-        "<br />";
-        "<br />";
+        echo "      " . "<br />";
+
 
     }
 
