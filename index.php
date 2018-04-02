@@ -72,16 +72,14 @@
 <div class="container-fluid text-center">
     <div class="row content">
         <div class="col-sm-3 sidenav">
-            <p><a class="twitter-timeline"  href="https://twitter.com/hashtag/news" data-widget-id="975926019680022528">#news Tweets</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-                    if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
-                    fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <p><a
+                <?php include ('twitterGet.php'); ?>
                 </a></p>
             <p><a href="#">tweets</a></p>
         </div>
         <div class="col-sm-7 text-left">
             <h1>Welcome</h1>
-            <?php include ('twitterGet.php'); ?>
+
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing  t.</p>
             <hr>
             <h3>Test</h3>
