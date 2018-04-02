@@ -31,7 +31,7 @@ if (isset($_GET['count'])) {$count = $_GET['count'];} else {$count = 20;}
 $getfield = "?q=%23news&src=typd";
 $twitter = new TwitterAPIExchange($settings);
 
-$string = json_decode($twitter->setGetfield($getfield)
+$string = json_decode($twitter->setPostfields($getfield)
     ->buildOauth($url, $requestMethod)
     ->performRequest(),$assoc = TRUE);
 if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p>
