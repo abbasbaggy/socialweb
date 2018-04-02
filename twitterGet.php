@@ -23,12 +23,12 @@ $url = "https://api.twitter.com/1.1/search/tweets.json";
 
 $requestMethod = "GET";
 //if (isset($_GET['user']))  {$user = $_GET['user'];}
-//else {$user  = "iagdotme";}
+
 if (isset($_GET['count'])) {$count = $_GET['count'];} else {$count = 20;}
 //$getfield = "?screen_name=$user&count=$count";
 //$getfield = "?q=%23news&result_type=popular&count=$count";
-$getfield = "?q=%23news&src=typd&count=$count";
-//$getfield = "?q=%23news&src=typd";
+//$getfield = "?q=%23news&src=typd&count=$count";
+$getfield = "?q=%23news&src=typd";
 $twitter = new TwitterAPIExchange($settings);
 
 $string = json_decode($twitter->setGetfield($getfield)
@@ -48,7 +48,7 @@ foreach($string as $items)
     echo "Friends: ". $items['user']['friends_count']."<br />";
     echo "Listed: ". $items['user']['listed_count']."<br /><hr />";
 }*/
-/*
+
 foreach($string as $items)
 {
     foreach ($items as $item) {
@@ -64,9 +64,9 @@ foreach($string as $items)
         echo "TWEETs: " . $item['text'] . "<br />";
     }
 
-}*/
+}/*
 echo "<pre>";
 print_r($string);
 echo "</pre>";
-
+*/
 ?>
