@@ -77,8 +77,6 @@
                     if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
                     fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                 </a></p>
-            <p><a <a href="https://twitter.com/intent/tweet?button_hashtag=news&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false">Tweet #news</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></a></p>
             <p><a href="#">tweets</a></p>
         </div>
         <div class="col-sm-7 text-left">
