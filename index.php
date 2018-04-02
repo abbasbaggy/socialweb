@@ -72,9 +72,9 @@
 <div class="container-fluid text-center">
     <div class="row content">
         <div class="col-sm-3 sidenav">
-
+                <div class="scrollmenu">
                 <?php include ('twitterGet.php'); ?>
-
+                </div>
             <p><a href="#">tweets</a></p>
         </div>
         <div class="col-sm-7 text-left">
