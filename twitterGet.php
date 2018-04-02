@@ -21,7 +21,7 @@ $settings = array(
 $url = "https://api.twitter.com/1.1/search/tweets.json";
 //$url = "https://api.twitter.com/1.1/tweets/search/fullachive/Newscred.json";
 
-$requestMethod = "GET";
+$requestMethod = "POST";
 //if (isset($_GET['user']))  {$user = $_GET['user'];}
 
 if (isset($_GET['count'])) {$count = $_GET['count'];} else {$count = 20;}
@@ -58,7 +58,7 @@ foreach($string as $items)
         echo "2" . $item['name'] . "<br />";
         echo "3" . $item['statuses_count'] . "<br />";
         echo "4" . $item['favourites_count'] . "<br />";
-        echo "5" . $item['created_at'] . "<br />";
+        echo "Time and date" . $item['created_at'] . "<br />";
         echo "6" . $item['user']['screen_name'] . "<br />";
         echo "7" . $item['user']['favourites_count'] . "<br />";
         echo "TWEETs: " . $item['text'] . "<br />";
