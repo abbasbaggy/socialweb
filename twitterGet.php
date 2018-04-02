@@ -18,8 +18,8 @@ $settings = array(
 );
 
 //$url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
-$url = "https://api.twitter.com/1.1/search/tweets.json";
-//$url = "https://api.twitter.com/1.1/tweets/search/fullachive/Newscred.json";
+//$url = "https://api.twitter.com/1.1/search/tweets.json";
+$url = "https://api.twitter.com/1.1/tweets/search/fullachive/Newscred.json";
 
 $requestMethod = "POST";
 //if (isset($_GET['user']))  {$user = $_GET['user'];}
