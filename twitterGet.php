@@ -10,10 +10,10 @@
 require_once('twitter-apiExchange.php');
 /** Set access tokens here - see: https://dev.twitter.com/apps/ **/
 $settings = array(
-    'oauth_access_token' => "215707565-hWZf8wu2u3gs5g6pLDr5BFOSSwiqR67FexvM37FK",
-    'oauth_access_token_secret' => "ULaMd5FfPewZSxzhtdMINme4PZDQboTmdkKHe8ovLHuv4",
-    'consumer_key' => "lGhCJ1BGN72tnGs6qjTjdpFZN",
-    'consumer_secret' => "EbgkvPYegk0qFi0rmP3Ul6fJ4W6okTldugajTvDBdiTl3hfQPB",
+    'oauth_access_token' => "215707565-rh94TVNw7TNXIeB2B4kyxvOgFQ5eM8YknXAE0ABQ",
+    'oauth_access_token_secret' => "P19TlmNljztIPZCKmwfkQEtoZ5pTh0bRzCvKOaZK3XNlz",
+    'consumer_key' => "cqFfY5QkugFCHJnwc7smCunFu",
+    'consumer_secret' => "HRcVSeaKQvGlF1BUCi74feI68y4vrfZxtopbWiEx18nSZBvPWo",
 
 );
 
