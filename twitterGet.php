@@ -27,7 +27,7 @@ $requestMethod = "GET";
 if (isset($_GET['count'])) {$count = $_GET['count'];} else {$count = 20;}
 //$getfield = "?screen_name=$user&count=$count";
 //$getfield = "?q=%23news&result_type=popular&count=$count";
-$getfield = "?q=%23news&src=typd&count=$count" - "Authorization: Bearer TOKEN";
+$getfield = "?q=%23news&src=typd&count=$count" - "Authorization: 215707565-rh94TVNw7TNXIeB2B4kyxvOgFQ5eM8YknXAE0ABQ";
 //$getfield = "?q=%23news&src=typd";
 
 $twitter = new TwitterAPIExchange($settings);
