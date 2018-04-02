@@ -19,19 +19,20 @@ $settings = array(
 
 //$url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
 //$url = "https://api.twitter.com/1.1/search/tweets.json";
-$url = "https://api.twitter.com/1.1/tweets/search/fullachive/Newscred.json";
+$url = "https://api.twitter.com/1.1/tweets/search/fullachive/newstat.json";
 
-$requestMethod = "POST";
+$requestMethod = "GET";
 //if (isset($_GET['user']))  {$user = $_GET['user'];}
 
 if (isset($_GET['count'])) {$count = $_GET['count'];} else {$count = 20;}
 //$getfield = "?screen_name=$user&count=$count";
 //$getfield = "?q=%23news&result_type=popular&count=$count";
-//$getfield = "?q=%23news&src=typd&count=$count";
-$getfield = "?q=%23news&src=typd";
+$getfield = "?q=%23news&src=typd&count=$count";
+//$getfield = "?q=%23news&src=typd";
+
 $twitter = new TwitterAPIExchange($settings);
 
-$string = json_decode($twitter->setPostfields($getfield)
+$string = json_decode($twitter->setGetfield($getfield)
     ->buildOauth($url, $requestMethod)
     ->performRequest(),$assoc = TRUE);
 if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p>
