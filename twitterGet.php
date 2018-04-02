@@ -59,7 +59,6 @@ foreach($string as $items)
         echo "2 :" . $item['user']['name'] . "<br />";
         echo "3 :" . $item['user']['statuses_count'] . "<br />";
         echo "4 :" . $item['favourites_count'] . "<br />";
-        echo "Time and date " . $item['created_at'] . "<br />";
         echo "6" . $item['user']['screen_name'] . "<br />";
         echo "7" . $item['user']['favourites_count'] . "<br />";
         echo "TWEETs: " . $item['text'] . "<br />";
