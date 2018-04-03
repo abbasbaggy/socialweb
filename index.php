@@ -80,6 +80,8 @@
         <div class="col-sm-7 text-left">
             <h1>Welcome</h1>
 
+            <?php include ('getnewsapi.php'); ?>
+
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing  t.</p>
             <hr>
             <h3>Test</h3>
