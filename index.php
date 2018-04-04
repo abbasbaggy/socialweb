@@ -83,7 +83,7 @@
             <?php //include ('getnewsapi.php');
             $response = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3";
             $resArr = array();
-            $resArr = json_decode($response);
+            $resArr = json_decode($response,$ass= TRUE);
             echo "<pre>";
             print_r($resArr);
             echo "</pre>";
