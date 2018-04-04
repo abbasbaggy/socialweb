@@ -81,14 +81,8 @@
             <h1>Welcome</h1>
             <a> https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3 </a>
             <?php //include ('getnewsapi.php');
-            $response = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3";
-            $reqmethod = 'GET';
-            $resArr = array();
-            $resArr = json_decode($response,$reqmethod);
-            echo "<pre>";
-            print_r($resArr);
-            echo "</pre>";
-
+            $bbc = file_get_contents("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3");
+            die("{$bbc}");
             ?>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing  t.</p>
