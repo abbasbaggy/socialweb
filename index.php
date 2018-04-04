@@ -80,7 +80,15 @@
         <div class="col-sm-7 text-left">
             <h1>Welcome</h1>
 
-            <?php include ('getnewsapi.php'); ?>
+            <?php //include ('getnewsapi.php');
+            $response = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3";
+            // $resArr = array();
+            $resArr = json_decode($response);
+            echo "<pre>";
+            print_r($resArr);
+            echo "</pre>";
+
+            ?>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing  t.</p>
             <hr>

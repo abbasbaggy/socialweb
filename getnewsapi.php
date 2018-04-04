@@ -19,7 +19,7 @@ class newsapi
         print_r($resArr);
         echo "</pre>";
 
-        return json_decode($resArr);
+        return $this->$resArr;
 
     }
 
