@@ -70,7 +70,7 @@
 </nav>
 
 <div class="container-fluid text-center">
-    <div class="row content">
+    <div class="scrollmenu">
         <div class="col-sm-3 sidenav">
 
                 <?php include ('twitterGet.php'); ?>
