@@ -80,10 +80,8 @@
         <div class="col-sm-7 text-left">
             <h1>Welcome</h1>
             <a> https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3 </a>
-            <?php //include ('getnewsapi.php');
-            $bbc = json_decode(file_get_contents("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3"));
+            <?php include ('usenewsapi.php');
 
-            die("{$bbc}");
             ?>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing  t.</p>
