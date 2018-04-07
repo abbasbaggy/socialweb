@@ -9,19 +9,19 @@
 $response = file_get_contents("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3");
 $responsearray= json_decode($response,true);
 //die("{$responsearray}");
-
+/*
 echo "<pre>";
         print_r($responsearray);
         echo "</pre>";
+*/
 
 
 
 
-/*
-foreach ($responsearray as $row)
+foreach ($responsearray as $item)
 
 {
-    foreach ($row as $item) {
+    foreach ($item as $row) {
         //$query = "INSERT INTO" for when i set db up
 
         echo "Published At: " . $row['publishedAt'] . "<br />";
@@ -32,4 +32,3 @@ foreach ($responsearray as $row)
 
 }
 
-*/
