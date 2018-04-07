@@ -6,5 +6,9 @@
  * Time: 06:24
  */
 
-$string1 = new newsapi($getbb);
+$string1 = new newsapi();
+
+
+
+
 

@@ -10,16 +10,16 @@ class newsapi
 {
 
 
-    public function getbbc_news_api()
+    public function __call($bbc)
     {
-        $response = "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3";
-       // $resArr = array();
-        $resArr = json_decode($response);
-        echo "<pre>";
-        print_r($resArr);
+        $response = file_get_contents("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3");
+        $responsearray= json_decode($response,true);
+        //die("{$response}");
+       /* echo "<pre>";
+        print_r($responsearray);
         echo "</pre>";
-
-        return $this->$resArr;
+        */
+        return $this->$responsearray;
 
     }
 
