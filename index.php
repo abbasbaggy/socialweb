@@ -69,7 +69,7 @@
     </div>
 </nav>
 
-<div class="container-fluid text-center">
+<div class="container-fluid text-left">
     <div class="scrollmenu">
         <div class="col-sm-3 sidenav">
 
