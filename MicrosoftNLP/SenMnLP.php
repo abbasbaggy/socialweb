@@ -42,7 +42,7 @@ function GetSentiment ($host, $path, $key, $data) {
 
 $data = array (
     'documents' => array (
-        array ( 'id' => '1', 'language' => 'en', 'text' => 'I really enjoy the new XBox One S. It has a clean look, it has 4K/HDR resolution and it is affordable.' ),
+        array ( 'id' => '1', 'language' => 'en', 'text' => 'You are crazy!? They may die thirsty.🤣 Facebook and Google need ad-free options says Jaron Lanier - https://t.co/jDiuJdwGq4' ),
         array ( 'id' => '2', 'language' => 'es', 'text' => 'Este ha sido un dia terrible, llegué tarde al trabajo debido a un accidente automobilistico.' )
     )
 );
