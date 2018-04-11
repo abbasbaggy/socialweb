@@ -12,7 +12,7 @@ $url = $request->getUrl();
 
 $headers = array(
     // Request headers
-    'Content-Type' => 'json',
+    'Content-Type' => 'application/json',
     'Ocp-Apim-Subscription-Key' => 'dd0c99e93d534a2c9ad064d00907ca5f',
 );
 
