@@ -78,13 +78,12 @@
             <p><a href="#">tweets</a></p>
         </div>
         <div class="col-sm-7 text-left">
-            <?php include ('MicrosoftNLP/MnLP.php'); ?>
-
             <h1>Welcome</h1>
 
             <?php
             include ('bbcnewsapi.php');
 
+            include ('MicrosoftNLP/MnLP.php');
             ?>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing  t.</p>
