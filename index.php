@@ -81,7 +81,7 @@
             <h1>Welcome</h1>
 
             <?php
-            include ('bbcnewsapi.php');
+           // include ('bbcnewsapi.php');
 
             include ('MicrosoftNLP/MnLP.php');
             ?>
