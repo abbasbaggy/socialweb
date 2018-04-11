@@ -79,21 +79,10 @@
         </div>
         <div class="col-sm-7 text-left">
             <h1>Welcome</h1>
-            <script>
-                POST https://language.googleapis.com/v1/documents:analyzeEntitySentiment?fields=entities%2Clanguage&key={AIzaSyDl5f4gWsqo0WZjlwj184aYfxVopTt0-n0}
 
-                {
-                    "document": {
-                    "type": "",
-                        "content": "RT @TimHortons: We’re supporting our Humboldt community with a $50,000 donation to the @HumboldtBroncos Hockey Club and on the ground suppo…"
-                }
-                }
-
-
-            </script>
             <?php
             //include ('bbcnewsapi.php');
-
+            include ('MicrosoftNLP/MnLP.php');
             ?>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing  t.</p>
