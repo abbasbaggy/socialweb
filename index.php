@@ -80,10 +80,19 @@
         <div class="col-sm-7 text-left">
             <h1>Welcome</h1>
             <script>
-            src= 'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3'
+                POST https://language.googleapis.com/v1/documents:analyzeEntitySentiment?fields=entities%2Clanguage&key={AIzaSyDl5f4gWsqo0WZjlwj184aYfxVopTt0-n0}
+
+                {
+                    "document": {
+                    "type": "",
+                        "content": "RT @TimHortons: We’re supporting our Humboldt community with a $50,000 donation to the @HumboldtBroncos Hockey Club and on the ground suppo…"
+                }
+                }
+
+
             </script>
             <?php
-            include ('bbcnewsapi.php');
+            //include ('bbcnewsapi.php');
 
             ?>
 
