@@ -79,11 +79,17 @@
         </div>
         <div class="col-sm-7 text-left">
             <h1>Welcome</h1>
+            <form action="./MicrosoftNLP/LanMnlp.php" method="get">
+                <textarea rows="3" cols="70" >
 
+                </textarea>
+                <input type="submit">
+            </form>
             <?php
            // include ('bbcnewsapi.php');
 
-            include ('MicrosoftNLP/SenMnlp.php')
+            include ('MicrosoftNLP/SenMnlp.php');
+            include ('MicrosoftNLP/LanMnlp.php');
             ?>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing  t.</p>
