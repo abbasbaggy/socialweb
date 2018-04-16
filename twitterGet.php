@@ -54,15 +54,17 @@ foreach($string as $items)
 foreach($string as $items)
 {
     foreach ($items as $item) {
+        for( $i = 14; $i<= $items; $i-- ) {
 
-        echo "Time and Date of Tweet: " . $item['created_at'] . "<br />";
-        echo "User Description :" . $item['user']['description'] . "<br />";
-        echo "name :" . $item['user']['name'] . "<br />";
-        echo "Status count :" . $item['user']['statuses_count'] . "<br />";
-        echo "Screen name :" . $item['user']['screen_name'] . "<br />";
-        echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
-        echo "TWEETs: " . $item['text'] . "<br />";
-        echo "      " . "<br />";
+            echo "Time and Date of Tweet: " . $item['created_at'] . "<br />";
+            echo "User Description :" . $item['user']['description'] . "<br />";
+            echo "name :" . $item['user']['name'] . "<br />";
+            echo "Status count :" . $item['user']['statuses_count'] . "<br />";
+            echo "Screen name :" . $item['user']['screen_name'] . "<br />";
+            echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
+            echo "TWEETs: " . $item['text'] . "<br />";
+            echo "      " . "<br />";
+        }
 
 
     }
