@@ -54,7 +54,7 @@ foreach($string as $items)
 foreach($string as $items)
 {
     foreach ($items as $item) {
-        for( $i = 14; $i<= $items; $i-- ) {
+        for( $i = 14; $i<= $item; $i-- ) {
 
             echo "Time and Date of Tweet: " . $item['created_at'] . "<br />";
             echo "User Description :" . $item['user']['description'] . "<br />";
