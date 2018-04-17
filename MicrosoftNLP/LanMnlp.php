@@ -65,12 +65,7 @@ $result = DetectLanguage ($host, $path, $accessKey, $data);
 //echo json_encode (json_decode ($result), JSON_PRETTY_PRINT);
 echo $result;
 
-foreach ($result as $results)
-    {
-        echo "Id: " . $results["documents"]["id"] . "<br />";
-        echo "name :" . $results['name'] . "<br />";
-        echo "iso639name :" . $results['iso6391Name'] . "<br />";
-
-    }
-
 ?>
+<script>
+    $result
+</script>

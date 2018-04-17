@@ -96,7 +96,41 @@
            // include ('MicrosoftNLP/LanMnlp.php');
             ?>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing  t.</p>
+            <script>
+                var obj, dbParam, xmlhttp, x, txt ="";
+                obj = {"table":"customers","limit":20};
+                dbParam = JSON.stringify(obj);
+                xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200){
+                        myObj = JSON.parse(this.responseText);
+                        txt += "<table border='1">"
+                        for(x in myObj) {
+                            txt += "<tr><td>" + myObj[x].name + "</td></tr>";
+                        }
+                        txt += "</table>"
+                        document.getElementById("id").innerHTML = txt;
+                    }
+                };
+                xmlhttp.open("POST", "MicrosoftNLP/LanMnlp.php", true);
+                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xmlhttp.send("x=" + dbParam);
+
+
+                / When the user scrolls down 20px from the top of the document, slide down the navbar
+                window.onscroll = function() {scrollFunction()};
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        document.getElementById("navbar").style.top = "0";
+                    } else {
+                        document.getElementById("navbar").style.top = "-50px";
+                    }
+                }
+            </script>
+
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing  t.</p>
             <hr>
             <h3>Test</h3>
             <p>Lorem ipsum...</p>
@@ -112,33 +146,14 @@
     </div>
 </div>
 
-<script>
-    // When the user scrolls down 20px from the top of the document, slide down the navbar
-    window.onscroll = function() {scrollFunction()};
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.getElementById("navbar").style.top = "0";
-        } else {
-            document.getElementById("navbar").style.top = "-50px";
-        }
-    }
-</script>
+
+    /
+
 
 <footer class="container-fluid text-center">
     <p>Footer Text</p>
 </footer>
 </body>
-
-
-
-
-
-
-
-
-
-
-
 
 </html>
