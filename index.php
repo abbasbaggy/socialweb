@@ -89,7 +89,7 @@
            // include ('bbcnewsapi.php');
 
             include ('MicrosoftNLP/SenMnlp.php');
-            include ('MicrosoftNLP/LanMnlp.php');
+           // include ('MicrosoftNLP/LanMnlp.php');
             ?>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing  t.</p>
