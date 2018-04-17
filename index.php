@@ -79,16 +79,20 @@
         </div>
         <div class="col-sm-7 text-left">
             <h1>Welcome</h1>
-            <form name="rawdata" action="MicrosoftNLP/LanMnlp.php" method="get">
+            <form name="rawdata" action="MicrosoftNLP/LanMnlp.php" target="results" method="get">
                 <textarea name="data" rows="3" cols="70" >
 
                 </textarea>
                 <input type="submit">
             </form>
+            <iframe src="" name="results" height="200" width="700">
+
+            </iframe>
+
             <?php
            // include ('bbcnewsapi.php');
 
-            include ('MicrosoftNLP/SenMnlp.php');
+           // include ('MicrosoftNLP/SenMnlp.php');
            // include ('MicrosoftNLP/LanMnlp.php');
             ?>
 
