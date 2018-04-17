@@ -49,7 +49,7 @@ function DetectLanguage ($host, $path, $key, $data) {
     $result = file_get_contents ($host . $path, false, $context);
     return $result;
 }
-$array =  'This is a document written in English.';
+//$array =  'This is a document written in English.';
 $data = array (
     'documents' => array (
         array ( 'id' => '1', 'text' => 'This is a document written in English.' ),
