@@ -6,7 +6,7 @@
  * Time: 14:34
  */
 
-$array = $_REQUEST['rawdata'];
+$array = $_REQUEST['data'];
 
 // NOTE: Be sure to uncomment the following line in your php.ini file.
 // ;extension=php_openssl.dll
