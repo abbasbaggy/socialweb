@@ -63,6 +63,8 @@ print "Please wait a moment for the results to appear.";
 $result = DetectLanguage ($host, $path, $accessKey, $data);
 
 //echo json_encode (json_decode ($result), JSON_PRETTY_PRINT);
+echo $result;
+
 foreach ($result as $results)
     {
         echo "Id: " . $results['id'] . "<br />";
