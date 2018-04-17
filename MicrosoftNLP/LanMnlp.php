@@ -6,7 +6,7 @@
  * Time: 14:34
  */
 
-
+$array = $_REQUEST['rawdata'];
 
 // NOTE: Be sure to uncomment the following line in your php.ini file.
 // ;extension=php_openssl.dll
@@ -53,7 +53,7 @@ $array =  'This is a document written in English.';
 $data = array (
     'documents' => array (
         array ( 'id' => '1', 'text' => 'This is a document written in English.' ),
-       // array ( 'id' => '2', 'text' => $array ),
+        array ( 'id' => '2', 'text' => $array ),
         array ( 'id' => '3', 'text' => '这是一个用中文写的文件')
     )
 );
