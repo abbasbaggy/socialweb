@@ -67,10 +67,12 @@ $result = DetectLanguage ($host, $path, $accessKey, $data);
 
 
 $lan = json_decode($result, true);
+echo $lan;
 
-foreach ($lan as $lans){
-    echo $lans['documents'][0]['detectedLanguages'][0]['name'] ."<br/>";
-}
+
+//foreach ($lan as $lans){
+  //  echo $lans['documents'][0]['detectedLanguages'][0]['name'] ."<br/>";
+//}
 
 ?>
 
