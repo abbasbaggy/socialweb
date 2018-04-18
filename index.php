@@ -94,6 +94,8 @@
 
            // include ('MicrosoftNLP/SenMnlp.php');
            // include ('MicrosoftNLP/LanMnlp.php');
+            $data = file_get_
+
             ?>
 
             <script>

@@ -54,7 +54,7 @@ $data = array (
     'documents' => array (
         array ( 'id' => '1', 'text' => 'This is a document written in English.' ),
         array ( 'id' => '2', 'text' => $array ),
-
+        array ( 'id' => '3', 'text' => '这是一个用中文写的文件')
     )
 );
 
@@ -63,7 +63,14 @@ print "Please wait a moment for the results to appear.";
 $result = DetectLanguage ($host, $path, $accessKey, $data);
 
 //echo json_encode (json_decode ($result), JSON_PRETTY_PRINT);
-echo $result;
+//echo $result;
+
+$dat = file_get_contents($result);
+$lan = json_decode($dat, true);
+
+foreach ($lan as $lans){
+    echo $lans['documents'][0]['detectedLanguages'][0]['name'] ."<br/>";
+}
 
 ?>
 
