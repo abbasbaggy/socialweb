@@ -66,6 +66,4 @@ $result = DetectLanguage ($host, $path, $accessKey, $data);
 echo $result;
 
 ?>
-<script>
-    $result
-</script>
+

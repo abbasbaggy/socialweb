@@ -97,24 +97,15 @@
             ?>
 
             <script>
-                var obj, dbParam, xmlhttp, x, txt ="";
-                obj = {"table":"customers","limit":20};
-                dbParam = JSON.stringify(obj);
-                xmlhttp = new XMLHttpRequest();
+                var xmlhttp = new XMLHttpRequest();
                 xmlhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200){
-                        myObj = JSON.parse(this.responseText);
-                        txt += "<table border='1">"
-                        for(x in myObj) {
-                            txt += "<tr><td>" + myObj[x].name + "</td></tr>";
-                        }
-                        txt += "</table>"
-                        document.getElementById("id").innerHTML = txt;
+                    if (this.readyState == 4 && this.status == 200) {
+                        var myObj = JSON.parse(this.responseText);
+                        document.getElementById("id").innerHTML = array.id.text;
                     }
                 };
-                xmlhttp.open("POST", "MicrosoftNLP/LanMnlp.php", true);
-                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                xmlhttp.send("x=" + dbParam);
+                xmlhttp.open("GET", "MicrosoftNLP/LanMnlp.php", true);
+                xmlhttp.send();
 
 
                 / When the user scrolls down 20px from the top of the document, slide down the navbar
