@@ -63,7 +63,11 @@ print "Please wait a moment for the results to appear.";
 $result = DetectLanguage ($host, $path, $accessKey, $data);
 
 //echo json_encode (json_decode ($result), JSON_PRETTY_PRINT);
-echo $result->documents;
+//echo $result;
+
+echo "<pre>";
+print_r($result);
+echo "</pre>";
 
 ?>
 
