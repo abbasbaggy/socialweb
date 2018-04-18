@@ -51,8 +51,11 @@ function DetectLanguage ($host, $path, $key, $data) {
 }
 //$array =  'This is a document written in English.';
 $data = array (
-     'id' => '1', 'text' => $array
+    'documents' => array (
+        array ( 'id' => '1', 'text' => 'This is a document written in English.' ),
+        array ( 'id' => '2', 'text' => $array ),
 
+    )
 );
 
 print "Please wait a moment for the results to appear.";
