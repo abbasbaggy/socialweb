@@ -7,7 +7,7 @@
  */
 
 //$lan = require_once 'LanMnlp.php';
-$lan = $GLOBALS['lans'];
+$lan = $_REQUEST['lans'];
 
 $array = $_REQUEST['data'];
 $accessKey = 'dd0c99e93d534a2c9ad064d00907ca5f';

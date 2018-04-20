@@ -77,7 +77,7 @@ foreach ($lan as $lans){
 }
 */
 echo
-$lans = $lan['documents'][0]['detectedLanguages'][0]['name'];
+$lan['documents'][0]['detectedLanguages'][0]['name'];
 //$errorlan= $lan['errors'][0]['message'];
 
 
