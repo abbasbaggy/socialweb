@@ -107,21 +107,8 @@
                     /*copy the text inside the text field*/
                     document.execCommand("Copy")
 
-                    
+
                 }
-
-
-
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                        var myObj = JSON.parse(this.responseText);
-                        document.getElementById("id").innerHTML = array.id.text;
-                    }
-                };
-                xmlhttp.open("GET", "MicrosoftNLP/LanMnlp.php", true);
-                xmlhttp.send();
-
 
                 / When the user scrolls down 20px from the top of the document, slide down the navbar
                 window.onscroll = function() {scrollFunction()};
