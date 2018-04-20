@@ -46,7 +46,7 @@ function GetSentiment ($host, $path, $key, $data) {
 
 $data = array (
     'documents' => array (
-        array ( 'id' => '1', 'language' => $lan, 'text' =>  $array ),
+        array ( 'id' => '1', 'language' => '', 'text' =>  $array ),
         array ( 'id' => '2', 'language' => 'es', 'text' => 'Este ha sido un dia terrible, llegué tarde al trabajo debido a un accidente automobilistico.' )
     )
 );
