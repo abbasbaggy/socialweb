@@ -1,41 +1,78 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: Abbas
- * Date: 11/04/2018
- * Time: 14:13
- */
-require_once 'HTTP/Request2.php';
 
-$request = new Http_Request2('https://southcentralus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment');
-$url = $request->getUrl();
+$accessKey = 'dd0c99e93d534a2c9ad064d00907ca5f';
 
-$headers = array(
-    // Request headers
-    'Content-Type' => 'application/json',
-    'Ocp-Apim-Subscription-Key' => 'dd0c99e93d534a2c9ad064d00907ca5f',
+$host = 'https://southcentralus.api.cognitive.microsoft.com';
+$path = '/text/analytics/v2.0/languages';
+
+function DetectLanguage ($host, $path, $key, $data)
+{
+
+    $headers = "Content-type: text/json\r\n" .
+        "Ocp-Apim-Subscription-Key: $key\r\n";
+
+    $data = json_encode($data);
+
+    $options = array(
+        'http' => array(
+            'header' => $headers,
+            'method' => 'POST',
+            'content' => $data
+        )
+    );
+    $context = stream_context_create($options);
+    $result = file_get_contents($host . $path, false, $context);
+    return $result;
+}
+//Language detection
+$dataL = array (
+    'documents' => array (
+        array ( 'id' => '1', 'text' => $array )
+
+    )
 );
 
-$request->setHeader($headers);
+print "Please wait a moment for the results to appear.";
 
-$parameters = array(
-    // Request parameters
-  //  'numberOfLanguagesToDetect' => '{integer}',
+$result = DetectLanguage ($host, $path, $accessKey, $data);
+$LanD = json_decode($result,true);
+//language result
+$language = $LanD['documents'][0]['detectedLanguages'][0]['name'];
+
+//sentiment detection
+
+function GetSentiment ($host, $path, $key, $data) {
+
+    $headers = "Content-type: text/json\r\n" .
+        "Ocp-Apim-Subscription-Key: $key\r\n";
+
+    $data = json_encode ($data);
+
+    // NOTE: Use the key 'http' even if you are making an HTTPS request. See:
+    // http://php.net/manual/en/function.stream-context-create.php
+    $options = array (
+        'http' => array (
+            'header' => $headers,
+            'method' => 'POST',
+            'content' => $data
+        )
+    );
+    $context  = stream_context_create ($options);
+    $result = file_get_contents ($host . $path, false, $context);
+    return $result;
+}
+
+$dataSP = array (
+    'documents' => array (
+        array ( 'id' => '1', 'language' => $LanD, 'text' => $array )
+
+    )
 );
 
-$url->setQueryVariables($parameters);
+$SenD = GetSentiment ($host, $path, $accessKey, $dataSP);
+// sentiment result remember to format
+//$Sentiment = $SenD['documents'][0]['detectedLanguages'][0]['name'];
 
-$request->setMethod(HTTP_Request2::METHOD_POST);
 
-// Request body
-$request->setBody("{T @VaticanNews: #PopeFrancis focused his catechesis at the Wednesday General Audience on the Sacrament of Baptism. https://t.co/J4uGz7jkno}");
-
-try
-{
-    $response = $request->send();
-    echo $response->getBody();
-}
-catch (HttpException $ex)
-{
-    echo $ex;
-}
+$KeyP = GetKeyPhrases ($host, $path, $accessKey, $dataSP);
+//Key phrase result

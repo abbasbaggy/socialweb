@@ -6,6 +6,8 @@
  * Time: 14:55
  */
 
+$lan = require_once 'LanMnlp.php';
+$array = $_REQUEST['data'];
 $accessKey = 'dd0c99e93d534a2c9ad064d00907ca5f';
 
 // Replace or verify the region.
@@ -42,7 +44,7 @@ function GetSentiment ($host, $path, $key, $data) {
 
 $data = array (
     'documents' => array (
-        array ( 'id' => '1', 'language' => 'en', 'text' => 'You are crazy!? They may die thirsty.🤣 Facebook and Google need ad-free options says Jaron Lanier - https://t.co/jDiuJdwGq4' ),
+        array ( 'id' => '1', 'language' => $lan, 'text' =>  $array ),
         array ( 'id' => '2', 'language' => 'es', 'text' => 'Este ha sido un dia terrible, llegué tarde al trabajo debido a un accidente automobilistico.' )
     )
 );

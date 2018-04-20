@@ -6,7 +6,7 @@
  * Time: 14:40
  */
 
-
+$array = $_REQUEST[''];
 
 // NOTE: Be sure to uncomment the following line in your php.ini file.
 // ;extension=php_openssl.dll

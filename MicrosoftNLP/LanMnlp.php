@@ -78,6 +78,9 @@ foreach ($lan as $lans){
 }
 */
 //echo
-//$lnas = $lan['documents'][0]['detectedLanguages'][0]['name'];
+$lnas = $lan['documents'][0]['detectedLanguages'][0]['name'];
+//$errorlan= $lan['errors'][0]['message'];
+
+
 ?>
 
