@@ -65,7 +65,7 @@ $result = DetectLanguage ($host, $path, $accessKey, $data);
 //echo $result;
 
 
-//$lan = json_decode($result, true);
+$lan = json_decode($result, true);
 
 /*
 echo "<pre>";
