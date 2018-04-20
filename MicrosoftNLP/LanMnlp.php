@@ -62,16 +62,16 @@ print "Please wait a moment for the results to appear.";
 $result = DetectLanguage ($host, $path, $accessKey, $data);
 
 //echo json_encode (json_decode ($result), JSON_PRETTY_PRINT);
-echo $result;
+//echo $result;
 
 
-//$lan = json_decode($result, true);
+$lan = json_decode($result, true);
 
-/*
+
 echo "<pre>";
 print_r($lan);
 echo "</pre>";
-
+/*
 foreach ($lan as $lans){
     echo $lans['documents'][0]['detectedLanguages'][0]['name'] ."<br/>";
 }
@@ -80,6 +80,6 @@ foreach ($lan as $lans){
 //$lnas = $lan['documents'][0]['detectedLanguages'][0]['name'];
 //$errorlan= $lan['errors'][0]['message'];
 
-
+*/
 ?>
 
