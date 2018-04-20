@@ -46,7 +46,7 @@ class funcLanM {
 
         $result = DetectLanguage ($host, $path, $accessKey, $data);
 
-        echo $result;
+        return $result;
 
 
 
