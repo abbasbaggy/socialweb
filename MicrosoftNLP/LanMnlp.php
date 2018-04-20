@@ -76,7 +76,7 @@ foreach ($lan as $lans){
     echo $lans['documents'][0]['detectedLanguages'][0]['name'] ."<br/>";
 }
 */
-$lans = $lan['documents'][0]['detectedLanguages'][0]['name'];
+$lans = $lan['documents'][0]['detectedLanguages'][0]['iso6391Name'];
 echo  $lans;
 //session_start();
 //$_SESSION['language']= $lans;
