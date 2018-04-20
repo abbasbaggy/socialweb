@@ -52,9 +52,8 @@ function DetectLanguage ($host, $path, $key, $data) {
 //$array =  'This is a document written in English.';
 $data = array (
     'documents' => array (
-        array ( 'id' => '1', 'text' => 'This is a document written in English.' ),
-        array ( 'id' => '2', 'text' => $array ),
-        array ( 'id' => '3', 'text' => '这是一个用中文写的文件')
+        array ( 'id' => '1', 'text' => $array)
+
     )
 );
 
@@ -63,7 +62,7 @@ print "Please wait a moment for the results to appear.";
 $result = DetectLanguage ($host, $path, $accessKey, $data);
 
 //echo json_encode (json_decode ($result), JSON_PRETTY_PRINT);
-echo $result;
+//echo $result;
 
 
 //$lan = json_decode($result, true);
