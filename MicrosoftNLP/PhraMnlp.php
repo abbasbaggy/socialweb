@@ -6,7 +6,8 @@
  * Time: 14:40
  */
 
-$array = $_REQUEST[''];
+$array = $_REQUEST['data'];
+$lan = $_SESSION['language'];
 
 // NOTE: Be sure to uncomment the following line in your php.ini file.
 // ;extension=php_openssl.dll
@@ -52,13 +53,11 @@ function GetKeyPhrases ($host, $path, $key, $data) {
 
 $data = array (
     'documents' => array (
-        array ( 'id' => '1', 'language' => 'en', 'text' => 'I really enjoy the new XBox One S. It has a clean look, it has 4K/HDR resolution and it is affordable.' ),
-        array ( 'id' => '2', 'language' => 'es', 'text' => 'Si usted quiere comunicarse con Carlos, usted debe de llamarlo a su telefono movil. Carlos es muy responsable, pero necesita recibir una notificacion si hay algun problema.' ),
-        array ( 'id' => '3', 'language' => 'en', 'text' => 'The Grand Hotel is a new hotel in the center of Seattle. It earned 5 stars in my review, and has the classiest decor I\'ve ever seen.' )
-    )
+        array ( 'id' => '1', 'language' => $lan, 'text' => $array )
+     )
 );
 
-print "Please wait a moment for the results to appear.";
+print "Please wait a moment for the language phrase to appear.";
 
 $result = GetKeyPhrases ($host, $path, $accessKey, $data);
 
