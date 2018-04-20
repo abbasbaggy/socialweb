@@ -6,7 +6,9 @@
  * Time: 14:55
  */
 
-$lan = require_once 'LanMnlp.php';
+//$lan = require_once 'LanMnlp.php';
+$lan = $GLOBALS['lans'];
+
 $array = $_REQUEST['data'];
 $accessKey = 'dd0c99e93d534a2c9ad064d00907ca5f';
 
