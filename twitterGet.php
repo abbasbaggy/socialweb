@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <?php
 /**
  * Created by IntelliJ IDEA.
@@ -5,6 +8,7 @@
  * Date: 20/03/2018
  * Time: 23:42
  */
+
 
 
 require_once('twitter-apiExchange.php');
@@ -70,8 +74,9 @@ foreach($string as $items)
             echo "Status count :" . $item['user']['statuses_count'] . "<br />";
             echo "Screen name :" . $item['user']['screen_name'] . "<br />";
             echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
-             echo "TWEETs: " . $item['text'] . "<br />";
-            echo "      " . "<br />";
+            ?>
+           <a onclick="myfunction()"> <?php echo "TWEETs:  " . $item['text'] . "<br />"; ?> </a>
+          <?php  echo "      " . "<br />";
       //  }
 
 
@@ -80,3 +85,5 @@ foreach($string as $items)
 }
 
 ?>
+
+</html>
