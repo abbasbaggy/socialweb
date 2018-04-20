@@ -79,7 +79,7 @@
         </div>
         <div class="col-sm-7 text-left">
             <h1>Welcome</h1>
-            <form name="rawdata" action="MicrosoftNLP/nlpResult.php" target="results" method="get">
+            <form name="rawdata" action="MicrosoftNLP/LanMnlp.php" target="results" method="get">
                 <textarea name="data" rows="3" cols="70" >
 
                 </textarea>

@@ -76,8 +76,10 @@ foreach ($lan as $lans){
     echo $lans['documents'][0]['detectedLanguages'][0]['name'] ."<br/>";
 }
 */
-echo
-$lan['documents'][0]['detectedLanguages'][0]['name'];
+$lans = $lan['documents'][0]['detectedLanguages'][0]['name'];
+echo  $lans;
+//session_start();
+//$_SESSION['language']= $lans;
 //$errorlan= $lan['errors'][0]['message'];
 
 
