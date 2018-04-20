@@ -8,6 +8,8 @@
 
 $array = $_REQUEST['data'];
 
-$nlp = new funcLanM($array);
+$nlp = new funcLanM();
+$nlps = $nlp->langauge($array);
 
-echo $nlp;
+
+echo $nlps;

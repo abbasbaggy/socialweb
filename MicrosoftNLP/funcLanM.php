@@ -6,9 +6,9 @@
  * Time: 21:40
  */
 
-class funcLanM{
+class funcLanM {
 
-    public function langauge($lan){
+    public function langauge( $lan){
 
         $accessKey = 'dd0c99e93d534a2c9ad064d00907ca5f';
         $host = 'https://southcentralus.api.cognitive.microsoft.com';
