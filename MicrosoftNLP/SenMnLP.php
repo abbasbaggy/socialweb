@@ -46,7 +46,7 @@ function GetSentiment ($host, $path, $key, $data) {
 
 $data = array (
     'documents' => array (
-        array ( 'id' => '1', 'language' => '', 'text' =>  $array ),
+        array ( 'id' => '1', 'language' => $lan, 'text' =>  $array ),
         array ( 'id' => '2', 'language' => 'es', 'text' => 'Este ha sido un dia terrible, llegué tarde al trabajo debido a un accidente automobilistico.' )
     )
 );
@@ -57,4 +57,4 @@ $result = GetSentiment ($host, $path, $accessKey, $data);
 
 echo json_encode (json_decode ($result), JSON_PRETTY_PRINT);
 //echo json_decode($result);
-echo $lan;
+echo $GLOBALS['lans'];
