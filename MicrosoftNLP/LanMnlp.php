@@ -78,10 +78,11 @@ foreach ($lan as $lans){
 */
 $lans = $lan['documents'][0]['detectedLanguages'][0]['iso6391Name'];
 echo  $lans;
-//session_start();
-//$_SESSION['language']= $lans;
+session_start();
+$lans = $_SESSION['language'];
 //$errorlan= $lan['errors'][0]['message'];
 
+include_once ('SenMnLP.php');
 
 ?>
 

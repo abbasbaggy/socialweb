@@ -8,8 +8,8 @@
 
 //$lan = require_once 'LanMnlp.php';
 
-
 $array = $_REQUEST['data'];
+$lan = $_SESSION['language'];
 $accessKey = 'dd0c99e93d534a2c9ad064d00907ca5f';
 
 // Replace or verify the region.
@@ -57,4 +57,3 @@ $result = GetSentiment ($host, $path, $accessKey, $data);
 
 echo json_encode (json_decode ($result), JSON_PRETTY_PRINT);
 //echo json_decode($result);
-echo $GLOBALS['lans'];
