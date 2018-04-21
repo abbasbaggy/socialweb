@@ -85,5 +85,18 @@ foreach($string as $items)
 }
 
 ?>
+<script>
+    function myFunction(){
+        /*get text feild */
+        var copyText = document.getElementById("input");
+        /*select the text field */
+        copyText.select();
+        /*copy the text inside the text field*/
+        document.execCommand("Copy");
+
+
+    }
+
+</script>
 
 </html>
