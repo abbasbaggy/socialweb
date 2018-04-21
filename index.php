@@ -105,7 +105,7 @@
                     /*select the text field */
                     copyText.select();
                     /*copy the text inside the text field*/
-                    document.execCommand("Copy")
+                    document.execCommand("Copy");
 
 
                 }
