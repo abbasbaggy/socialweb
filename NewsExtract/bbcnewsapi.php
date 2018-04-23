@@ -29,7 +29,7 @@ foreach ($responsearray as $item)
 
 
         $query = "INSERT INTO `bbcnewstop`(`‘Published’`, `‘Title’`, `‘Description’`) VALUES 
-               ('".$row["publishedAt"]."','".$row["title"]."','".$row["description"]."');";
+               ("'".$row["publishedAt"]."'","'".$row["title"]."'","'".$row["description"]."'");";
         require("dbconnect.php");
         mysqli_query($link, $query);
 
