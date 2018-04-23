@@ -90,11 +90,11 @@
             </iframe>
 
             <?php
-           // include ('bbcnewsapi.php');
+            include ('NewsExtract/bbcnewsapi.php');
 
             //include ('MicrosoftNLP/SenMnlp.php');
            // include ('MicrosoftNLP/LanMnlp.php');
-            require ('dbconnect.php');
+           // require ('dbconnect.php');
 
             ?>
 
