@@ -11,13 +11,13 @@ $response= file_get_contents("https://newsapi.org/v2/everything?sources=bbc-news
 $responsearray= json_decode($response,true);
 //die("{$responsearray}");
 
-echo "<pre>";
+/*echo "<pre>";
         print_r($responsearray);
         echo "</pre>";
 
+*/
 
 
-/*
 
 foreach ($responsearray as $item)
 
@@ -26,11 +26,11 @@ foreach ($responsearray as $item)
         //$query = "INSERT INTO" for when i set db up
 
         echo "Published At: " . $row['publishedAt'] . "<br />";
-        echo "Author :" . $row['author'] . "<br />";
+        //echo "Author :" . $row['author'] . "<br />";
         echo "Title :" . $row['title'] . "<br />";
         echo "Description :" . $row['description'] . "<br />";
+        echo "URL :" . $row['url'] . "<br />";
     }
 
 }
 
-*?
