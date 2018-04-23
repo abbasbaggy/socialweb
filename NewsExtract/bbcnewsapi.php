@@ -30,21 +30,17 @@ foreach ($responsearray as $item)
 
         $query = "INSERT INTO bbcnewstop(`Published`, `Title`, `Description`) VALUES
                (`".$row["publishedAt"]."`,`".$row["title"]."`,`".$row["description"]."`);";
+        require_once ("../dbconnect.php");
+        mysqli_query($link, $query) or die(mysqli_error());
 
-       // mysqli_multi_query($link, $query) or die(mysqli_error());
-
-
+    /*
         echo "Published At: " . $row['publishedAt'] . "<br />";
         //echo "Author :" . $row['author'] . "<br />";
         echo "Title :" . $row['title'] . "<br />";
         echo "Description :" . $row['description'] . "<br />";
         echo "URL :" . $row['url'] . "<br />";
-
+       */
     }
+    echo" success";
 
 }
-require ('../dbconnect.php');
-if (mysqli_query($link, $query))
-
-{echo "sucess";
-};
