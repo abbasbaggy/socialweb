@@ -34,14 +34,15 @@ foreach ($responsearray as $item)
         //mysqli_query($link, $query) or die(mysqli_error());
 
 
-        echo "Published At: " . $row['publishedAt'] . "<br />";
+      /*  echo "Published At: " . $row['publishedAt'] . "<br />";
         //echo "Author :" . $row['author'] . "<br />";
         echo "Title :" . $row['title'] . "<br />";
         echo "Description :" . $row['description'] . "<br />";
         echo "URL :" . $row['url'] . "<br />";
 
+       */
+        echo $query;
     }
 
 
 }echo" success";
-echo $query;
