@@ -28,8 +28,8 @@ foreach ($responsearray as $item)
         // use if statement to check date of last data b4 insering if(){
 
 
-        $query = "INSERT INTO bbcnewstop(`Published`, `Title`, `Description`) VALUES
-               (`".$row["publishedAt"]."`,`".$row["title"]."`,`".$row["description"]."`);";
+        $query = "INSERT INTO `bbcnewstop`(`‘Published’`, `‘Title’`, `‘Description’`) VALUES 
+               ('".$row["publishedAt"]."','".$row["title"]."','".$row["description"]."');";
 
         mysqli_query($link, $query);
 
