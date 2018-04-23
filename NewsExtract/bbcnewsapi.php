@@ -20,7 +20,7 @@ $responsearray= json_decode($response,true);
 */
 
 //use select statement to get last store created date in db
-//require("dbconnect.php");
+require("dbconnect.php");
 foreach ($responsearray as $item)
 
 {
@@ -41,7 +41,7 @@ foreach ($responsearray as $item)
         echo "URL :" . $row['url'] . "<br />";
 
        */
-        echo $query;
+       // echo $query;
     }
 
 
