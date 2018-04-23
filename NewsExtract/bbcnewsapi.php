@@ -6,6 +6,8 @@
  * Time: 11:40
  */
 
+
+require_once ('../dbconnect.php');
 $response = file_get_contents("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3");
 //$response= file_get_contents("https://newsapi.org/v2/everything?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3");
 $responsearray= json_decode($response,true);
@@ -26,7 +28,10 @@ foreach ($responsearray as $item)
         // use if statement to check date of last data b4 insering if(){
 
 
-        //$query = "INSERT INTO" for when i set db up
+        $query = "INSERT INTO bbcnewstop(Published, Title, Description) VALUES
+                (`".$row['publishedAt']."`,`".$row['title']."`,`".$row['description']."`);";
+
+        mysqli_multi_query($con, $query) or mysqli_query(die);
 
         echo "Published At: " . $row['publishedAt'] . "<br />";
         //echo "Author :" . $row['author'] . "<br />";
