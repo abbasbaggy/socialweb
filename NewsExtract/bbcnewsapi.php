@@ -42,7 +42,7 @@ foreach ($responsearray as $item)
         */
     }
 
-}if (mysqli_multi_query($link, $query))
+}if (mysqli_query($link, $query))
 
 {echo "sucess";
 };

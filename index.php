@@ -101,6 +101,18 @@
             <script>
 
 
+                function myFunction(){
+                    /*get text feild */
+                    var copyText = document.getElementById("input");
+                    /*select the text field */
+                    copyText.select();
+                    /*copy the text inside the text field*/
+                    document.execCommand("Copy");
+
+
+                }
+
+
                 / When the user scrolls down 20px from the top of the document, slide down the navbar
                 window.onscroll = function() {scrollFunction()};
 
