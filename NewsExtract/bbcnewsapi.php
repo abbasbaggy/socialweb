@@ -41,6 +41,6 @@ foreach ($responsearray as $item)
         echo "URL :" . $row['url'] . "<br />";
        */
     }
-    echo" success";
 
-}
+
+}echo" success";
