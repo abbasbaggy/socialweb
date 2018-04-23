@@ -82,7 +82,7 @@ class TwitterAPIExchange
         $this->consumer_secret = $settings['consumer_secret'];
     }
     /**
-     * Set postfields array, example: array('screen_name' => 'J7mbo')
+     * Set postfields array, example: array('screen_name' => '')
      *
      * @param array $array Array of parameters to send to API
      *
