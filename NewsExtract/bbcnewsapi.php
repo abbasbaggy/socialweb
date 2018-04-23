@@ -31,7 +31,7 @@ foreach ($responsearray as $item)
         $query = "INSERT INTO bbcnewstop(`Published`, `Title`, `Description`) VALUES
                (`".$row["publishedAt"]."`,`".$row["title"]."`,`".$row["description"]."`);";
 
-        //mysqli_query($link, $query) or die(mysqli_error());
+        mysqli_query($link, $query) or die(mysqli_error($link));
 
 
       /*  echo "Published At: " . $row['publishedAt'] . "<br />";
@@ -41,7 +41,7 @@ foreach ($responsearray as $item)
         echo "URL :" . $row['url'] . "<br />";
 
        */
-        echo $query;
+        //echo $query;
     }
 
 
