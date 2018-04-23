@@ -33,12 +33,13 @@ foreach ($responsearray as $item)
 
        // mysqli_multi_query($con, $query) or die(mysqli_error());
 
-
+        /*
         echo "Published At: " . $row['publishedAt'] . "<br />";
         //echo "Author :" . $row['author'] . "<br />";
         echo "Title :" . $row['title'] . "<br />";
         echo "Description :" . $row['description'] . "<br />";
         echo "URL :" . $row['url'] . "<br />";
+        */
     }
 
 }if (mysqli_multi_query($con, $query))
