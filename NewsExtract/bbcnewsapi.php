@@ -20,7 +20,7 @@ $responsearray= json_decode($response,true);
 */
 
 //use select statement to get last store created date in db
-//$query='';
+$query='';
 foreach ($responsearray as $item)
 
 {
@@ -36,7 +36,7 @@ foreach ($responsearray as $item)
 
         $query = 'INSERT INTO `bbcnewstop`(`‘Published’`, `‘Title’`, `‘Description’`) VALUES (\'2018-04-24T00:05:38Z\',\'Parents facing unfair child abuse claims over bruising\',\'Chloes son was taken away for a year, until his bruising was found to be down to a medical condition.\');';
 
-        mysqli_mutli_query($link, $query);
+       // mysqli_mutli_query($link, $query);
 
 
       /*  echo "Published At: " . $row['publishedAt'] . "<br />";
