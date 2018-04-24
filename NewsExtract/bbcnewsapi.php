@@ -52,5 +52,5 @@ foreach ($responsearray as $item)
 
 
 }
-mysqli_multi_query($link, $query);
+mysqli_multi_query($con, $query);
 echo" success";
