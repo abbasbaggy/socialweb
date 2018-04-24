@@ -34,7 +34,7 @@ foreach ($responsearray as $item)
        // $query = "INSERT INTO `bbcnewstop`(`‘Published’`, `‘Title’`, `‘Description’`) VALUES
           //     (\'".$row['publishedAt']."\','".$row['title']."','".$row["description"]."');";
 
-        $query = "INSERT INTO `bbcnewstop`(`‘Published’`, `‘Title’`, `‘Description’`) VALUES (\'2018-04-24T00:05:38Z\',\'Parents facing unfair child abuse claims over bruising\',\'Chloes son was taken away for a year, until his bruising was found to be down to a medical condition.\');";
+        .$query = "INSERT INTO `bbcnewstop`(`‘Published’`, `‘Title’`, `‘Description’`) VALUES (\'2018-04-24T00:05:38Z\',\'Parents facing unfair child abuse claims over bruising\',\'Chloes son was taken away for a year, until his bruising was found to be down to a medical condition.\');";
 
         mysqli_mutli_query($link, $query);
 
