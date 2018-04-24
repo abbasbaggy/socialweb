@@ -6,7 +6,7 @@
  * Time: 11:40
  */
 
-
+require('dbconnect.php');
 
 //$response = file_get_contents("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3");
 $response= file_get_contents("https://newsapi.org/v2/everything?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3");
@@ -20,7 +20,7 @@ $responsearray= json_decode($response,true);
 */
 
 //use select statement to get last store created date in db
-require('dbconnect.php');
+
 foreach ($responsearray as $item)
 
 {
