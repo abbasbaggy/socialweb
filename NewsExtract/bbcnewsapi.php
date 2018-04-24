@@ -27,10 +27,12 @@ foreach ($responsearray as $item)
     foreach ($item as $row) {
         // use if statement to check date of last data b4 insering if(){
 
-
+        $pub = mysqli_real_escape_string($link,$row['publishedAt']);
+        $tit = mysqli_real_escape_string($link,$row['title']);
+        $des = mysqli_real_escape_string($link,$row['description']);
 
         $query = "INSERT INTO `bbcnewstop`(`‘Published’`, `‘Title’`, `‘Description’`) VALUES 
-               ('".$row['publishedAt']."','".$row['title']."','".$row['description']."');";
+               ('$pub','$tit','$des');";
         require("dbconnect.php");
         mysqli_query($link, $query);
 
