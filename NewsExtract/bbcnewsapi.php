@@ -33,7 +33,7 @@ foreach ($responsearray as $item)
         $des = mysqli_real_escape_string($con,$row['description']);
 
         $query = "INSERT INTO `bbcnewstop`(`‘Published’`, `‘Title’`, `‘Description’`) VALUES
-                  ('$pud','$tit','$des')";
+                  ('$pud','$tit','$des');";
 
        // $query = "INSERT INTO `bbcnewstop`(`‘Published’`, `‘Title’`, `‘Description’`) VALUES
           //     (\'".$row['publishedAt']."\','".$row['title']."','".$row["description"]."');";
