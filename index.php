@@ -94,7 +94,7 @@
 
             //include ('MicrosoftNLP/SenMnlp.php');
            // include ('MicrosoftNLP/LanMnlp.php');
-            get_include_path ('dbconnect.php');
+            require('dbconnect.php');
 
             ?>
 
