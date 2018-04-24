@@ -33,14 +33,14 @@ foreach ($responsearray as $item)
         $des = mysqli_real_escape_string($con,$row['description']);
 
         $query = "INSERT INTO `bbcnewstop`(`‘Published’`, `‘Title’`, `‘Description’`) VALUES
-                  ('". $pud."','" .$tit ."','" .$des ."')";
+                  ('$pud',' $tit ',' .$des ');";
 
        // $query = "INSERT INTO `bbcnewstop`(`‘Published’`, `‘Title’`, `‘Description’`) VALUES
           //     (\'".$row['publishedAt']."\','".$row['title']."','".$row["description"]."');";
 
       //  $query = "INSERT INTO bbcnewstop(`‘Published’`, `‘Title’`, `‘Description’`) VALUES (\'2018-04-24T00:05:38Z\',\'Parents facing unfair child abuse claims over bruising\',\'Chloes son was taken away for a year, until his bruising was found to be down to a medical condition.\');";
 
-        mysqli_query($con, $query);
+
 
 
       /*  echo "Published At: " . $row['publishedAt'] . "<br />";
@@ -50,10 +50,11 @@ foreach ($responsearray as $item)
         echo "URL :" . $row['url'] . "<br />";
 
        */
-        echo $query;
+        //echo $query;
     }
 
 
 }
-
+if(mysqli_query($con, $query)){}
+else{echo "Error" . mysqli_error($con);}
 echo" success";
