@@ -50,7 +50,7 @@ foreach ($responsearray as $item)
         echo "URL :" . $row['url'] . "<br />";
 
        */
-        //echo $query;
+        echo $query;
     }
 
 
