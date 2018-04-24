@@ -31,7 +31,11 @@ if (!$link) {
     exit;
 }
 
-//echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
-//echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
+$query = 'INSERT INTO bbcnewstop(`‘Published’`, `‘Title’`, `‘Description’`) VALUES (\'2018-04-24T00:05:38Z\',\'Parents facing unfair child abuse claims over bruising\',\'Chloes son was taken away for a year, until his bruising was found to be down to a medical condition.\');';
+mysqli_query($link,$query);
 
-//mysqli_close($link);
+echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
+echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
+
+
+mysqli_close($link);
