@@ -70,7 +70,7 @@ print_r($phrase);
 echo "</pre>";
 */
 foreach ($Phrase as $phr){
-    echo $phr['documents'][0]['KeyPhrases'] ."<br/>";
+    echo $phr['documents']['KeyPhrases'] ."<br/>";
 }
 //$phr = $phrase['documents'][0]['KeyPhrases'][0];
 
