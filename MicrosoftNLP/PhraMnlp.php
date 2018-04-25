@@ -71,6 +71,7 @@ echo "</pre>";
 */
 foreach ($Phrase as $phr){
     echo $phr['documents']['KeyPhrases'] ."<br/>";
+    echo "succes";
 }
 //$phr = $phrase['documents'][0]['KeyPhrases'][0];
 
