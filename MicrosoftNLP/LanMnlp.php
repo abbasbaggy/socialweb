@@ -84,7 +84,7 @@ $lans = $_SESSION['language'];
 //$errorlan= $lan['errors'][0]['message'];
 
 include_once ('SenMnLP.php');
-include_once ('PhraMnlp.php');
+//include_once ('PhraMnlp.php');
 
 ?>
 
