@@ -61,11 +61,11 @@ print "Please wait a moment for the language phrase to appear.";
 
 $result = GetKeyPhrases ($host, $path, $accessKey, $data);
 
-//echo json_encode (json_decode ($result), JSON_PRETTY_PRINT);
+echo json_encode (json_decode ($result), JSON_PRETTY_PRINT);
 
-$phrase = json_decode($result, true);
-echo "<pre>";
-print_r($phrase);
-echo "</pre>";
+//$phrase = json_decode($result, true);
+//echo "<pre>";
+//print_r($phrase);
+//echo "</pre>";
 
 ?>
