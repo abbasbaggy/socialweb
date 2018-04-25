@@ -90,7 +90,7 @@
             </iframe>
 
             <?php
-            include ('NewsExtract/bbcnewsapi.php');
+            //include ('NewsExtract/bbcnewsapi.php');
 
             //include ('MicrosoftNLP/SenMnlp.php');
            // include ('MicrosoftNLP/LanMnlp.php');
