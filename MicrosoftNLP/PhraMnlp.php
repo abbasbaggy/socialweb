@@ -62,8 +62,8 @@ print "Please wait a moment for the language phrase to appear.";
 $result = GetKeyPhrases ($host, $path, $accessKey, $data);
 
 //echo json_encode (json_decode ($result), JSON_PRETTY_PRINT);
+$pass = json_decode($result,true);
 
-$phrase = json_decode($result, true);
 
 //echo "<pre>";
 //print_r($phrase);
@@ -74,7 +74,7 @@ foreach ($Phrase as $phr){
     echo "succes";
 }
 */
-echo $phrase['documents'][0]['KeyPhrases'];
+echo $pass['documents'][0]['KeyPhrases'];
 
 
 
