@@ -64,8 +64,16 @@ $result = GetKeyPhrases ($host, $path, $accessKey, $data);
 //echo json_encode (json_decode ($result), JSON_PRETTY_PRINT);
 
 $phrase = json_decode($result, true);
+/*
 echo "<pre>";
 print_r($phrase);
 echo "</pre>";
+*/
+//foreach ($lan as $lans){
+  //  echo $lans['documents'][0]['detectedLanguages'][0]['name'] ."<br/>";
+//}
+$phr = $phrase['documents'][0]['KeyPhrases'][0];
+
+echo $phr;
 
 ?>
