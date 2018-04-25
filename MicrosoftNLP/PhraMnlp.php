@@ -69,11 +69,11 @@ echo "<pre>";
 print_r($phrase);
 echo "</pre>";
 */
-//foreach ($lan as $lans){
-  //  echo $lans['documents'][0]['detectedLanguages'][0]['name'] ."<br/>";
-//}
-$phr = $phrase['documents'][0]['KeyPhrases'][0];
+foreach ($Phrase as $phr){
+    echo $phrase['documents'][0]['KeyPhrases'] ."<br/>";
+}
+//$phr = $phrase['documents'][0]['KeyPhrases'][0];
 
-echo $phr;
+//echo $phr;
 
 ?>
