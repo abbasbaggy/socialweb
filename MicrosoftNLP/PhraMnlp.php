@@ -74,9 +74,8 @@ echo "</pre>";
 $phrase = "";
 for($num = 0;$num <=10 ; $num++){
     $phrase = $pass['documents'][0]['keyPhrases'][$num]. "<br /> ";
-   // echo $phrase;
+    echo $phrase;
 }
 
-echo $phrase;
 
 ?>
