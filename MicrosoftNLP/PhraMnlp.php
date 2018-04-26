@@ -64,20 +64,14 @@ $result = GetKeyPhrases ($host, $path, $accessKey, $data);
 //echo json_encode (json_decode ($result), JSON_PRETTY_PRINT);
 $pass = json_decode($result,true);
 
-/*
+
 echo "<pre>";
 print_r($pass);
 echo "</pre>";
 
-foreach ($Pass as $phr){
-    foreach($phr as $pras) {
-        echo $pras['documents']['KeyPhrases'] . "<br/>";
-        //echo "succes";
-    }
-}*/
+//$pass['documents'][0]['KeyPhrases'][0];
 
-$phr =$pass["documents"][0]["KeyPhrases"]['id'];
-echo $phr;
+/*
 /*for ($pass['documents'] =0; $pass['documents'] < 2; $pass['documents']++){
     echo "<ul>";
     for ($pass[KeyPhrases] = 0; $pass[KeyPhrases] <8 ; $pass[KeyPhrases]++){
