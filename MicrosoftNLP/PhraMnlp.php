@@ -81,6 +81,7 @@ for ($row =0; $row < 2; $row++){
     for ($col = 0; $col <8 ; $col++){
         echo"<li>".$pass['documents']['KeyPhrases'] . "</li>";
     }
+    echo "</ul>";
 }
 
 //echo $pass['documents'][0]['KeyPhrases'];
