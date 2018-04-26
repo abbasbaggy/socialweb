@@ -69,19 +69,13 @@ echo "<pre>";
 print_r($pass);
 echo "</pre>";
 */
-//$pass['documents'][0]['KeyPhrases'][0];
 
-
-/*for ($pass['documents'] =0; $pass['documents'] < 2; $pass['documents']++){
-    echo "<ul>";
-    for ($pass[KeyPhrases] = 0; $pass[KeyPhrases] <8 ; $pass[KeyPhrases]++){
-        echo"<li>".$pass['documents']['KeyPhrases'] . "</li>";
-    }
-    echo "</ul>";
+//echo $pass['documents'][0]['keyPhrases'][0];
+$phrase = "";
+for($num = 0; ; $num++){
+    $phrase = $pass['documents'][0]['keyPhrases'][$num];
 }
-*/
-echo $pass['documents'][0]['keyPhrases'][0];
 
-
+echo $phrase;
 
 ?>
