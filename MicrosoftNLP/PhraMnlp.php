@@ -68,11 +68,18 @@ $pass = json_decode($result,true);
 echo "<pre>";
 print_r($pass);
 echo "</pre>";
-*/
+
 foreach ($Pass as $phr){
     foreach($phr as $pras) {
         echo $pras['documents']['KeyPhrases'] . "<br/>";
         //echo "succes";
+    }
+}*/
+
+for ($row =0; $row < 2; $row++){
+    echo "<ul>";
+    for ($col = 0; $col <8 ; $col++){
+        echo"<li>".$pass['documents']['KeyPhrases'] . "</li>";
     }
 }
 
