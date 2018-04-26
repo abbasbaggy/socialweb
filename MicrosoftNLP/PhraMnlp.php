@@ -65,16 +65,16 @@ $result = GetKeyPhrases ($host, $path, $accessKey, $data);
 $pass = json_decode($result,true);
 
 
-//echo "<pre>";
-//print_r($phrase);
-//echo "</pre>";
+echo "<pre>";
+print_r($phrase);
+echo "</pre>";
 /*
 foreach ($Phrase as $phr){
     echo $phr['documents']['KeyPhrases'] ."<br/>";
     echo "succes";
 }
 */
-echo $pass['documents'][0]['KeyPhrases'];
+//echo $pass['documents'][0]['KeyPhrases'];
 
 
 
