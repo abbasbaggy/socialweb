@@ -76,7 +76,7 @@ foreach ($Pass as $phr){
     }
 }*/
 
-$phr =$pass['documents'][0]['KeyPhrases']['id'];
+$phr =$pass["documents"][0]["KeyPhrases"]['id'];
 echo $phr;
 /*for ($pass['documents'] =0; $pass['documents'] < 2; $pass['documents']++){
     echo "<ul>";
