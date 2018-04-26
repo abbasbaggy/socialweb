@@ -72,7 +72,7 @@ echo "</pre>";
 
 //echo $pass['documents'][0]['keyPhrases'][0];
 $phrase = "";
-for($num = 0;$num <10 ; $num++){
+for($num = 0;$num <=10 ; $num++){
     $phrase = $pass['documents'][0]['keyPhrases'][$num];
 }
 
