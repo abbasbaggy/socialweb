@@ -66,7 +66,7 @@ $pass = json_decode($result,true);
 
 
 echo "<pre>";
-print_r($phrase);
+print_r($pass);
 echo "</pre>";
 /*
 foreach ($Phrase as $phr){
