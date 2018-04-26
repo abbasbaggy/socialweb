@@ -57,7 +57,7 @@ $data = array (
      )
 );
 
-print "Please wait a moment for the language phrase to appear.";
+print "Please wait a moment for the language phrase to appear. <br/>";
 
 $result = GetKeyPhrases ($host, $path, $accessKey, $data);
 
