@@ -76,9 +76,9 @@ foreach ($Pass as $phr){
     }
 }*/
 
-for ($row =0; $row < 2; $row++){
+for ($pass['documents'] =0; $pass['documents'] < 2; $pass['documents']++){
     echo "<ul>";
-    for ($col = 0; $col <8 ; $col++){
+    for ($pass[KeyPhrases] = 0; $pass[KeyPhrases] <8 ; $pass[KeyPhrases]++){
         echo"<li>".$pass['documents']['KeyPhrases'] . "</li>";
     }
     echo "</ul>";
