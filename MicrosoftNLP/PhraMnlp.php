@@ -73,7 +73,7 @@ echo "</pre>";
 //echo $pass['documents'][0]['keyPhrases'][0];
  $phrase = "";
  $search = "";
-
+require ('MicrosoftNLP/dbconnect.php');
 for($num = 0;$num <=10 ; $num++){
     $phrase = $pass['documents'][0]['keyPhrases'][$num];
     echo $phrase. " ";
