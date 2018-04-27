@@ -71,11 +71,11 @@ echo "</pre>";
 */
 
 //echo $pass['documents'][0]['keyPhrases'][0];
-$phrase ="";
+ $phrase = "";
 for($num = 0;$num <=10 ; $num++){
     $phrase = $pass['documents'][0]['keyPhrases'][$num];
-    echo $phrase. "<br /> ";
+   // echo $phrase. "<br /> ";
 }
 
-
+print_r($phrase);
 ?>
