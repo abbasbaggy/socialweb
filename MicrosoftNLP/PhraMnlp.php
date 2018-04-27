@@ -73,7 +73,7 @@ echo "</pre>";
 //echo $pass['documents'][0]['keyPhrases'][0];
  $phrase = "";
  $search = "";
- require ('NewsExtract/dbconnect');
+
 for($num = 0;$num <=10 ; $num++){
     $phrase = $pass['documents'][0]['keyPhrases'][$num];
     echo $phrase. " ";
@@ -81,6 +81,7 @@ for($num = 0;$num <=10 ; $num++){
   //  $search = 'SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$phrase."%')';
 
 }
+
 $search = 'SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$phrase."%')';
 $datas = mysqli_query($con, $search);
 if(mysqli_num_rows($datas)> 0){
