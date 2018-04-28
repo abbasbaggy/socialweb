@@ -80,5 +80,7 @@ echo "</pre>";
 
 
 
-foreach ($pass['documents'][0]['keyPhrases'] as $phrase);
+foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
+    echo $phrase ."<br/>";
+}
 echo $phrase;
