@@ -91,7 +91,7 @@ foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
 //print_r($phrase_arr);
 $strP = implode(" ",$phrase_arr);
 //echo $strP;
-require ('dbconnect.php');
+require ('../MicrosoftNLP/dbconnect.php');
 $search = 'SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$strP."%')';
 
 $datas = mysqli_query($con, $search);
