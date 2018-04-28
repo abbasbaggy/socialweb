@@ -101,7 +101,7 @@ $query = mysqli_query($con,$datas);
 
 if(mysqli_num_rows($query)> 0){
     while ($result = mysqli_fetch_array($query) ){
-        echo $result;
+        print_r( $result);
     }
 } else{
     echo  "Error" . mysqli_error($con);
