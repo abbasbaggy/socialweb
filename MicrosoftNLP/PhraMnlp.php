@@ -74,14 +74,14 @@ echo "</pre>";
 */
 
 //echo $pass['documents'][0]['keyPhrases'][0];
- $phrase1 = '';
+ $phrase1 = array();
  $search = "";
 
 
 
 
 foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
-    $phrase1 .=$phrase['phr'];
+    $phrase1[]=$phrase['phr'];
 }
- //$phrase = $phrase1;
-echo $phrase1;
+ $strP = "'".implode(" ",$phrase1)."'";
+echo $strP;
