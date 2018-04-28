@@ -92,9 +92,12 @@ foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
 $strP = implode(" ",$phrase_arr);
 //echo $strP;
 require ('../MicrosoftNLP/dbconnect.php');
-$search = 'SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$strP."%')';
 
-$datas = mysqli_query($con, $search);
+mysqli_select_db($con,`bbcnewstop`) or die(mysqli_error($con));
+
+$datas = mysqli_query($con,"SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$strP."%'");
+
+
 if(mysqli_num_rows($datas)> 0){
     while ($result = mysqli_fetch_array($datas) ){
         echo "<p>".$results. "</p>>";
