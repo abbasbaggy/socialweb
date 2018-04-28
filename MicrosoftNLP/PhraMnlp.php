@@ -89,5 +89,5 @@ require ('dbconnect.php');
 
     }
 
-
+    echo $_SESSION['phrase'];
 ?>
