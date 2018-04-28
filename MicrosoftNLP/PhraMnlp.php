@@ -81,11 +81,10 @@ echo "</pre>";
     $phrase = $pass['documents'][0]['keyPhrases'][$num]." ";
     //echo $phrase;
 
-   // session_start();
+    session_start();
     $phrase = $_SESSION['phrase'];
         echo $_SESSION['phrase'];
 
-    //$search = 'SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$phrase."%')';
 
     }
 
