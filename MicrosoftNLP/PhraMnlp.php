@@ -6,6 +6,9 @@
  * Time: 14:40
  */
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 $array = $_REQUEST['data'];
 $lan = $_SESSION['language'];
 
@@ -81,5 +84,4 @@ echo "</pre>";
         //echo $phrase;
 
     }
-
-echo $phr;
+    echo $phr;
