@@ -88,7 +88,7 @@ echo "</pre>";
     echo $phrase;
 */
 
-foreach ($pass['documents'][0] as $num){
+foreach ($pass as $num){
     echo $num['keyPhrases'];
 
 }
