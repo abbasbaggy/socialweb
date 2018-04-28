@@ -79,7 +79,7 @@ require ('dbconnect.php');
 
     for($num ;$num <=10 ; $num++){
     $phrase = $pass['documents'][0]['keyPhrases'][$num]." ";
-    echo $phrase;
+    //echo $phrase;
 
     session_start();
     $phrase = $_SESSION['phrase'];
