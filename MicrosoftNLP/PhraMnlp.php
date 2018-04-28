@@ -74,7 +74,7 @@ echo "</pre>";
  $phrase= " ";
  $search = "";
  $num = 0;
-require ('dbconnect.php');
+
 
 
     for($num ;$num <=10 ; $num++){
@@ -83,11 +83,11 @@ require ('dbconnect.php');
 
    // session_start();
     $phrase = $_SESSION['phrase'];
-
+        echo $_SESSION['phrase'];
 
     //$search = 'SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$phrase."%')';
 
     }
 
-    echo $_SESSION['phrase'];
+
 ?>
