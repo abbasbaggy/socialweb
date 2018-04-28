@@ -99,7 +99,7 @@ $datas = "SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$strP."%')";
 
 $query = mysqli_query($con,$datas);
 
-if(mysqli_num_rows($con,$datas)> 0){
+if(mysqli_num_rows($query)> 0){
     while ($result = mysqli_fetch_array($con,$datas) ){
         echo "<p>".$result. "</p>>";
     }
