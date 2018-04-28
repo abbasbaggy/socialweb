@@ -93,15 +93,16 @@ $strP = implode(" ",$phrase_arr);
 //echo $strP;
 require ('../MicrosoftNLP/dbconnect.php');
 
-mysqli_select_db($con,`bbcnewstop`) or die(mysqli_error($con));
+//mysqli_select_db($con,`bbcnewstop`) or die(mysqli_error($con));
 
-$datas = mysqli_query($con,"SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$strP."%'");
+$datas = "SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$strP."%')";
 
+$query = mysqli_query($con,$datas);
 
-if(mysqli_num_rows($datas)> 0){
-    while ($result = mysqli_fetch_array($datas) ){
-        echo "<p>".$results. "</p>>";
+if(mysqli_num_rows($con,$datas)> 0){
+    while ($result = mysqli_fetch_array($con,$datas) ){
+        echo "<p>".$result. "</p>>";
     }
 } else{
-    echo "No result";
+    echo  "Error" . mysqli_error($con);
 }
