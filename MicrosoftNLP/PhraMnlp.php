@@ -77,7 +77,7 @@ echo "</pre>";
 require ('dbconnect.php');
 
 
-    for($num ;$num < max($num) ; $num++){
+    for($num ;max($num)>0 ; $num++){
     $phrase = $pass['documents'][0]['keyPhrases'][$num]." ";
     echo $phrase;
 
