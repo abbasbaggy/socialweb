@@ -87,10 +87,10 @@ echo "</pre>";
     }
     echo $phrase;
 */
-
+session_start();
 foreach ($pass['documents'][0]['keyPhrases'] as $num){
     //echo $num;
-    session_start();
-    $num =$_SESSION['phrase'];
+
+    $num += $_SESSION['phrase'];
 }
 echo $_SESSION['phrase'];
