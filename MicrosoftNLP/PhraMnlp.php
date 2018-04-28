@@ -76,7 +76,7 @@ $phrase= " ";
  $num = 0;
 require ('dbconnect.php');
 
-while($num <= 10){
+while($num != null){
     $phrase = $pass['documents'][0]['keyPhrases'][$num];
     $num++;
 }
