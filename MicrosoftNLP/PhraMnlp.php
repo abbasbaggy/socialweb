@@ -77,13 +77,11 @@ echo "</pre>";
 
 
 
-    for($num ;$num <=10 ; $num++){
-    $phrase = $pass['documents'][0]['keyPhrases'][$num]." ";
-    //echo $phrase;
+    for($num ;$num <=10 ; $num++) {
+        $phrase = $pass['documents'][0]['keyPhrases'][$num] . " ";
+        echo $phrase;
 
-    session_start();
-    $phrase = $_SESSION['phrase'];
-        echo $_SESSION['phrase'];
+
 
 
     }
