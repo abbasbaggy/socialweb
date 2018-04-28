@@ -74,13 +74,13 @@ echo "</pre>";
 $phrase;
  $search = "";
 require ('dbconnect.php');
-for($num = 0;$num <=10 ; $num++){
-    $phrase += $pass['documents'][0]['keyPhrases'][$num]." ";
+    for($num = 0;$num <=10 ; $num++){
+    $phrase=+ $pass['documents'][0]['keyPhrases'][$num]." ";
     return $phrase;
 
     //$search = 'SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$phrase."%')';
 
-}
+    }
     echo $phrase;
 //$search = 'SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$phrase."%')';
 
