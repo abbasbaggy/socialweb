@@ -80,8 +80,8 @@ echo "</pre>";
 
 
     for($num =0 ;$num <=10 ; $num++) {
-        $phr = $pass['documents'][0]['keyPhrases'][$num] . " ";
+        $phrase = $pass['documents'][0]['keyPhrases'][$num] . " ";
         //echo $phrase;
 
     }
-    echo $phr;
+    echo $phrase;
