@@ -74,13 +74,13 @@ echo "</pre>";
 */
 
 //echo $pass['documents'][0]['keyPhrases'][0];
- $phrase= " ";
+ $phrase1;
  $search = "";
 
 
 
 
 foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
-    $phrase1 += $phrase;
+    $phrase += $phrase1;
 }
 echo $phrase1;
