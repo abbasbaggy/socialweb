@@ -81,6 +81,6 @@ echo "</pre>";
 
 
 foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
-    echo $phrase ."<br/>";
+    $phrase1 = $phrase;
 }
-echo $phrase;
+echo $phrase1;
