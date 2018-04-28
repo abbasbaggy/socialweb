@@ -72,7 +72,7 @@ echo "<pre>";
 print_r($pass);
 echo "</pre>";
 foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
-    echo $phrase " ";
+    echo $phrase "<br/>";
 }
 */
 
@@ -89,5 +89,6 @@ foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
 //print_r($phrase_arr);
 $strP = implode(" ",$phrase_arr);
 //echo $strP;
-
+session_destroy();
+session_start();
 $strP = $_SESSION['phrase'];
