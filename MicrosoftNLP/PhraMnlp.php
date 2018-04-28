@@ -78,7 +78,7 @@ echo "</pre>";
  $search = "";
 
 
-
+session_start();
 
 foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
     $phrase = $_SESSION['phrase'];
