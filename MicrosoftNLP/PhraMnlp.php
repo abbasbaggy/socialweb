@@ -71,7 +71,7 @@ echo "</pre>";
 */
 
 //echo $pass['documents'][0]['keyPhrases'][0];
-$phrase= " ";
+ $phrase= " ";
  $search = "";
  $num = 0;
 require ('dbconnect.php');
