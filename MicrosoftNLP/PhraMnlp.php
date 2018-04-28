@@ -78,20 +78,9 @@ echo "</pre>";
  $search = "";
 
 
-/*
-    for($num =0 ;$num <=10 ; $num++) {
 
-        $phrase = $pass['documents'][0]['keyPhrases'][$num] . " ";
-        //echo $phrase;
 
-    }
-    echo $phrase;
-*/
-session_start();
-$_SESSION['phrase'];
-foreach ($pass['documents'][0]['keyPhrases'] as $num){
-    //echo $num;
+foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
 
-    $num += $_SESSION['phrase'];
 }
-echo $_SESSION['phrase'];
+echo $phrase;
