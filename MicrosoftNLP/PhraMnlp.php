@@ -78,10 +78,17 @@ echo "</pre>";
  $search = "";
 
 
-
+/*
     for($num =0 ;$num <=10 ; $num++) {
+
         $phrase = $pass['documents'][0]['keyPhrases'][$num] . " ";
         //echo $phrase;
 
     }
     echo $phrase;
+*/
+
+foreach ($pass['documents'][0] as $num){
+    echo $num['keyPhrases'];
+
+}
