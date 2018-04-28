@@ -8,6 +8,7 @@
 $phrase = $_SESSION['phrase'];
 
 echo $phrase;
+/*
 $search = 'SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$phrase."%')';
 
 $datas = mysqli_query($con, $search);
@@ -18,3 +19,4 @@ if(mysqli_num_rows($datas)> 0){
 } else{
     echo "No result";
 }
+*/

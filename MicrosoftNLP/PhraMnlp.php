@@ -71,6 +71,9 @@ $pass = json_decode($result,true);
 echo "<pre>";
 print_r($pass);
 echo "</pre>";
+foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
+    echo $phrase " ";
+}
 */
 
 //echo $pass['documents'][0]['keyPhrases'][0];
@@ -85,4 +88,6 @@ foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
 }
 //print_r($phrase_arr);
 $strP = implode(" ",$phrase_arr);
-echo $strP;
+//echo $strP;
+
+$strP = $_SESSION['phrase'];
