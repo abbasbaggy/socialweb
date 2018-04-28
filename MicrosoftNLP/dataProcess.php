@@ -5,7 +5,7 @@
  * Date: 28/04/2018
  * Time: 12:51
  */
-$phrase = $_SESSION['phrase'];
+$phrase = $_SESSION['phr'];
 
 echo $phrase;
 /*
