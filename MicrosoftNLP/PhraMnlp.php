@@ -88,4 +88,4 @@ foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
 }
 //print_r($phrase_arr);
 $strP = implode(" ",$phrase_arr);
-//echo $strP;
+echo $strP;
