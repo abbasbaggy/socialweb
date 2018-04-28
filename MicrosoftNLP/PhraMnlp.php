@@ -75,6 +75,13 @@ $phrase;
  $search = "";
  $num = 0;
 require ('dbconnect.php');
+
+while($num < 10){
+    $phrase=+ $pass['documents'][0]['keyPhrases'][$num];
+    $num++;
+}
+    echo $phrase;
+/*
     for($num ;$num <=10 ; $num++){
     $phrase=+ $pass['documents'][0]['keyPhrases'][$num]." ";
     return $phrase;
