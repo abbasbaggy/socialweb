@@ -81,6 +81,6 @@ echo "</pre>";
 
 
 foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
-    $phrase_arr[] =$phrase['phr'];
+    $phrase_arr[] =$phrase;
 }
 print_r($phrase_arr);
