@@ -81,6 +81,6 @@ echo "</pre>";
 
 
 foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
-
+    $phrase = $_SESSION['phrase'];
 }
-echo $phrase;
+echo $_SESSION['phrase'];
