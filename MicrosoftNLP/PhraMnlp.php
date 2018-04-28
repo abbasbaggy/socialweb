@@ -88,6 +88,7 @@ echo "</pre>";
     echo $phrase;
 */
 session_start();
+$_SESSION['phrase'];
 foreach ($pass['documents'][0]['keyPhrases'] as $num){
     //echo $num;
 
