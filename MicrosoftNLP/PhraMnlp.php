@@ -81,7 +81,7 @@ require ('dbconnect.php');
     $phrase = $pass['documents'][0]['keyPhrases'][$num]." ";
     //echo $phrase;
 
-    session_start();
+   // session_start();
     $phrase = $_SESSION['phrase'];
 
 
