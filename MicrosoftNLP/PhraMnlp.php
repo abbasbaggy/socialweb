@@ -12,6 +12,7 @@ ini_set('display_errors', 1);
 $array = $_REQUEST['data'];
 $lan = $_SESSION['language'];
 
+
 // NOTE: Be sure to uncomment the following line in your php.ini file.
 // ;extension=php_openssl.dll
 
@@ -88,4 +89,15 @@ foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
 }
 //print_r($phrase_arr);
 $strP = implode(" ",$phrase_arr);
-echo $strP;
+//echo $strP;
+
+$search = 'SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$strP."%')';
+require ('dbconnect.php');
+$datas = mysqli_query($con, $search);
+if(mysqli_num_rows($datas)> 0){
+    while ($result = mysqli_fetch_array($datas) ){
+        echo "<p>".$results. "</p>>";
+    }
+} else{
+    echo "No result";
+}
