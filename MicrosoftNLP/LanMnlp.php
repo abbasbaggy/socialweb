@@ -87,5 +87,5 @@ include_once ('SenMnLP.php');
 include_once ('PhraMnlp.php');
 //include_once ('dataProcess.php')
 
-?>
+
 
