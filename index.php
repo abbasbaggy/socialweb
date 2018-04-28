@@ -1,5 +1,5 @@
 <?php
-
+$_SESSION['phr'];
 ?>
 
 <!DOCTYPE html>
