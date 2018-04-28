@@ -91,4 +91,4 @@ $strP = implode(" ",$phrase_arr);
 //echo $strP;
 session_destroy();
 session_start();
-$strP = $_SESSION['phrase'];
+$strP = $_SESSION['phr'];
