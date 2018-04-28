@@ -71,28 +71,26 @@ echo "</pre>";
 */
 
 //echo $pass['documents'][0]['keyPhrases'][0];
- $phrase = "";
+
  $search = "";
 require ('dbconnect.php');
 for($num = 0;$num <=10 ; $num++){
     $phrase = $pass['documents'][0]['keyPhrases'][$num]." ";
-    echo $phrase;
+    return $phrase;
 
-    $search = 'SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$phrase."%')';
-
-    $datas = mysqli_query($con, $search);
-    if(mysqli_num_rows($datas)> 0){
-        while ($result = mysqli_fetch_array($datas) ){
-            echo "<p>".$results. "</p>>";
-        }
-    } else{
-        echo "No result";
-    }
-
+    //$search = 'SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$phrase."%')';
 
 }
-
+    echo $phrase;
 //$search = 'SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$phrase."%')';
 
-
+/*$datas = mysqli_query($con, $search);
+if(mysqli_num_rows($datas)> 0){
+    while ($result = mysqli_fetch_array($datas) ){
+        echo "<p>".$results. "</p>>";
+    }
+} else{
+    echo "No result";
+}
+*/
 ?>
