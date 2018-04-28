@@ -93,7 +93,7 @@ $strP = implode(" ",$phrase_arr);
 //echo $strP;
 require ('../MicrosoftNLP/dbconnect.php');
 
-mysqli_select_db($con,'bbcnewstop') or die(mysqli_error($con));
+mysqli_select_db($con,"bbcnewstop") or die(mysqli_error($con));
 
 $datas = mysqli_query($con,"SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$strP."%'");
 
