@@ -72,10 +72,11 @@ $pass = json_decode($result,true);
 echo "<pre>";
 print_r($pass);
 echo "</pre>";
-foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
-    echo $phrase "<br/>";
-}
 */
+foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
+    echo $phrase ."<br/>";
+}
+
 
 //echo $pass['documents'][0]['keyPhrases'][0];
  $phrase1 = array();
@@ -90,9 +91,9 @@ foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
 //print_r($phrase_arr);
 $strP = implode(" ",$phrase_arr);
 //echo $strP;
-
-$search = 'SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$strP."%')';
 require ('dbconnect.php');
+$search = 'SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$strP."%')';
+
 $datas = mysqli_query($con, $search);
 if(mysqli_num_rows($datas)> 0){
     while ($result = mysqli_fetch_array($datas) ){
