@@ -76,20 +76,15 @@ echo "</pre>";
  $num = 0;
 require ('dbconnect.php');
 
-while($num != null){
-    $phrase = $pass['documents'][0]['keyPhrases'][$num];
-    $num++;
-}
+
+    for($num ;$num < max($num) ; $num++){
+    $phrase = $pass['documents'][0]['keyPhrases'][$num]." ";
     echo $phrase;
-/*
-    for($num ;$num <=10 ; $num++){
-    $phrase=+ $pass['documents'][0]['keyPhrases'][$num]." ";
-    return $phrase;
 
     //$search = 'SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$phrase."%')';
 
     }
-    echo $phrase;
+    //echo $phrase;
 //$search = 'SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$phrase."%')';
 
 /*$datas = mysqli_query($con, $search);
