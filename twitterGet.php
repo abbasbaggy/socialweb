@@ -75,10 +75,10 @@ foreach($string as $items)
             echo "Screen name :" . $item['user']['screen_name'] . "<br />";
             echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
             ?>
-           <a name="input" type="text"  id="input" > <?php echo "TWEETs:  " . $item['text'] . "<br />"; ?> </a>
+           <span id="input" style="background-color: azure" > <?php echo "TWEETs:  " . $item['text'] . "<br />"; ?> </span>
             <textarea id="holdText" style="display:none;"></textarea>
             <button onclick ='myFunction()'>Select tweet</button>
-        <script>
+        <script language="JavaScript">
             function myFunction() {
 
                 holdText.innerText = input.innerText;
