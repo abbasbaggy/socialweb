@@ -155,8 +155,8 @@ for($renum= 0;count($result1_arr) >= $renum;$renum++){
             array ( 'id' => $renum, 'language' => $lan, 'text' => $bbcarr )
         )
     );
-    $bbcfinal = GetSentiment1($host, $path, $accessKey, $data2);
-    print_r($bbcfinal);
+   // $bbcfinal = GetSentiment1($host, $path, $accessKey, $data2);
+    print_r($data2);
 }
 
 
