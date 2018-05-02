@@ -76,14 +76,14 @@ foreach($string as $items)
             echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
             ?>
            <span id="input" style="background-color: azure" > <?php echo "TWEETs:  " . $item['text'] . "<br />"; ?> </span>
-            <textarea id="holdText" style="display:none;"></textarea>
+
             <button onclick ='myFunction()'>Select tweet</button>
         <script language="JavaScript">
             function myFunction() {
 
-                holdText.innerText = input.innerText;
-                Copied = holdText.createTextRange();
-                Copied.execCommand("Copy");
+                var copyText = document.getElementById("input");
+                copyText.select();
+                document.execCommand("Copy");
                 alert("tweet copied paste in box");
             }
 
