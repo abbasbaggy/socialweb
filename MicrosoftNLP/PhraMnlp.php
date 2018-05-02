@@ -152,7 +152,7 @@ for($renum= 0;count($result1_arr) >= $renum;$renum++){
 
     $data2 = array (
         'documents' => array (
-            array ( 'id' => '1', 'language' => $lan, 'text' => $bbcarr )
+            array ( 'id' => $renum, 'language' => $lan, 'text' => $bbcarr )
         )
     );
     $resultse1 = GetSentiment1($host1, $path1, $accessKey1, $data2);
