@@ -146,7 +146,7 @@ function GetSentiment1 ($host1, $path1, $key1, $data2) {
     return $resultse1;
 }
 
-/*
+
 for($renum= 0;count($result1_arr) >= $renum;$renum++){
    $bbcarr=  $result1_arr[$renum]['Description'];
 
@@ -157,15 +157,8 @@ for($renum= 0;count($result1_arr) >= $renum;$renum++){
     );
     $resultse1 = GetSentiment1($host1, $path1, $accessKey1, $data2);
     print_r($resultse1);
-}*/
+}
 
-$data2 = array (
-    'documents' => array (
-        array ( 'id' => '1', 'language' => $lan, 'text' => 'I completely understand why this is news, I mean the task of changing a soiled ' )
-    )
-);
-$resultse1 = GetSentiment1($host1, $path1, $accessKey1, $data2);
-echo json_encode (json_decode ($resultse1), JSON_PRETTY_PRINT);
 
 
 /*
