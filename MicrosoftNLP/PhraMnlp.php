@@ -156,7 +156,8 @@ for($renum= 0;count($result1_arr) >= $renum;$renum++){
         )
     );
     $resultse1 = GetSentiment1($host1, $path1, $accessKey1, $data2);
-    print_r($resultse1);
+    echo json_encode (json_decode ($resultse1), JSON_PRETTY_PRINT);
+
 }
 
 
