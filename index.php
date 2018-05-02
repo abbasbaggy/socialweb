@@ -106,8 +106,8 @@
                     var copyText = document.getElementById("input");
                     /*select the text field */
                     copyText.select();
-                    /*copy the text inside the text field*/
                     document.execCommand("Copy");
+                    alert("tweet copied paste in box");
 
 
                 }
