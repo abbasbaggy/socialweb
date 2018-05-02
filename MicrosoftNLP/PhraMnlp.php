@@ -108,12 +108,14 @@ if(mysqli_num_rows($query)> 0){
     echo  "Error" . mysqli_error($con);
 }
 
-    echo $result1_arr;
+echo "<pre>";
+print_r($result1_arr);
+echo "</pre>";
 
 
 
 foreach ($result1 as $new){
-    $bbcsen= $new['Description'];
+   // $bbcsen= $new['Description'];
 
     $resultBbc = GetSentiment($host, $path, $accessKey, $bbcsen);
     echo $resultBbc;
