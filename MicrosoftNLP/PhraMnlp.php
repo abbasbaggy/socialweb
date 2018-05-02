@@ -107,7 +107,7 @@ if(mysqli_num_rows($query)> 0){
 } else{
     echo  "Error" . mysqli_error($con);
 }
-
+/*
 echo "<pre>";
 print_r($result1_arr);
 echo "</pre>";
@@ -121,22 +121,50 @@ foreach ($result1_arr as $new){
     //
     //echo $resultBbc;
 
-}*
+}*/
+function GetSentiment ($host, $path, $key, $data2) {
+
+    $headers = "Content-type: text/json\r\n" .
+        "Ocp-Apim-Subscription-Key: $key\r\n";
+
+    $data = json_encode ($data2);
+
+    // NOTE: Use the key 'http' even if you are making an HTTPS request. See:
+    // http://php.net/manual/en/function.stream-context-create.php
+    $options = array (
+        'http' => array (
+            'header' => $headers,
+            'method' => 'POST',
+            'content' => $data2
+        )
+    );
+    $context  = stream_context_create ($options);
+    $result = file_get_contents ($host . $path, false, $context);
+    return $result;
+}
+
 
 for($renum= 1;$renum <= max($result1_arr);$renum++){
     $bbcarr= $result1_arr[$renum]['Description'];
 
-    $data2 = array (
+    $databbc = array (
         'documents' => array (
             array ( 'id' => $renum, 'language' => $lan, 'text' => $bbcarr )
         )
     );
 
-    $resultBbc = GetSentiment($host, $path, $accessKey, $data2);
 
-    $bbcfinal_arr[] = $resultBbc;
 }
+echo "data bbc";
+echo "<pre>";
+print_r($databbc);
+echo "</pre>";
+
+
+/*
+$bbcfinal = GetSentiment($host, $path, $accessKey, $data2);
 echo " please wait";
 echo "<pre>";
-print_r($bbcfinal_arr);
+print_r($bbcfinal);
 echo "</pre>";
+*/
