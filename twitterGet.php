@@ -75,7 +75,7 @@ foreach($string as $items)
             echo "Screen name :" . $item['user']['screen_name'] . "<br />";
             echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
             ?>
-           <a type="text"  id="input" > <?php echo "TWEETs:  " . $item['text'] . "<br />"; ?> </a>
+           <a name="input" type="text"  id="input" > <?php echo "TWEETs:  " . $item['text'] . "<br />"; ?> </a>
             <button onclick = "myFunction()">Select tweet</button>
           <?php  echo "      " . "<br />";
       //  }
@@ -91,7 +91,8 @@ foreach($string as $items)
 <script>
 function myFunction(){
 /*get text feild */
-var copyText = document.getElementById("input");
+
+var copyText = document.getElementsByName("input");
 /*select the text field */
 copyText.select();
 document.execCommand("Copy");
