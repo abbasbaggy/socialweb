@@ -100,9 +100,22 @@ $datas = "SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$strP."%')";
 $query = mysqli_query($con,$datas);
 
 if(mysqli_num_rows($query)> 0){
-    while ($result = mysqli_fetch_array($query) ){
-        print_r( $result);
+    while ($result1 = mysqli_fetch_array($query) ){
+       // print_r( $result1);
+        $result1_arr[] = $result1;
     }
 } else{
     echo  "Error" . mysqli_error($con);
+}
+
+    echo $result1_arr;
+
+
+
+foreach ($result1 as $new){
+    $bbcsen= $new['Description'];
+
+    $resultBbc = GetSentiment($host, $path, $accessKey, $bbcsen);
+    echo $resultBbc;
+
 }
