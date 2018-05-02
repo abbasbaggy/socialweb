@@ -77,7 +77,7 @@ foreach($string as $items)
             ?>
            <span id="input" style="background-color: azure" > <?php echo "TWEETs:  " . $item['text'] . "<br />"; ?> </span>
 
-            <button onclick ='myFunction()'>Select tweet</button>
+            <button onclick ="myFunction()">Select tweet</button>
         <script language="JavaScript">
             function myFunction() {
 
