@@ -153,7 +153,7 @@ for($renum= 1;$renum <= max($result1_arr);$renum++){
         )
     );
 
-
+    print_r($databbc);
 }
 echo "data bbc";
 echo "<pre>";
