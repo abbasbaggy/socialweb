@@ -116,8 +116,13 @@ echo "</pre>";
 
 foreach ($result1_arr as $new){
     $bbcsen= $new['Description'];
-    echo $bbcsen. "<br/>";
+    //echo $bbcsen. "<br/>";
+
     //$resultBbc = GetSentiment($host, $path, $accessKey, $bbcsen);
     //echo $resultBbc;
 
+}
+
+for($renum= 1;$renum <= max($result1_arr);$renum++){
+    echo $result1_arr[$renum]['Description'];
 }
