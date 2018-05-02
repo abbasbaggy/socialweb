@@ -130,7 +130,7 @@ function GetSentiment1 ($host1, $path1, $key1, $data2) {
     $headers1 = "Content-type: text/json\r\n" .
         "Ocp-Apim-Subscription-Key: $key1\r\n";
 
-    $data = json_encode ($data2);
+    $data2 = json_encode ($data2);
 
     // NOTE: Use the key 'http' even if you are making an HTTPS request. See:
     // http://php.net/manual/en/function.stream-context-create.php
