@@ -77,6 +77,18 @@ foreach($string as $items)
             ?>
            <a name="input" type="text"  id="input" > <?php echo "TWEETs:  " . $item['text'] . "<br />"; ?> </a>
             <button onclick = "myFunction()">Select tweet</button>
+        <script>
+            function myFunction(){
+                /*get text feild */
+
+                var copyText = document.getElementsByName("input");
+                /*select the text field */
+                copyText.select();
+                document.execCommand("Copy");
+                alert("tweet copied paste in box");
+
+        </script>
+
           <?php  echo "      " . "<br />";
       //  }
 
