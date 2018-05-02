@@ -122,10 +122,10 @@ foreach ($result1_arr as $new){
     //echo $resultBbc;
 
 }*/
-function GetSentiment ($host, $path, $key, $data2) {
+function GetSentiment1 ($host1, $path1, $key1, $data2) {
 
     $headers = "Content-type: text/json\r\n" .
-        "Ocp-Apim-Subscription-Key: $key\r\n";
+        "Ocp-Apim-Subscription-Key: $key1\r\n";
 
     $data = json_encode ($data2);
 
@@ -139,7 +139,7 @@ function GetSentiment ($host, $path, $key, $data2) {
         )
     );
     $context  = stream_context_create ($options);
-    $result = file_get_contents ($host . $path, false, $context);
+    $result = file_get_contents ($host1 . $path1, false, $context);
     return $result;
 }
 
