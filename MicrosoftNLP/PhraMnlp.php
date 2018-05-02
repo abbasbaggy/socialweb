@@ -121,7 +121,7 @@ foreach ($result1_arr as $new){
     //
     //echo $resultBbc;
 
-}*
+}*/
 function GetSentiment ($host, $path, $key, $data2) {
 
     $headers = "Content-type: text/json\r\n" .
@@ -143,7 +143,7 @@ function GetSentiment ($host, $path, $key, $data2) {
     return $result;
 }
 
-*/
+
 for($renum= 0;count($result1_arr) >= $renum;$renum++){
    $bbcarr=  $result1_arr[$renum]['Description'];
 
