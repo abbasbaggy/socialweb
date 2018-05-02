@@ -127,23 +127,23 @@ $host1 = 'https://southcentralus.api.cognitive.microsoft.com';
 $path1 = '/text/analytics/v2.0/sentiment';
 function GetSentiment1 ($host1, $path1, $key1, $data2) {
 
-    $headers = "Content-type: text/json\r\n" .
+    $headers1 = "Content-type: text/json\r\n" .
         "Ocp-Apim-Subscription-Key: $key1\r\n";
 
     $data = json_encode ($data2);
 
     // NOTE: Use the key 'http' even if you are making an HTTPS request. See:
     // http://php.net/manual/en/function.stream-context-create.php
-    $options = array (
+    $options1 = array (
         'http' => array (
-            'header' => $headers,
+            'header' => $headers1,
             'method' => 'POST',
             'content' => $data2
         )
     );
-    $context  = stream_context_create ($options);
-    $result = file_get_contents ($host1 . $path1, false, $context);
-    return $result;
+    $context1  = stream_context_create ($options1);
+    $resultse1 = file_get_contents ($host1 . $path1, false, $context1);
+    return $resultse1;
 }
 
 
@@ -155,8 +155,8 @@ for($renum= 0;count($result1_arr) >= $renum;$renum++){
             array ( 'id' => '1', 'language' => $lan, 'text' => $bbcarr )
         )
     );
-    $bbcfinal = GetSentiment1($host, $path, $accessKey, $data2);
-    print_r($bbcfinal);
+    $resultse1 = GetSentiment1($host, $path, $accessKey, $data2);
+    print_r($resultse1);
 }
 
 
