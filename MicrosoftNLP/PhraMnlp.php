@@ -121,7 +121,7 @@ foreach ($result1_arr as $new){
     //
     //echo $resultBbc;
 
-}*/
+}*
 
 for($renum= 1;$renum <= max($result1_arr);$renum++){
     $bbcarr= $result1_arr[$renum]['Description'];
