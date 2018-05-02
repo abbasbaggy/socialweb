@@ -145,15 +145,15 @@ function GetSentiment ($host, $path, $key, $data2) {
 
 */
 for($renum= 0;max($result1_arr) >= $renum;$renum++){
-    $bbcarr= $result1_arr[$renum]['Description'];
+    echo $result1_arr[$renum]['Description'];
 
-    $databbc = array (
-        'documents' => array (
-            array ( 'id' => $renum, 'language' => $lan, 'text' => $bbcarr )
-        )
-    );
+   // $databbc = array (
+     //   'documents' => array (
+       //     array ( 'id' => $renum, 'language' => $lan, 'text' => $bbcarr )
+        //)
+   // );
 
-    print_r($databbc);
+    //print_r($databbc);
 }
 echo "data bbc";
 echo "<pre>";
