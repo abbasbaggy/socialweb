@@ -122,7 +122,7 @@ foreach ($result1_arr as $new){
     //echo $resultBbc;
 
 }*/
-$accessKey = 'dd0c99e93d534a2c9ad064d00907ca5f';
+$accessKey1 = 'dd0c99e93d534a2c9ad064d00907ca5f';
 $host1 = 'https://southcentralus.api.cognitive.microsoft.com';
 $path1 = '/text/analytics/v2.0/sentiment';
 function GetSentiment1 ($host1, $path1, $key1, $data2) {
@@ -155,7 +155,7 @@ for($renum= 0;count($result1_arr) >= $renum;$renum++){
             array ( 'id' => '1', 'language' => $lan, 'text' => $bbcarr )
         )
     );
-    $resultse1 = GetSentiment1($host, $path, $accessKey, $data2);
+    $resultse1 = GetSentiment1($host1, $path1, $accessKey1, $data2);
     print_r($resultse1);
 }
 
