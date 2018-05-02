@@ -156,16 +156,12 @@ for($renum= 0;count($result1_arr) >= $renum;$renum++){
         )
     );
     $resultse1 = GetSentiment1($host1, $path1, $accessKey1, $data2);
-    echo json_encode (json_decode ($resultse1), JSON_PRETTY_PRINT);
-
+   // echo json_encode (json_decode ($resultse1), JSON_PRETTY_PRINT);
+    $resultse1_arr[] = $resultse1;
 }
-
-
-
-/*
-
-echo " please wait";
 echo "<pre>";
-print_r($bbcfinal);
+print_r($resultse1_arr);
 echo "</pre>";
-*/
+
+
+
