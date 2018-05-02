@@ -76,16 +76,16 @@ foreach($string as $items)
             echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
             ?>
            <a name="input" type="text"  id="input" > <?php echo "TWEETs:  " . $item['text'] . "<br />"; ?> </a>
-            <button onclick = "myFunction()">Select tweet</button>
+            <button onclick ='myFunction()'>Select tweet</button>
         <script>
-            function myFunction(){
-                /*get text feild */
+            function myFunction() {
 
                 var copyText = document.getElementsByName("input");
                 /*select the text field */
                 copyText.select();
                 document.execCommand("Copy");
                 alert("tweet copied paste in box");
+            }
 
         </script>
 
