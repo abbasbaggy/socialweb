@@ -116,7 +116,7 @@ echo "</pre>";
 
 foreach ($result1_arr as $new){
     $bbcsen= $new['Description'];
-    echo $result. "<br/>";
+    echo $bbcsen. "<br/>";
     //$resultBbc = GetSentiment($host, $path, $accessKey, $bbcsen);
     //echo $resultBbc;
 
