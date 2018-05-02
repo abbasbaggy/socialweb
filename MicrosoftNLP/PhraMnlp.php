@@ -144,7 +144,7 @@ function GetSentiment ($host, $path, $key, $data2) {
 }
 
 */
-for($renum= 1;max($result1_arr)> $renum;$renum++){
+for($renum= 0;max($result1_arr) >= $renum;$renum++){
     $bbcarr= $result1_arr[$renum]['Description'];
 
     $databbc = array (
