@@ -153,12 +153,9 @@ for($renum= 0;count($result1_arr) >= $renum;$renum++){
         )
     );
 
-    //print_r($databbc);
+    print_r($databbc);
 }
 echo "data bbc";
-echo "<pre>";
-print_r($databbc);
-echo "</pre>";
 
 
 /*
