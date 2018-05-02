@@ -75,7 +75,7 @@ foreach($string as $items)
             echo "Screen name :" . $item['user']['screen_name'] . "<br />";
             echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
             ?>
-           <a id="input" > <?php echo "TWEETs:  " . $item['text'] . "<br />"; ?> </a>
+           <a name="input" id="input" > <?php echo "TWEETs:  " . $item['text'] . "<br />"; ?> </a>
             <button onclick = "myFunction()">Select tweet</button>
           <?php  echo "      " . "<br />";
       //  }

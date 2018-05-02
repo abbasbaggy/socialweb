@@ -85,7 +85,7 @@
                 </textarea>
                 <input type="submit">
             </form>
-            <iframe src="" name="results" height="200" width="700">
+            <iframe src="" name="results" height="500" width="700">
 
             </iframe>
 

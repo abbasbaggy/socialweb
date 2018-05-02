@@ -114,10 +114,10 @@ echo "</pre>";
 
 
 
-foreach ($result1 as $new){
-   // $bbcsen= $new['Description'];
-
-    $resultBbc = GetSentiment($host, $path, $accessKey, $bbcsen);
-    echo $resultBbc;
+foreach ($result1_arr as $new){
+    $bbcsen= $new['Description'];
+    echo $result. "<br/>";
+    //$resultBbc = GetSentiment($host, $path, $accessKey, $bbcsen);
+    //echo $resultBbc;
 
 }
