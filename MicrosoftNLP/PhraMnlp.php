@@ -113,16 +113,30 @@ print_r($result1_arr);
 echo "</pre>";
 
 
-
+/*
 foreach ($result1_arr as $new){
-    $bbcsen= $new['Description'];
+   // $bbcsen= $new['Description'];
     //echo $bbcsen. "<br/>";
 
-    //$resultBbc = GetSentiment($host, $path, $accessKey, $bbcsen);
+    //
     //echo $resultBbc;
 
-}
+}*/
 
 for($renum= 1;$renum <= max($result1_arr);$renum++){
-    echo $result1_arr[$renum]['Description'];
+    $bbcarr= $result1_arr[$renum]['Description'];
+
+    $data2 = array (
+        'documents' => array (
+            array ( 'id' => $renum, 'language' => $lan, 'text' => $bbcarr )
+        )
+    );
+
+    $resultBbc = GetSentiment($host, $path, $accessKey, $data2);
+
+    $bbcfinal_arr[] = $resultBbc;
 }
+echo " please wait";
+echo "<pre>";
+print_r($bbcfinal_arr);
+echo "</pre>";
