@@ -59,5 +59,5 @@ $sen =  json_decode($result, true);
 
 
 
-$senti = $sen['documents'][0]['score'][0];
+$senti = $sen['documents'][0]['score'];
 echo $senti ."<br/>";
