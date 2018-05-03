@@ -5,8 +5,7 @@
  * Date: 23/04/2018
  * Time: 12:05
  */
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+
 
 require('NewsExtract/dbconnect.php');
 //$response=file_get_contents("https://newsapi.org/v2/top-headlines?sources=daily-mail&apiKey=5c167ce6600f424281d02fa7891d6ee3");
