@@ -119,7 +119,7 @@
             </script>
 
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing  t.</p>
+
             <hr>
             <h3>Test</h3>
             <p>Lorem ipsum...</p>

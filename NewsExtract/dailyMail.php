@@ -34,7 +34,7 @@ foreach ($responsearray as $item)
         echo "Title :" . $row['title'] . "<br />";
         echo "Description :" . $row['description'] . "<br />";
         echo "URL :" . $row['url'] . "<br />";
-        echo $inTime;
+        echo "time" .$inTime. "<br/>";
     }
 
 }
