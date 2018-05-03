@@ -12,8 +12,8 @@ $responsearray= json_decode($response,true);
 
 
 $query='';
-$inTime = date('m/d/y h:i:s', time());
-echo $inTime;
+$inTim = date('m/d/y h:i:s', time());
+
 foreach ($responsearray as $item)
 
 {
@@ -22,7 +22,7 @@ foreach ($responsearray as $item)
         $pub = mysqli_real_escape_string($con,$row['publishedAt']);
         $tit = mysqli_real_escape_string($con,$row['title']);
         $des = mysqli_real_escape_string($con,$row['description']);
-        $inTime = mysqli_real_escape_string($con,$inTime);
+        $inTime = mysqli_real_escape_string($con,$inTim);
 
         $query = "INSERT INTO `dailymail`(`Published`,`Title`,`Description`,`inTime`) VALUES
                   ('$pub',' $tit ',' $des' ,'$inTime');";
@@ -33,9 +33,9 @@ foreach ($responsearray as $item)
         echo "Title :" . $row['title'] . "<br />";
         echo "Description :" . $row['description'] . "<br />";
         echo "URL :" . $row['url'] . "<br />";
-
+        echo $inTime;
     }
 
 }
-echo   mysqli_error($con);
+echo "Error".   mysqli_error($con);
 
