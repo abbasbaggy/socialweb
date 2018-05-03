@@ -4,6 +4,7 @@
  * User: Abbas
  * Date: 15/04/2018
  * Time: 14:40
+ * code part from microsoft and also adapted to meet project specification
  */
 
 error_reporting(E_ALL);
@@ -95,7 +96,8 @@ require ('../MicrosoftNLP/dbconnect.php');
 
 //mysqli_select_db($con,`bbcnewstop`) or die(mysqli_error($con));
 
-$datas = "SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$strP."%')";
+$TStrp = mysqli_real_escape_string($con,$strP);
+$datas = "SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$TStrp."%')";
 
 $query = mysqli_query($con,$datas);
 
@@ -106,6 +108,7 @@ if(mysqli_num_rows($query)> 0){
     }
 } else{
     echo  "Error" . mysqli_error($con);
+    echo "no match found";
 }
 /*
 echo "<pre>";
@@ -133,7 +136,7 @@ function GetSentiment1 ($host1, $path1, $key1, $data2) {
     $data2 = json_encode ($data2);
 
     // NOTE: Use the key 'http' even if you are making an HTTPS request. See:
-    // http://php.net/manual/en/function.stream-context-create.php
+
     $options1 = array (
         'http' => array (
             'header' => $headers1,
