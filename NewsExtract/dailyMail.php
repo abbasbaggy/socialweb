@@ -23,8 +23,8 @@ foreach ($responsearray as $item)
         $des = mysqli_real_escape_string($con,$row['description']);
         $inTime = mysqli_real_escape_string($con,$inTime);
 
-        $query = "INSERT INTO `Dailymail`(`Published`,`Title`,`Description`,`inTime`) VALUES
-                  ('$pub',' $tit ','. $des '$inTime);";
+        $query = "INSERT INTO `dailymail`(`Published`,`Title`,`Description`,`inTime`) VALUES
+                  ('$pub',' $tit ',' $des '$inTime);";
         mysqli_query($con, $query);
 
         echo "Published At: " . $row['publishedAt'] . "<br />";
