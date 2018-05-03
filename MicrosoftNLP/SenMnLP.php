@@ -60,3 +60,4 @@ $sen =  json_decode($result, true);
 
 
 $senti = $sen['documents'][0]['score'][0];
+echo $senti ."<br/>";
