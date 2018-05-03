@@ -27,12 +27,12 @@ foreach ($responsearray as $item)
                   ('$pub',' $tit ',' $des '$inTime);";
         mysqli_query($con, $query);
 
-       /* echo "Published At: " . $row['publishedAt'] . "<br />";
+        echo "Published At: " . $row['publishedAt'] . "<br />";
         // echo "Author :" . $row['author'] . "<br />";
         echo "Title :" . $row['title'] . "<br />";
         echo "Description :" . $row['description'] . "<br />";
         echo "URL :" . $row['url'] . "<br />";
-       */
+
     }
 
 }
