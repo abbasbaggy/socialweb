@@ -18,12 +18,12 @@ foreach ($responsearray as $item)
 
 {
     foreach ($item as $row) {
-        $inTim = date('m/d/y h:i:s', time());
+        $inTime = date('m/d/y h:i:s', time());
         //$query = "INSERT INTO" for when i set db up
         $pub = mysqli_real_escape_string($con,$row['publishedAt']);
         $tit = mysqli_real_escape_string($con,$row['title']);
         $des = mysqli_real_escape_string($con,$row['description']);
-        $inTime = mysqli_real_escape_string($con,$inTim);
+        //$inTime = mysqli_real_escape_string($con,$inTim);
 
         $query = "INSERT INTO `dailymail`(`Published`,`Title`,`Description`,`inTime`) VALUES
                   ('$pub',' $tit ',' $des' ,'$inTime');";
