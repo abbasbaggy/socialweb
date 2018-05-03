@@ -13,6 +13,7 @@ $responsearray= json_decode($response,true);
 
 $query='';
 $inTime = date('m/d/y h:i:s', time());
+echo $inTime;
 foreach ($responsearray as $item)
 
 {
@@ -36,5 +37,5 @@ foreach ($responsearray as $item)
     }
 
 }
-echo "Error" . mysqli_error($con);
+echo   mysqli_error($con);
 
