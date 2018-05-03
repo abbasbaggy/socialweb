@@ -24,7 +24,7 @@ foreach ($responsearray as $item)
         $inTime = mysqli_real_escape_string($con,$inTime);
 
         $query = "INSERT INTO `Dailymail`(`Published`,`Title`,`Description`,`inTime`) VALUES
-                  ('$pub',' $tit ',' $des '$inTime);";
+                  ('$pub',' $tit ','. $des '$inTime);";
         mysqli_query($con, $query);
 
         echo "Published At: " . $row['publishedAt'] . "<br />";
