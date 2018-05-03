@@ -129,7 +129,7 @@
                 <p>Source Score</p>
             </div>
             <div class="well">
-                <p><?php include ('MicrosoftNLP/SenMnlp.php'); ?> </p>
+                <p><?php// include ('MicrosoftNLP/SenMnlp.php'); ?> </p>
             </div>
         </div>
     </div>
