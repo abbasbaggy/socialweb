@@ -12,13 +12,13 @@ $responsearray= json_decode($response,true);
 
 
 $query='';
-$inTim;
+$inTime = date('m/d/y h:i:s', time());
 
 foreach ($responsearray as $item)
 
 {
     foreach ($item as $row) {
-        $inTime = date('m/d/y h:i:s', time());
+
         //$query = "INSERT INTO" for when i set db up
         $pub = mysqli_real_escape_string($con,$row['publishedAt']);
         $tit = mysqli_real_escape_string($con,$row['title']);
@@ -34,7 +34,7 @@ foreach ($responsearray as $item)
         echo "Title :" . $row['title'] . "<br />";
         echo "Description :" . $row['description'] . "<br />";
         echo "URL :" . $row['url'] . "<br />";
-        echo "time" .$inTime. "<br/>";
+        echo "time " .$inTime. "<br/>";
     }
 
 }
