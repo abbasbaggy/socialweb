@@ -38,5 +38,5 @@ foreach ($responsearray as $item)
     }
 
 }
-echo "Error".   mysqli_error($con);
+echo "Errors".   mysqli_error($con);
 
