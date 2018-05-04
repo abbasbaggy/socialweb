@@ -6,6 +6,16 @@
  * Time: 11:40
  */
 
+//$response = file_get_contents("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3");
+$response= file_get_contents("https://newsapi.org/v2/everything?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3");
+$responsearray= json_decode($response,true);
+//die("{$responsearray}");
+
+/*echo "<pre>";
+        print_r($responsearray);
+        echo "</pre>";
+
+*/
 
 $connectstr_dbhost = '';
 $connectstr_dbname = '';
@@ -37,18 +47,12 @@ if (!$con) {
 
 
 
-//$response = file_get_contents("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3");
-$response= file_get_contents("https://newsapi.org/v2/everything?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3");
-$responsearray= json_decode($response,true);
-//die("{$responsearray}");
 
-/*echo "<pre>";
-        print_r($responsearray);
-        echo "</pre>";
 
-*/
 
-//use select statement to get last store created date in db
+
+
+
 
 $query='';
 $row;
