@@ -51,6 +51,7 @@ $responsearray= json_decode($response,true);
 //use select statement to get last store created date in db
 
 $query='';
+$row;
 foreach ($responsearray as $item)
 
 {
