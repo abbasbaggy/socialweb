@@ -7,7 +7,7 @@
  */
 
 
-require('NewsExtract/dbconnect.php');
+require('dbconnect.php');
 //$response=file_get_contents("https://newsapi.org/v2/top-headlines?sources=daily-mail&apiKey=5c167ce6600f424281d02fa7891d6ee3");
 $response= file_get_contents("https://newsapi.org/v2/everything?sources=daily-mail&apiKey=5c167ce6600f424281d02fa7891d6ee3");
 $responsearray= json_decode($response,true);
