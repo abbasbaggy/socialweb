@@ -68,6 +68,7 @@ foreach($string['statuses'] as $item){
     echo "Screen name :" . $item['user']['screen_name'] . "<br />";
     echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
     echo "TWEETs:  " . $item['text'] . "<br />";
+    echo "      " . "<br />";
 
 }
 
