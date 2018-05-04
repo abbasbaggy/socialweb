@@ -12,18 +12,16 @@
 $response= file_get_contents("https://newsapi.org/v2/everything?sources=daily-mail&apiKey=5c167ce6600f424281d02fa7891d6ee3");
 $responsearray= json_decode($response,true);
 
-echo "<pre>";
-print_r($responsearray);
-echo "</pre>";
+
 
 
 $query='';
 $inTime = date('m/d/y h:i:s', time());
 
-foreach ($responsearray as $item)
+foreach ($responsearray['articles'] as $row)
 
 {
-    foreach ($item as $row) {
+
 
         //$query = "INSERT INTO" for when i set db up
         $pub = mysqli_real_escape_string($con,$row['publishedAt']);
@@ -33,17 +31,17 @@ foreach ($responsearray as $item)
 
         $query = "INSERT INTO `dailymail`(`Published`,`Title`,`Description`,`inTime`) VALUES
                   ('$pub',' $tit ',' $des' ,'$inTime');";
-        mysqli_query($con, $query);
+      //  mysqli_query($con, $query);
 
-      /*  echo "Published At: " . $row['publishedAt'] . "<br />";
+        echo "Published At: " . $row['publishedAt'] . "<br />";
         // echo "Author :" . $row['author'] . "<br />";
         echo "Title :" . $row['title'] . "<br />";
         echo "Description :" . $row['description'] . "<br />";
         echo "URL :" . $row['url'] . "<br />";
         echo "time " .$inTime. "<br/>";
-      */
-    }
+
+
 
 }
-echo "Errors".   mysqli_error($con);
+//echo "Errors".   mysqli_error($con);
 
