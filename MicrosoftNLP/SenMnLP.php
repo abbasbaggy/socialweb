@@ -50,7 +50,7 @@ $data = array (
     )
 );
 
-print "Please wait a moment for sentiments to appear.";
+print "Please wait a moment for sentiments to appear . =";
 
 $result = GetSentiment ($host, $path, $accessKey, $data);
 
