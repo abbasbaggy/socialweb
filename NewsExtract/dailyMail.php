@@ -24,9 +24,9 @@ foreach ($responsearray['articles'] as $row)
 
 
         //$query = "INSERT INTO" for when i set db up
-        $pub = mysqli_real_escape_string($con,$row['publishedAt']);
-        $tit = mysqli_real_escape_string($con,$row['title']);
-        $des = mysqli_real_escape_string($con,$row['description']);
+     //   $pub = mysqli_real_escape_string($con,$row['publishedAt']);
+       // $tit = mysqli_real_escape_string($con,$row['title']);
+       // $des = mysqli_real_escape_string($con,$row['description']);
         //$inTime = mysqli_real_escape_string($con,$inTim);
 
         $query = "INSERT INTO `dailymail`(`Published`,`Title`,`Description`,`inTime`) VALUES
