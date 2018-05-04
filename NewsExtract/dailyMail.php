@@ -7,6 +7,14 @@
  */
 
 
+
+//$response=file_get_contents("https://newsapi.org/v2/top-headlines?sources=daily-mail&apiKey=5c167ce6600f424281d02fa7891d6ee3");
+$response= file_get_contents("https://newsapi.org/v2/everything?sources=daily-mail&apiKey=5c167ce6600f424281d02fa7891d6ee3");
+$responsearray= json_decode($response,true);
+
+
+
+
 $connectstr_dbhost = '';
 $connectstr_dbname = '';
 $connectstr_dbusername = '';
@@ -23,9 +31,9 @@ foreach ($_SERVER as $key => $value) {
     $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
 }
 
-$con = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword, $connectstr_dbname);
+$cons = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword, $connectstr_dbname);
 
-if (!$con) {
+if (!$cons) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
     echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
     echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
@@ -34,13 +42,6 @@ if (!$con) {
 
 
 
-
-
-
-
-//$response=file_get_contents("https://newsapi.org/v2/top-headlines?sources=daily-mail&apiKey=5c167ce6600f424281d02fa7891d6ee3");
-$response= file_get_contents("https://newsapi.org/v2/everything?sources=daily-mail&apiKey=5c167ce6600f424281d02fa7891d6ee3");
-$responsearray= json_decode($response,true);
 
 
 $query='';
@@ -59,7 +60,7 @@ foreach ($responsearray as $item)
 
         $query = "INSERT INTO `dailymail`(`Published`,`Title`,`Description`,`inTime`) VALUES
                   ('$pub',' $tit ',' $des' ,'$inTime');";
-        mysqli_query($con, $query);
+        mysqli_query($cons, $query);
 
       /*  echo "Published At: " . $row['publishedAt'] . "<br />";
         // echo "Author :" . $row['author'] . "<br />";
