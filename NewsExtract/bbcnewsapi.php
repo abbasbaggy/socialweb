@@ -7,7 +7,7 @@
  */
 
 
-require('NewsExtract/dbconnect.php');
+
 //$response = file_get_contents("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3");
 $response= file_get_contents("https://newsapi.org/v2/everything?sources=bbc-news&apiKey=5c167ce6600f424281d02fa7891d6ee3");
 $responsearray= json_decode($response,true);
@@ -20,7 +20,7 @@ $responsearray= json_decode($response,true);
 */
 
 //use select statement to get last store created date in db
-
+require('NewsExtract/dbconnect.php');
 $query='';
 foreach ($responsearray as $item)
 
@@ -33,7 +33,7 @@ foreach ($responsearray as $item)
         $des = mysqli_real_escape_string($con,$row['description']);
 
         $query = "INSERT INTO `bbcnewstop`(`Published`,`Title`,`Description`) VALUES
-                  ('$pub',' $tit ',' .$des ');";
+                  ('$pub',' $tit ',' $des ');";
 
        // $query = "INSERT INTO `bbcnewstop`(`‘Published’`, `‘Title’`, `‘Description’`) VALUES
           //     (\'".$row['publishedAt']."\','".$row['title']."','".$row["description"]."');";

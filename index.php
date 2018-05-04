@@ -75,7 +75,7 @@
 
                 <?php include ('twitterGet.php'); ?>
 
-            <p><a href="#">tweets</a></p>
+
         </div>
         <div class="col-sm-7 text-left">
             <h1>Welcome</h1>
@@ -90,7 +90,7 @@
             </iframe>
 
             <?php
-           include ('NewsExtract/dailyMail.php');
+          // include ('NewsExtract/dailyMail.php');
             //include('NewsExtract/bbcnewsapi.php')
             //include ('MicrosoftNLP/SenMnlp.php');
            // include ('MicrosoftNLP/LanMnlp.php');
