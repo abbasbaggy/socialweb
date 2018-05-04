@@ -101,16 +101,6 @@ foreach($string as $items)
 
 
 ?>
-<script>
-function myFunction(){
-/*get text feild */
 
-var copyText = document.getElementsByName("input");
-/*select the text field */
-copyText.select();
-document.execCommand("Copy");
-alert("tweet copied paste in box");
-
-</script>
 
 </html>
