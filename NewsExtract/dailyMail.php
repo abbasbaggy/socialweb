@@ -13,7 +13,7 @@ $response= file_get_contents("https://newsapi.org/v2/everything?sources=daily-ma
 $responsearray= json_decode($response,true);
 
 
-require("dbconnect.php");
+require('dbconnect.php');
 
 $query='';
 $inTime = date('m/d/y h:i:s', time());
