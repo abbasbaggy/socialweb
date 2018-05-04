@@ -91,7 +91,7 @@
 
             <?php
           include ('NewsExtract/dailyMail.php');
-            //include('NewsExtract/bbcnewsapi.php')
+            include('NewsExtract/bbcnewsapi.php')
             //include ('MicrosoftNLP/SenMnlp.php');
            // include ('MicrosoftNLP/LanMnlp.php');
            // require('NewsExtract/dbconnect.php');
