@@ -55,7 +55,7 @@ if (!$con) {
 
 
 $query='';
-$row;
+
 foreach ($responsearray as $item)
 
 {
