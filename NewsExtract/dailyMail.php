@@ -13,33 +13,7 @@ $response= file_get_contents("https://newsapi.org/v2/everything?sources=daily-ma
 $responsearray= json_decode($response,true);
 
 
-$connectstr_dbhost = '';
-$connectstr_dbname = '';
-$connectstr_dbusername = '';
-$connectstr_dbpassword = '';
-
-foreach ($_SERVER as $key => $value) {
-    if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
-        continue;
-    }
-
-    $connectstr_dbhost = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
-    $connectstr_dbname = preg_replace("/^.*Database=(.+?);.*$/", "\\1", $value);
-    $connectstr_dbusername = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
-    $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
-}
-
-$con = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword,$connectstr_dbname);
-
-if (!$con) {
-    echo "Error: Unable to connect to MySQL." . PHP_EOL;
-    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-    exit;
-}
-
-
-
+require('dbconnect.php');
 
 $query='';
 $inTime = date('m/d/y h:i:s', time());
@@ -56,13 +30,13 @@ foreach ($responsearray['articles'] as $row) {
                   ('$pub',' $tit ',' $des' ,'$inTime');";
         mysqli_query($con, $query);
 
-        echo "Published At: " . $row['publishedAt'] . "<br />";
+        /*echo "Published At: " . $row['publishedAt'] . "<br />";
         // echo "Author :" . $row['author'] . "<br />";
         echo "Title :" . $row['title'] . "<br />";
         echo "Description :" . $row['description'] . "<br />";
         echo "URL :" . $row['url'] . "<br />";
         echo "time " .$inTime. "<br/>";
-
+        */
 
 
 }
