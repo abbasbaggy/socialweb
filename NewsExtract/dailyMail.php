@@ -13,7 +13,7 @@ $response= file_get_contents("https://newsapi.org/v2/everything?sources=daily-ma
 $responsearray= json_decode($response,true);
 
 
-require('NewsExtract/dbconnect.php');
+require('NewsExtract/dbconnect');
 
 $query='';
 $inTime = date('m/d/y h:i:s', time());
@@ -28,7 +28,7 @@ foreach ($responsearray['articles'] as $row) {
 
         $query = "INSERT INTO `dailymail`(`Published`,`Title`,`Description`,`inTime`) VALUES
                   ('$pub',' $tit ',' $des' ,'$inTime');";
-      //  mysqli_query($con, $query);
+        mysqli_query($con, $query);
 
         echo "Published At: " . $row['publishedAt'] . "<br />";
         // echo "Author :" . $row['author'] . "<br />";
