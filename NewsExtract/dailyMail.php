@@ -18,10 +18,7 @@ require('NewsExtract/dbconnect.php');
 $query='';
 $inTime = date('m/d/y h:i:s', time());
 
-foreach ($responsearray['articles'] as $row)
-
-{
-
+foreach ($responsearray['articles'] as $row) {
 
         //$query = "INSERT INTO" for when i set db up
         $pub = mysqli_real_escape_string($con,$row['publishedAt']);
