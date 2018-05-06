@@ -145,6 +145,7 @@ foreach($string['statuses'] as $item){
             return succeed;
         }
     });
+</script>
 
     <?php  echo "      " . "<br />";
 }
@@ -153,5 +154,5 @@ foreach($string['statuses'] as $item){
 
 
 
-</script>
+
 </html>
