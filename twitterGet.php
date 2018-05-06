@@ -73,6 +73,18 @@ foreach($string['statuses'] as $item){
     <button id = "copytweet">Select tweet</button>
     <span id = "msg"></span><br>
 
+    <script>
+        document.getElementById("copytweet").addEventListener("click", function() {
+            copyToClipboard(document.getElementById("input"));
+        });
+        function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+        }
+    </script>
 
 
     <?php  echo "      " . "<br />";
@@ -80,18 +92,7 @@ foreach($string['statuses'] as $item){
 
 ?>
 
-<script>
-    document.getElementById("copytweet").addEventListener("click", function() {
-        copyToClipboard(document.getElementById("input"));
-    });
-    function copyToClipboard(element) {
-        var $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val($(element).text()).select();
-        document.execCommand("copy");
-        $temp.remove();
-    }
-</script>
+
 
 
 </html>
