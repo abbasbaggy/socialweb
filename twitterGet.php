@@ -61,6 +61,7 @@ print_r($string);
 echo "</pre>";
 */
 $i =0;
+$in = 1;
 foreach($string['statuses'] as $item){
 
     echo "Time and Date of Tweet: " . $item['created_at'] . "<br />";
@@ -71,12 +72,12 @@ foreach($string['statuses'] as $item){
     echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
     ?>
  <span id= "<?php echo $i++?>" style="background-color: azure" > <?php   echo "TWEETs:  " . $item['text']. "<br/>" ?> </span>
-    <button id = "copytweet">Select tweet</button>
+    <button id = "<?php echo $in++?>">Select tweet</button>
     <span id = "msg"></span><br>
 
     <script>
-        document.getElementById("copytweet").addEventListener("click", function() {
-            copyToClipboard(document.getElementById("input"));
+        document.getElementById("<?php echo $in++?>").addEventListener("click", function() {
+            copyToClipboard(document.getElementById("<?php echo $i++?>"));
         });
         function copyToClipboard(element) {
             var $temp = $("<input>");
