@@ -60,8 +60,9 @@ echo "<pre>";
 print_r($string);
 echo "</pre>";
 */
-
+$i =0;
 foreach($string['statuses'] as $item){
+
     echo "Time and Date of Tweet: " . $item['created_at'] . "<br />";
     echo "User Description :" . $item['user']['description'] . "<br />";
     echo "name :" . $item['user']['name'] . "<br />";
@@ -69,7 +70,7 @@ foreach($string['statuses'] as $item){
     echo "Screen name :" . $item['user']['screen_name'] . "<br />";
     echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
     ?>
- <span id="input" style="background-color: azure" > <?php   echo "TWEETs:  " . $item['text']. "<br/>" ?> </span>
+ <span id= '<?php$i++?>' style="background-color: azure" > <?php   echo "TWEETs:  " . $item['text']. "<br/>" ?> </span>
     <button id = "copytweet">Select tweet</button>
     <span id = "msg"></span><br>
 
