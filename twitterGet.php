@@ -73,11 +73,13 @@ foreach($string['statuses'] as $item){
     echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
     ?>
  <span id= "<?php echo $i?>" style="background-color: azure" > <?php   echo "TWEETs:  " . $item['text']. "<br/>" ?> </span>
-    <button onclick="copyToClipboard('<?php echo $i?>')" >Select tweet</button>
-
+    <button id = "<?php echo $in?>">Select tweet</button>
+    <span id = "msg"></span><br>
 
     <script>
-
+        document.getElementById("<?php echo $in?>").addEventListener("click", function() {
+            copyToClipboard(document.getElementById("<?php echo $i?>"));
+        });
         function copyToClipboard(element) {
             var $temp = $("<input>");
             $("body").append($temp);
