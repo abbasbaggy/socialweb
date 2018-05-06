@@ -60,9 +60,8 @@ echo "<pre>";
 print_r($string);
 echo "</pre>";
 */
-$i =0;
+
 foreach($string['statuses'] as $item){
-    echo $i++ ."<br/>" ;
     echo "Time and Date of Tweet: " . $item['created_at'] . "<br />";
     echo "User Description :" . $item['user']['description'] . "<br />";
     echo "name :" . $item['user']['name'] . "<br />";
@@ -70,13 +69,20 @@ foreach($string['statuses'] as $item){
     echo "Screen name :" . $item['user']['screen_name'] . "<br />";
     echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
     ?>
- <span id="input<?php$i++?>" style="background-color: azure" > <?php   echo "TWEETs:  " . $item['text'] ?> </span> <br/>;
-    <button id = "copytweet<?php$i++?>">Select tweet</button>
+ <span id="input" style="background-color: azure" > <?php   echo "TWEETs:  " . $item['text'] ?> </span> <br/>;
+    <button id = "copytweet">Select tweet</button>
     <span id = "msg"></span><br>
 
+
+
+    <?php  echo "      " . "<br />";
+}
+
+?>
+
 <script>
-    document.getElementById("copytweet<?php$i++?>").addEventListener("click", function() {
-        copyToClipboardMsg(document.getElementById("input<?php$i++?>"), "msg");
+    document.getElementById("copytweet").addEventListener("click", function() {
+        copyToClipboardMsg(document.getElementById("input"), "msg");
 
         function copyToClipboardMsg(elem, msgElem) {
             var succeed = copyToClipboard(elem);
@@ -146,13 +152,6 @@ foreach($string['statuses'] as $item){
         }
     });
 </script>
-
-    <?php  echo "      " . "<br />";
-}
-
-?>
-
-
 
 
 </html>
