@@ -76,7 +76,7 @@ foreach($string['statuses'] as $item){
     <span id = "msg"></span><br>
 
     <script>
-        document.getElementById("<?php echo $in++?>").addEventListener("click", function() {
+        document.getElementById("<?php echo $in?>").addEventListener("click", function() {
             copyToClipboard(document.getElementById("<?php echo $i++?>"));
         });
         function copyToClipboard(element) {
