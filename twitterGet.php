@@ -70,13 +70,13 @@ foreach($string['statuses'] as $item){
     echo "Screen name :" . $item['user']['screen_name'] . "<br />";
     echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
     ?>
- <span id="input" style="background-color: azure" > <?php   echo "TWEETs:  " . $item['text'] ?> </span> <br/>;
-    <button id = "copytweet">Select tweet</button>
+ <span id="input<?php$i++?>" style="background-color: azure" > <?php   echo "TWEETs:  " . $item['text'] ?> </span> <br/>;
+    <button id = "copytweet<?php$i++?>">Select tweet</button>
     <span id = "msg"></span><br>
 
 <script>
-    document.getElementById("copytweet").addEventListener("click", function() {
-        copyToClipboardMsg(document.getElementById("input"), "msg");
+    document.getElementById("copytweet<?php$i++?>").addEventListener("click", function() {
+        copyToClipboardMsg(document.getElementById("input<?php$i++?>"), "msg");
 
         function copyToClipboardMsg(elem, msgElem) {
             var succeed = copyToClipboard(elem);
