@@ -60,8 +60,9 @@ echo "<pre>";
 print_r($string);
 echo "</pre>";
 */
+$i =0;
 foreach($string['statuses'] as $item){
-    echo $item++ ."<br/>" ;
+    echo $i++ ."<br/>" ;
     echo "Time and Date of Tweet: " . $item['created_at'] . "<br />";
     echo "User Description :" . $item['user']['description'] . "<br />";
     echo "name :" . $item['user']['name'] . "<br />";
