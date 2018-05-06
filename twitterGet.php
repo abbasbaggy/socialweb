@@ -76,7 +76,16 @@ foreach($string['statuses'] as $item){
     <button onclick="copyToClipboard('<?php echo $i?>')" >Select tweet</button>
 
 
+    <script>
 
+        function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+        }
+    </script>
 
 
     <?php  echo "      " . "<br />";
@@ -84,16 +93,7 @@ foreach($string['statuses'] as $item){
 
 ?>
 
-<script>
 
-    function copyToClipboard(element) {
-        var $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val($(element).text()).select();
-        document.execCommand("copy");
-        $temp.remove();
-    }
-</script>
 
 
 </html>
