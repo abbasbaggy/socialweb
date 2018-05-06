@@ -74,7 +74,7 @@ foreach($string['statuses'] as $item){
     ?>
  <span id= "<?php echo $i?>" style="background-color: azure" > <?php   echo "TWEETs:  " . $item['text']. "<br/>" ?> </span>
     <button id = "<?php echo $in?>">Select tweet</button>
-    <span id = "msg"></span><br>
+
 
     <script>
         document.getElementById("<?php echo $in?>").addEventListener("click", function() {
