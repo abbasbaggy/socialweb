@@ -83,7 +83,7 @@ require ('../MicrosoftNLP/dbconnect.php');
 //mysqli_select_db($con,`bbcnewstop`) or die(mysqli_error($con));
 
 $TStrp = mysqli_real_escape_string($con,$strP);
-$datas = "SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$TStrp."%')";
+$datas = "SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%.$TStrp.%')";
 
 $query = mysqli_query($con,$datas);
 
