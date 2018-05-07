@@ -87,7 +87,7 @@ foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
         echo  "Error" . mysqli_error($con);
         echo "no match found";
     }
-    $phrase_arr[] =$phrase;
+    $phrase_arr[] =$result1_arr;
 }
 echo "<pre>";
 print_r($result1_arr);
