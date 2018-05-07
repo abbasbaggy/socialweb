@@ -89,6 +89,7 @@ foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
     }
     $phrase_arr[] =$result1_arr;
 }
+/*
 echo "<pre>";
 print_r($result1_arr);
 echo "</pre>";
@@ -130,7 +131,7 @@ foreach ($result1_arr as $new){
     //
     //echo $resultBbc;
 
-}*
+}*/
 $accessKey1 = 'dd0c99e93d534a2c9ad064d00907ca5f';
 $host1 = 'https://southcentralus.api.cognitive.microsoft.com';
 $path1 = '/text/analytics/v2.0/sentiment';
@@ -171,6 +172,6 @@ for($renum= 0;count($result1_arr) >= $renum;$renum++){
 echo "<pre>";
 print_r($resultse1_arr);
 echo "</pre>";
-*/
+
 
 
