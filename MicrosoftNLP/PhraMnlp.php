@@ -70,24 +70,44 @@ foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
  $search = "";
 
 
+require ('../MicrosoftNLP/dbconnect.php');
 
 
 foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
+    $TStrps = mysqli_real_escape_string($con,$phrase);
+    $datasen = "SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%.$TStrps.%' limit 2) ";
+    $query = mysqli_query($con,$datasen);
+
+    if(mysqli_num_rows($query)> 0){
+        while ($result1 = mysqli_fetch_array($query) ){
+            // print_r( $result1);
+            $result1_arr[] = $result1;
+        }
+    } else{
+        echo  "Error" . mysqli_error($con);
+        echo "no match found";
+    }
     $phrase_arr[] =$phrase;
 }
+echo "<pre>";
+print_r($result1_arr);
+echo "</pre>";
+
 //print_r($phrase_arr);
-$strP = implode(" ",$phrase_arr);
+
+
+//$strP = implode(" ",$phrase_arr);
 //echo $strP;
-require ('../MicrosoftNLP/dbconnect.php');
+//require ('../MicrosoftNLP/dbconnect.php');
 
 //mysqli_select_db($con,`bbcnewstop`) or die(mysqli_error($con));
 
-$TStrp = mysqli_real_escape_string($con,$strP);
-$datas = "SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%.$TStrp.%')";
+//$TStrp = mysqli_real_escape_string($con,$strP);
+//$datas = "SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%.$TStrp.%' limit 10) ";
 
-$query = mysqli_query($con,$datas);
+//$query = mysqli_query($con,$datas);
 
-if(mysqli_num_rows($query)> 0){
+/*if(mysqli_num_rows($query)> 0){
     while ($result1 = mysqli_fetch_array($query) ){
        // print_r( $result1);
         $result1_arr[] = $result1;
@@ -96,7 +116,7 @@ if(mysqli_num_rows($query)> 0){
     echo  "Error" . mysqli_error($con);
     echo "no match found";
 }
-/*
+/
 echo "<pre>";
 print_r($result1_arr);
 echo "</pre>";
@@ -110,7 +130,7 @@ foreach ($result1_arr as $new){
     //
     //echo $resultBbc;
 
-}*/
+}*
 $accessKey1 = 'dd0c99e93d534a2c9ad064d00907ca5f';
 $host1 = 'https://southcentralus.api.cognitive.microsoft.com';
 $path1 = '/text/analytics/v2.0/sentiment';
@@ -151,6 +171,6 @@ for($renum= 0;count($result1_arr) >= $renum;$renum++){
 echo "<pre>";
 print_r($resultse1_arr);
 echo "</pre>";
-
+*/
 
 
