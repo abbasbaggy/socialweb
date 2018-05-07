@@ -14,24 +14,10 @@ $array = $_REQUEST['data'];
 $lan = $_SESSION['language'];
 
 
-// NOTE: Be sure to uncomment the following line in your php.ini file.
-// ;extension=php_openssl.dll
 
-// **********************************************
-// *** Update or verify the following values. ***
-// **********************************************
-
-// Replace the accessKey string value with your valid access key.
 $accessKey = 'dd0c99e93d534a2c9ad064d00907ca5f';
 
-// Replace or verify the region.
 
-// You must use the same region in your REST API call as you used to obtain your access keys.
-// For example, if you obtained your access keys from the westus region, replace
-// "westcentralus" in the URI below with "westus".
-
-// NOTE: Free trial access keys are generated in the westcentralus region, so if you are using
-// a free trial access key, you should not need to change this region.
 $host = 'https://southcentralus.api.cognitive.microsoft.com';
 $path = '/text/analytics/v2.0/keyPhrases';
 
