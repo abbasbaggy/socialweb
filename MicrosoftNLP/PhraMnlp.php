@@ -186,7 +186,8 @@ if($result1_arr > 1) {
         $newscore = json_decode($newfre, true);
         $num += $newscore['documents'][0]['score'];
     }
-    $sentfre = $num / count($resultse1_arr);
+    $count = count($resultse1_arr1)- 1;
+    $sentfre = $num / $count;
     echo "Comparative Sentiment Freqency of Topic above against BBC News";
     echo $sentfre;
 } elseif ($result1_arr < 1){
