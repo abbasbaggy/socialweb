@@ -169,9 +169,9 @@ for($renum= 0;count($result1_arr) >= $renum;$renum++){
    // echo json_encode (json_decode ($resultse1), JSON_PRETTY_PRINT);
     $resultse1_arr[] = $resultse1;
 }
-//echo "<pre>";
-//print_r($resultse1_arr);
-//echo "</pre>";
+echo "<pre>";
+print_r($resultse1_arr);
+echo "</pre>";
 
 for ($frenum = 0; count($resultse1_arr) >= $frenum; $frenum++){
     $num =+ $resultse1_arr['documents'][$frenum]['score'];
