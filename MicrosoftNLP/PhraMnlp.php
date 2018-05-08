@@ -181,6 +181,6 @@ $num= 0.00000;
 
 foreach($resultse1_arr as $newfre){
     $newscore =  json_decode($newfre, true);
-    $num =+ $newscore['documents'][0]['score'];
+    $num += $newscore['documents'][0]['score'];
 }
 echo $num;
