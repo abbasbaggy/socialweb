@@ -174,9 +174,9 @@ print_r($resultse1_arr);
 echo "</pre>";
 
 for ($frenum = 0; count($resultse1_arr) >= $frenum; $frenum++){
-    $num =+ $resultse1_arr['documents'][$frenum]['score'];
+    $num += $resultse1_arr['documents'][$frenum]['score'];
     echo $num;
 }
-
+echo $num;
 
 
