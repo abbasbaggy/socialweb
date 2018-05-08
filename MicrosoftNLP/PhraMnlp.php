@@ -159,7 +159,7 @@ function GetSentiment1 ($host1, $path1, $key1, $data2) {
     return $resultse1;
 }
 
-if($resultse1_arr != null) {
+if($result1_arr != null) {
     for ($renum = 0; count($result1_arr) >= $renum; $renum++) {
         $bbcarr = $result1_arr[$renum]['Description'];
 
@@ -189,6 +189,6 @@ if($resultse1_arr != null) {
     $sentfre = $num / count($resultse1_arr);
 
     echo $sentfre;
-} elseif ($resultse1_arr = null){
+} elseif ($result1_arr = null){
     Echo "Sorry no match found";
 }
