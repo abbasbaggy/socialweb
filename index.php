@@ -73,7 +73,8 @@
     <div class="scrollmenu">
         <div class="col-sm-3 sidenav">
 
-                <?php include ('twitterGet.php'); ?>
+                <?php include ('twittergettest.php')
+                // include ('twitterGet.php'); ?>
 
 
         </div>
@@ -91,7 +92,7 @@
 
             <?php
           //include ('NewsExtract/dailyMail.php');
-          include('NewsExtract/bbcnewsapi.php')
+          //include('NewsExtract/bbcnewsapi.php')
             //include ('MicrosoftNLP/SenMnlp.php');
            // include ('MicrosoftNLP/LanMnlp.php');
            // require('NewsExtract/dbconnect.php');
