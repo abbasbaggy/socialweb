@@ -172,11 +172,11 @@ for($renum= 0;count($result1_arr) >= $renum;$renum++){
 echo "<pre>";
 print_r($resultse1_arr);
 echo "</pre>";
-
+$num = 0.00000;
 for ($frenum = 0; count($resultse1_arr) >= $frenum; $frenum++){
     $num += $resultse1_arr['documents'][$frenum]['score'];
     echo $num;
 }
-echo $num;
+//echo $num;
 
 
