@@ -64,24 +64,24 @@ echo $senti ."<br/>";
 
 switch ($senti){
     case ($senti <= 0.20):
-        echo "extremely Negative .\"<br/>\"";
+        echo "extremely Negative \"<br/>\"";
         break;
     case ($senti <= 0.40):
-        echo "very Negative .\"<br/>\"";
+        echo "very Negative \"<br/>\"";
         break;
     case ($senti <= 0.49):
-        echo "a little negative .\"<br/>\"";
+        echo "a little negative \"<br/>\"";
         break;
     case ($sent = 0.5):
-        echo "Neutral .\"<br/>\"";
+        echo "Neutral \"<br/>\"";
         break;
     case ($senti <= 0.59):
-        echo "a little positive .\"<br/>\"";
+        echo "a little positive \"<br/>\"";
         break;
     case ($senti <= 0.80):
-        echo "very positive .\"<br/>\"";
+        echo "very positive \"<br/>\"";
         break;
     case ($senti <= 1.0):
-        echo "extremely positive .\"<br/>\"";
+        echo "extremely positive \"<br/>\"";
         break;
 }

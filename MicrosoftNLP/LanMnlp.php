@@ -57,7 +57,7 @@ $data = array (
     )
 );
 
-print "Please wait a moment for the Language to appear.";
+print "Please wait a moment for the Language to appear ---";
 
 $result = DetectLanguage ($host, $path, $accessKey, $data);
 

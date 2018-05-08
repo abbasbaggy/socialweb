@@ -83,12 +83,14 @@ foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
             // print_r( $result1);
             $result1_arr[] = $result1;
         }
-    } else{
+    } else {
         echo  "Error" . mysqli_error($con);
         echo "no match found";
+
     }
-    $phrase_arr[] =$result1_arr;
+
 }
+
 /*
 echo "<pre>";
 print_r($result1_arr);
@@ -132,6 +134,7 @@ foreach ($result1_arr as $new){
     //echo $resultBbc;
 
 }*/
+
 $accessKey1 = 'dd0c99e93d534a2c9ad064d00907ca5f';
 $host1 = 'https://southcentralus.api.cognitive.microsoft.com';
 $path1 = '/text/analytics/v2.0/sentiment';
@@ -156,32 +159,36 @@ function GetSentiment1 ($host1, $path1, $key1, $data2) {
     return $resultse1;
 }
 
+if($resultse1_arr != null) {
+    for ($renum = 0; count($result1_arr) >= $renum; $renum++) {
+        $bbcarr = $result1_arr[$renum]['Description'];
 
-for($renum= 0;count($result1_arr) >= $renum;$renum++){
-   $bbcarr=  $result1_arr[$renum]['Description'];
-
-    $data2 = array (
-        'documents' => array (
-            array ( 'id' => $renum, 'language' => $lan, 'text' => $bbcarr )
-        )
-    );
-    $resultse1 = GetSentiment1($host1, $path1, $accessKey1, $data2);
-   // echo json_encode (json_decode ($resultse1), JSON_PRETTY_PRINT);
-    $resultse1_arr[] = $resultse1;
-}
-echo "<pre>";
-print_r($resultse1_arr);
-echo "</pre>";
-$num= 0.00000;
+        $data2 = array(
+            'documents' => array(
+                array('id' => $renum, 'language' => $lan, 'text' => $bbcarr)
+            )
+        );
+        $resultse1 = GetSentiment1($host1, $path1, $accessKey1, $data2);
+        // echo json_encode (json_decode ($resultse1), JSON_PRETTY_PRINT);
+        $resultse1_arr[] = $resultse1;
+    }
+    echo "<pre>";
+    print_r($resultse1_arr);
+    echo "</pre>";
+    $num = 0.00000;
 //for ($frenum = 0; count($resultse1_arr) >= $frenum; $frenum++){
-  //  print_r( $resultse1_arr[$frenum]['documents'][0]['score']) ;
+    //  print_r( $resultse1_arr[$frenum]['documents'][0]['score']) ;
 
 //}
 //echo $num;
 
-foreach($resultse1_arr as $newfre){
-    $newscore =  json_decode($newfre, true);
-    $num += $newscore['documents'][0]['score'];
+    foreach ($resultse1_arr as $newfre) {
+        $newscore = json_decode($newfre, true);
+        $num += $newscore['documents'][0]['score'];
+    }
+    $sentfre = $num / count($resultse1_arr);
+
+    echo $sentfre;
+} elseif ($resultse1_arr = null){
+    Echo "Sorry no match found";
 }
- $sentfre = $num / count($resultse1_arr);
-echo $sentfre;
