@@ -175,7 +175,7 @@ if($result1_arr > 1) {
     echo "<pre>";
     print_r($resultse1_arr);
     echo "</pre>";
-    $num = 1.00000;
+    $num = 0.50000;
 //for ($frenum = 0; count($resultse1_arr) >= $frenum; $frenum++){
     //  print_r( $resultse1_arr[$frenum]['documents'][0]['score']) ;
 
