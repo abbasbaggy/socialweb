@@ -75,7 +75,7 @@ require ('../MicrosoftNLP/dbconnect.php');
 
 foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
     $TStrps = mysqli_real_escape_string($con,$phrase);
-    $datasen = "SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$TStrps."%') ";
+    $datasen = "SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%".$TStrps."%' limit 3) ";
     $query = mysqli_query($con,$datasen);
 
     if(mysqli_num_rows($query)> 0){
