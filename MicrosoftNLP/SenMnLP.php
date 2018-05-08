@@ -63,25 +63,25 @@ $senti = $sen['documents'][0]['score'];
 echo $senti ."<br/>";
 
 switch ($senti){
-    case 0.00 < 0.20:
+    case (0.00 < 0.20):
         echo "extremely Negative .\"<br/>\"";
         break;
-    case 0.21 < 0.40:
+    case (0.21 < 0.40):
         echo "very Negative .\"<br/>\"";
         break;
-    case 0.41 < 0.49:
+    case (0.41 < 0.49):
         echo "a little negative .\"<br/>\"";
         break;
-    case 0.5:
+    case (0.5):
         echo "Neutral .\"<br/>\"";
         break;
-    case 0.51 < 0.59:
+    case (0.51 < 0.59):
         echo "a little positive .\"<br/>\"";
         break;
-    case 0.60 < 0.80:
+    case (0.60 < 0.80):
         echo "very positive .\"<br/>\"";
         break;
-    case 0.81 < 1.0:
+    case (0.81 < 1.0):
         echo "extremely positive .\"<br/>\"";
         break;
 }
