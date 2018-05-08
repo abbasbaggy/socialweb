@@ -172,7 +172,7 @@ for($renum= 0;count($result1_arr) >= $renum;$renum++){
 echo "<pre>";
 print_r($resultse1_arr);
 echo "</pre>";
-//$num= 0.00000;
+$num= 0.00000;
 //for ($frenum = 0; count($resultse1_arr) >= $frenum; $frenum++){
   //  print_r( $resultse1_arr[$frenum]['documents'][0]['score']) ;
 
@@ -181,6 +181,6 @@ echo "</pre>";
 
 foreach($resultse1_arr as $newfre){
     $newscore =  json_decode($newfre, true);
-    echo $newscore['documents'][0]['score'] ."<br/>";
+    $num =+ $newscore['documents'][0]['score'];
 }
-
+echo $num;
