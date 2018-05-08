@@ -178,7 +178,7 @@ echo "</pre>";
     //pro
 //}
 //echo $num;
-foreach ($resultse1_arr['doucument']['score'] as $scores){
+foreach ($resultse1_arr['documents']['score'] as $scores){
     echo $scores;
 }
 
