@@ -159,7 +159,7 @@ function GetSentiment1 ($host1, $path1, $key1, $data2) {
     return $resultse1;
 }
 
-if($result1_arr != null) {
+if($result1_arr > 1) {
     for ($renum = 0; count($result1_arr) >= $renum; $renum++) {
         $bbcarr = $result1_arr[$renum]['Description'];
 
