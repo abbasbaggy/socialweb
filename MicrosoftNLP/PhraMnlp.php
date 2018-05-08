@@ -189,6 +189,6 @@ if($result1_arr != null) {
     $sentfre = $num / count($resultse1_arr);
 
     echo $sentfre;
-} elseif ($result1_arr = null){
+} elseif ($result1_arr < 1){
     Echo "Sorry no match found";
 }
