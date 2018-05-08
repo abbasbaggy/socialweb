@@ -180,6 +180,7 @@ echo "</pre>";
 //echo $num;
 
 foreach($resultse1_arr as $newfre){
-    echo $newfre;
+    $newscore =  json_decode($newfre, true);
+    echo $newscore['documents'][0]['score'] ."<br/>";
 }
 
