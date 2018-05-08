@@ -180,6 +180,6 @@ echo "</pre>";
 //echo $num;
 
 foreach($resultse1_arr as $newfre){
-    echo $newfre['documents'][0]['score'];
+    echo $newfre['documents']['score'];
 }
 
