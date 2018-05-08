@@ -178,8 +178,8 @@ echo "</pre>";
     //pro
 //}
 //echo $num;
-foreach ($resultse1_arr['documents']['score'] as $scores){
-    echo $scores;
-}
 
+$respass = json_decode($resultse1,true);
+
+echo $respass;
 
