@@ -180,6 +180,8 @@ echo "</pre>";
 //echo $num;
 
 foreach($resultse1_arr as $newfre){
-    echo $newfre;
+   // echo $newfre;
 }
-
+echo "<pre>";
+print_r($newfre);
+echo "</pre>";
