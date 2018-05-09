@@ -71,25 +71,23 @@ foreach($string['statuses'] as $item){
     echo "Status count :" . $item['user']['statuses_count'] . "<br />";
     echo "Screen name :" . $item['user']['screen_name'] . "<br />";
     echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
-
-    echo  "<p><a id= '" . $i ."'"."href ='sample'>     TWEETs:  " . $item['text']. "<br/>  </a> </p>
-  <button onclick='myFunction()'>Select tweet</button>
-
-  <script>
-
-      function myFunction() {
-          var x = document.getElementById('" . $i ."').text;
-          document.getElementById('int').innerHTML = x;
-          x.remove();
-      }
-
-  </script>";
+    ?>
+   <p><a id="myAnchor" href ="sample">  <?php  echo "TWEETs:  " . $item['text']. "<br/>" ?> </a> </p>
+    <button onclick="myFunction()">Select tweet</button>
 
 
 
 
-
+    <?php  echo "      " . "<br />";
 }
 
 ?>
+<script>
 
+    function myFunction() {
+        var x = document.getElementById("myAnchor").text;
+        document.getElementById("int").innerHTML = x;
+        x.remove();
+    }
+
+</script>
