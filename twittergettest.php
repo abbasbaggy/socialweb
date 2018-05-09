@@ -73,9 +73,10 @@ foreach($string['statuses'] as $item){
     echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
     ?>
     <p><a id="myAnchor" href ="sample"> <?php   echo "TWEETs:  " . $item['text']. "<br/>" ?> </a> </p>
-    <button onclick="myfunction">Select tweet</button>
+    <button onclick="myFunction()">Select tweet</button>
 
     <script>
+
         function myFunction() {
             var x = document.getElementById("myAnchor").text;
             document.getElementById("int").innerHTML = x;
