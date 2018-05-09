@@ -104,5 +104,3 @@ $temp1.remove();
 }
 </script>
 
-
-</html>
