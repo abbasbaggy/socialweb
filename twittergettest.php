@@ -44,7 +44,7 @@ $string = json_decode($twitter->setGetfield($getfield)
 if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p>
 <p><em>".$string[errors][0]["message"]."</em></p>";exit();}
 
-$twits =json_encode(  ($string), JSON_PRETTY_PRINT);
+$twits =json_encode ($string);
 /*
 foreach($string as $items)
 {
