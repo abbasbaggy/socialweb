@@ -65,14 +65,14 @@ $in = 1;
 foreach($string['statuses'] as $item){
     $i++;
     $in++;
-    echo "Time and Date of Tweet: " . $item['created_at'] . "<br />";
-    echo "User Description :" . $item['user']['description'] . "<br />";
+    echo "Time and Date of Tweet: " . $item['created_at'] . "<p />";
+    echo "User Description :" . $item['user']['description'] . "<p />";
     echo "name :" . $item['user']['name'] . "<br />";
-    echo "Status count :" . $item['user']['statuses_count'] . "<br />";
-    echo "Screen name :" . $item['user']['screen_name'] . "<br />";
-    echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
+    echo "Status count :" . $item['user']['statuses_count'] . "<p />";
+    echo "Screen name :" . $item['user']['screen_name'] . "<p />";
+    echo "favourites count :" . $item['user']['favourites_count'] . "<p />";
     ?>
- <span id= "<?php echo $i?>" style="background-color: azure" > <?php   echo "TWEETs:  " . $item['text']. "<br/>" ?> </span>
+ <span id= "<?php echo $i?>" style="background-color: azure" > <?php   echo "TWEETs:  " . $item['text']. "<p/>" ?> </span>
     <button id = "<?php echo $in?>">Select tweet</button>
 
 
