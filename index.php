@@ -81,15 +81,15 @@
         <div class="col-sm-7 text-left">
             <h1>Welcome</h1>
             <form name="rawdata" action="MicrosoftNLP/LanMnlp.php" target="results" method="get">
-                <textarea name="data" rows="3" cols="70" >
+                <textarea id="int" name="data" rows="3" cols="70" >
 
                 </textarea>
                 <input type="submit">
             </form>
 
             <hr>
-            <h3>Test</h3>
-            <p>Result Analysis</p>
+            <h3>Test Analysis</h3>
+
             <iframe src="" name="results" height="500" width="700">
 
             </iframe>

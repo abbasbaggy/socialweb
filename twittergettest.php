@@ -44,7 +44,6 @@ $string = json_decode($twitter->setGetfield($getfield)
 if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p>
 <p><em>".$string[errors][0]["message"]."</em></p>";exit();}
 
-$twits =json_encode ($string);
 /*
 foreach($string as $items)
 {
@@ -61,24 +60,32 @@ echo "<pre>";
 print_r($string);
 echo "</pre>";
 */
-?>
-
-
+$i =0;
+$in = 1;
+foreach($string['statuses'] as $item){
+    $i++;
+    $in++;
+    echo "Time and Date of Tweet: " . $item['created_at'] . "<br />";
+    echo "User Description :" . $item['user']['description'] . "<br />";
+    echo "name :" . $item['user']['name'] . "<br />";
+    echo "Status count :" . $item['user']['statuses_count'] . "<br />";
+    echo "Screen name :" . $item['user']['screen_name'] . "<br />";
+    echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
+    ?>
+    <p><a id="myAnchor" href ="sample"> <?php   echo "TWEETs:  " . $item['text']. "<br/>" ?> </a> </p>
+    <button onclick="myfunction">Select tweet</button>
 
     <script>
-    Var newstri = <?php  $string; ?>
- var myJsin = JSON.stringify(newstri);
- document.getElementById("demo").innerText = myJsin;
+        function myFunction() {
+            var x = document.getElementById("myAnchor").text;
+            document.getElementById("int").innerHTML = x;
+        }
+
+    </script>
 
 
+    <?php  echo "      " . "<br />";
+}
 
-
-    function copyToClipboard(element) {
-        var $temp1 = $("<input>");
-        $("body").append($temp1);
-        $temp1.val($(element).text()).select();
-        document.execCommand("copy");
-        $temp1.remove();
-    }
-</script>
+?>
 
