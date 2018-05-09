@@ -77,7 +77,7 @@ foreach($string['statuses'] as $item){
     <span id = "msg"></span><br>
 
     <script>
-        document.getElementById("<?php echo $i?>").addEventListener("click", function() {
+        document.getElementById("<?php echo $in?>").addEventListener("click", function() {
             copyToClipboard(document.getElementById("<?php echo $i?>"));
         });
         function copyToClipboard(element) {
@@ -96,11 +96,11 @@ foreach($string['statuses'] as $item){
 ?>
 <script>
 function copyToClipboard(element) {
-var $temp = $("<input>");
-$("body").append($temp);
-$temp.val($(element).text()).select();
+var $temp1 = $("<input>");
+$("body").append($temp1);
+$temp1.val($(element).text()).select();
 document.execCommand("copy");
-$temp.remove();
+$temp1.remove();
 }
 </script>
 
