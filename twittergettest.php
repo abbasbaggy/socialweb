@@ -87,7 +87,7 @@ foreach($string['statuses'] as $item){
     function myFunction() {
         var x = document.getElementById("myAnchor").text;
         document.getElementById("int").innerHTML = x;
-        remove(x);
+        x = null;
     }
 
 </script>
