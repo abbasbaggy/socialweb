@@ -59,11 +59,11 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active">FAke News via Twitter Analysis using Sentiments</li>
+                <li class="active"><a href=".">FAke News via Twitter Analysis using Sentiments</a></li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> About</a></li>
+                <li><a href="About.html"><span class="glyphicon glyphicon-log-in"></span> About</a></li>
             </ul>
         </div>
     </div>
