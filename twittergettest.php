@@ -66,7 +66,7 @@ echo "</pre>";
 
 
     <script>
-    Var newstri = <?php echo $twits; ?>
+    Var newstri = <?php  $twits; ?>
  var myJsin = JSON.stringify(newstri);
  document.getElementById("demo").innerText = myJsin;
 
