@@ -55,11 +55,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">FAke News</a>
+            <a class="navbar-brand" href=".">FAke News</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">FAke News via Twitter Analysis</a></li>
+                <li class="active">FAke News via Twitter Analysis using Sentiments</li>
 
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -86,6 +86,10 @@
                 </textarea>
                 <input type="submit">
             </form>
+
+            <hr>
+            <h3>Test</h3>
+            <p>Result Analysis</p>
             <iframe src="" name="results" height="500" width="700">
 
             </iframe>
@@ -102,9 +106,7 @@
 
 
 
-            <hr>
-            <h3>Test</h3>
-            <p>Lorem ipsum...</p>
+
         </div>
         <div class="col-sm-2 sidenav">
             <div class="well">
