@@ -72,13 +72,13 @@ foreach($string['statuses'] as $item){
     echo "Screen name :" . $item['user']['screen_name'] . "<br />";
     echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
     ?>
-    <p><a id="myAnchor" href ="sample"> <?php   echo "TWEETs:  " . $item['text']. "<br/>" ?> </a> </p>
+    <p><a id= "<?php echo $i?>" href ="sample"> <?php   echo "TWEETs:  " . $item['text']. "<br/>" ?> </a> </p>
     <button onclick="myFunction()">Select tweet</button>
 
     <script>
 
         function myFunction() {
-            var x = document.getElementById("myAnchor").text;
+            var x = document.getElementById(<?php echo $i?>).text;
             document.getElementById("int").innerHTML = x;
         }
 
