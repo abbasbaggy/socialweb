@@ -72,18 +72,20 @@ foreach($string['statuses'] as $item){
     echo "Screen name :" . $item['user']['screen_name'] . "<br />";
     echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
 
-  echo  "<p><a id= '" . $i ."'"."href ='sample'>     TWEETs:  " . $item['text']. "<br/>  </a> </p>
-    <button onclick='myFunction()'>Select tweet</button>
+    echo  "<p><a id= '" . $i ."'"."href ='sample'>     TWEETs:  " . $item['text']. "<br/>  </a> </p>
+  <button onclick='myFunction()'>Select tweet</button>
 
-    <script>
+  <script>
 
-        function myFunction() {
-            var x = document.getElementById(" . $i .").text;
-            document.getElementById('int').innerHTML = x;
-            x.remove();
-        }
+      function myFunction() {
+          var x = document.getElementById('" . $i ."').text;
+          document.getElementById('int').innerHTML = x;
+          x.remove();
+      }
 
-    </script>";
+  </script>";
+
+
 
 
 
