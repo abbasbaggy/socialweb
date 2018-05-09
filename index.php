@@ -75,7 +75,13 @@
 
                 <?php // include ('twittergettest.php')
                 //include ('twitterGet.php'); ?>
-            <p id="demo"></p>
+            <div class="well">
+                <p>Tweets</p>
+            </div><div class="well">
+                <p>Tweets</p>
+            </div><div class="well">
+                <p>Tweets</p>
+            </div>
 
         </div>
         <div class="col-sm-7 text-left">
