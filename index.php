@@ -73,7 +73,7 @@
     <div class="scrollmenu">
         <div class="col-sm-3 sidenav">
 
-                <?php // include ('twittergettest.php')
+                <?php  include ('twittergettest.php')
                 //include ('twitterGet.php'); ?>
             <div class="well">
                 <p>Tweets</p>
