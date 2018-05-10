@@ -16,7 +16,7 @@ $array = $_REQUEST['data'];
 // **********************************************
 
 // Replace the accessKey string value with your valid access key.
-$accessKey = '20f38c819ed54108ac5fd6f43d354fde';
+$accessKey = '19d10e679abe47d58b67e286c8617776';
 
 // Replace or verify the region.
 
