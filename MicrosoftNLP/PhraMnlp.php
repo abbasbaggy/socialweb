@@ -15,7 +15,7 @@ $lan = $_SESSION['language'];
 
 
 
-$accessKey = 'dd0c99e93d534a2c9ad064d00907ca5f';
+$accessKey = '20f38c819ed54108ac5fd6f43d354fde';
 
 
 $host = 'https://southcentralus.api.cognitive.microsoft.com';
@@ -135,7 +135,7 @@ foreach ($result1_arr as $new){
 
 }*/
 
-$accessKey1 = 'dd0c99e93d534a2c9ad064d00907ca5f';
+$accessKey1 = '20f38c819ed54108ac5fd6f43d354fde';
 $host1 = 'https://southcentralus.api.cognitive.microsoft.com';
 $path1 = '/text/analytics/v2.0/sentiment';
 function GetSentiment1 ($host1, $path1, $key1, $data2) {

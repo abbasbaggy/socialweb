@@ -76,6 +76,15 @@ foreach($string['statuses'] as $item){
     <button id = "<?php echo $in?>">Select tweet</button>
 
     <script>
+
+        // var bleh = document.getElementsById("<?php echo $in?>");
+
+        //
+        // for (var i = 0 ; i < bleh.length; i++) {
+        // bleh[i].addEventListener("click", function() {
+        // copyToClipboard(i);
+       // });
+        // }
         document.getElementById("<?php echo $in?>").addEventListener("click", function() {
             copyToClipboard(document.getElementById("<?php echo $i?>"));
         });

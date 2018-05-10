@@ -10,7 +10,7 @@
 
 $array = $_REQUEST['data'];
 $lan = $_SESSION['language'];
-$accessKey = 'dd0c99e93d534a2c9ad064d00907ca5f';
+$accessKey = '20f38c819ed54108ac5fd6f43d354fde';
 
 // Replace or verify the region.
 
