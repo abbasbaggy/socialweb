@@ -73,15 +73,9 @@
     <div class="scrollmenu">
         <div class="col-sm-3 sidenav">
 
-                <?php  include ('twittergettest.php')
-                //include ('twitterGet.php'); ?>
-            <div class="well">
-                <p>Tweets</p>
-            </div><div class="well">
-                <p>Tweets</p>
-            </div><div class="well">
-                <p>Tweets</p>
-            </div>
+                <?php // include ('twittergettest.php')
+                include ('twitterGet.php'); ?>
+
 
         </div>
         <div class="col-sm-7 text-left">
@@ -101,8 +95,8 @@
             </iframe>
 
             <?php
-          include ('NewsExtract/dailyMail.php');
-          include('NewsExtract/bbcnewsapi.php')
+         // include ('NewsExtract/dailyMail.php');
+          //include('NewsExtract/bbcnewsapi.php')
             //include ('MicrosoftNLP/SenMnlp.php');
            // include ('MicrosoftNLP/LanMnlp.php');
            // require('NewsExtract/dbconnect.php');
