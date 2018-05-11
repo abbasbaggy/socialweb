@@ -86,7 +86,7 @@ foreach($string['statuses'] as $item){
        // });
         // }
         document.getElementsByName("<?php echo $in?>").addEventListener("click", function() {
-            copyToClipboard(document.getElementsByName("<?php echo $i?>")
+            copyToClipboard(document.getElementsByName("<?php echo $i?>"));
         });
         function copyToClipboard(element) {
             var $temp = $("<input>");
