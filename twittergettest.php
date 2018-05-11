@@ -85,7 +85,7 @@ foreach($string['statuses'] as $item){
 <script>
 
     function myFunction() {
-        var x = document.getElementById("<?php echo $i?>").text;
+        var x = document.getElementById("2").text;
         document.getElementById("int").innerHTML = x;
         x = null;
     }
