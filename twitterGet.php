@@ -38,11 +38,11 @@ $getfield = "?f=news&vertical=news&q=news&src=typd";
 
 $twitter = new TwitterAPIExchange($settings);
 
- echo  $twitter->setGetfield($getfield)
+$string = json_decode($twitter->setGetfield($getfield)
     ->buildOauth($url, $requestMethod)
-    ->performRequest();
-//if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p>
-//<p><em>".$string[errors][0]["message"]."</em></p>";exit();}
+    ->performRequest(),$assoc = TRUE);
+if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p>
+<p><em>".$string[errors][0]["message"]."</em></p>";exit();}
 
 /*
 foreach($string as $items)
@@ -54,12 +54,12 @@ foreach($string as $items)
     echo "Followers: ". $items['user']['followers_count']."<br />";
     echo "Friends: ". $items['user']['friends_count']."<br />";
     echo "Listed: ". $items['user']['listed_count']."<br /><hr />";
-}*/
+}*
 
-//echo "<pre>";
-//print_r($string);
-//echo "</pre>";
-/*
+echo "<pre>";
+print_r($string);
+echo "</pre>";
+*/
 $i =0;
 $in = 0;
 foreach($string['statuses'] as $item){
@@ -71,35 +71,12 @@ foreach($string['statuses'] as $item){
     echo "Status count :" . $item['user']['statuses_count'] . "<br />";
     echo "Screen name :" . $item['user']['screen_name'] . "<br />";
     echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
+    echo "TWEETs:  " . $item['text']. "<br/>"
+
+
     ?>
- <span id= "<?php echo $i?>" style="background-color: azure" > <?php   echo "TWEETs:  " . $item['text']. "<br/>" ?> </span>
-    <button id = "<?php echo $in?>">Select tweet</button>
 
-    <script>
 
-        // var bleh = document.getElementsById("<?//php echo $in?>");
-
-        //
-        // for (var i = 0 ; i < bleh.length; i++) {
-        // bleh[i].addEventListener("click", function() {
-        // copyToClipboard(i);
-        // });
-        // }
-        var x =15 ;
-        for(var i =0; i< x ;i ++) {
-            document.getElementById(x).addEventListener("click", function () {
-                copyToClipboard(document.getElementById(x));
-            });
-
-            function copyToClipboard(element) {
-                var $temp = $("<input>");
-                $("body").append($temp);
-                $temp.val($(element).text()).select();
-                document.execCommand("copy");
-                $temp.remove();
-            }
-        }
-    </script>
 
 
 
@@ -108,4 +85,28 @@ foreach($string['statuses'] as $item){
 
 ?>
 
+<script>
 
+    // var bleh = document.getElementsById("<?//php echo $in?>");
+
+    //
+    // for (var i = 0 ; i < bleh.length; i++) {
+    // bleh[i].addEventListener("click", function() {
+    // copyToClipboard(i);
+    // });
+    // }
+    var x =15 ;
+    for(var i =0; i< x ;i ++) {
+        document.getElementById(x).addEventListener("click", function () {
+            copyToClipboard(document.getElementById(x));
+        });
+
+        function copyToClipboard(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+        }
+    }
+</script>
