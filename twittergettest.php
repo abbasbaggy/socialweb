@@ -83,11 +83,14 @@ foreach($string['statuses'] as $item){
 
 ?>
 <script>
+ var x = 15
+ for(var i =0; i<x; i++) {
 
-    function myFunction() {
-        var x = document.getElementById("2").text;
-        document.getElementById("int").innerHTML = x;
-        x = null;
-    }
+     function myFunction() {
+         var x = document.getElementById("i").text;
+         document.getElementById("int").innerHTML = x;
+         x = null;
+     }
+ }
 
 </script>
