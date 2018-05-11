@@ -61,7 +61,7 @@ print_r($string);
 echo "</pre>";
 */
 $i =0;
-$in = 1;
+$in = 0;
 foreach($string['statuses'] as $item){
     $i++;
     $in++;
@@ -75,19 +75,30 @@ foreach($string['statuses'] as $item){
  <span id= "<?php echo $i?>" style="background-color: azure" > <?php   echo "TWEETs:  " . $item['text']. "<br/>" ?> </span>
     <button id = "<?php echo $in?>">Select tweet</button>
 
-    <script>
 
-        // var bleh = document.getElementsById("<?//php echo $in?>");
 
-        //
-        // for (var i = 0 ; i < bleh.length; i++) {
-        // bleh[i].addEventListener("click", function() {
-        // copyToClipboard(i);
-       // });
-        // }
-        document.getElementById("<?php echo $in?>").addEventListener("click", function() {
-            copyToClipboard(document.getElementsByTagName("<?php echo $i?>"));
+
+    <?php  echo "      " . "<br />";
+}
+
+?>
+
+<script>
+
+    // var bleh = document.getElementsById("<?//php echo $in?>");
+
+    //
+    // for (var i = 0 ; i < bleh.length; i++) {
+    // bleh[i].addEventListener("click", function() {
+    // copyToClipboard(i);
+    // });
+    // }
+    var x =15 ;
+    for(var i =0; i< x ;i ++) {
+        document.getElementById(x).addEventListener("click", function () {
+            copyToClipboard(document.getElementById(x));
         });
+
         function copyToClipboard(element) {
             var $temp = $("<input>");
             $("body").append($temp);
@@ -95,20 +106,5 @@ foreach($string['statuses'] as $item){
             document.execCommand("copy");
             $temp.remove();
         }
-    </script>
-
-
-    <?php  echo "      " . "<br />";
-}
-
-?>
-<script>
-function copyToClipboard(element) {
-var $temp1 = $("<input>");
-$("body").append($temp1);
-$temp1.val($(element).text()).select();
-document.execCommand("copy");
-$temp1.remove();
-}
+    }
 </script>
-
