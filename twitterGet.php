@@ -54,12 +54,12 @@ foreach($string as $items)
     echo "Followers: ". $items['user']['followers_count']."<br />";
     echo "Friends: ". $items['user']['friends_count']."<br />";
     echo "Listed: ". $items['user']['listed_count']."<br /><hr />";
-}*
+}*/
 
 echo "<pre>";
 print_r($string);
 echo "</pre>";
-*/
+/*
 $i =0;
 $in = 0;
 foreach($string['statuses'] as $item){

@@ -80,7 +80,7 @@
         </div>
         <div class="col-sm-7 text-left">
             <h1>Welcome</h1>
-            <form name="rawdata" action="MicrosoftNLP/LanMnlp.php" target="results" method="get">
+           <!--- <form name="rawdata" action="MicrosoftNLP/LanMnlp.php" target="results" method="get">
                 <textarea id="int" name="data" rows="3" cols="70" >
 
                 </textarea>
@@ -93,7 +93,8 @@
             <iframe src="" name="results" height="500" width="700">
 
             </iframe>
-
+            -->
+           <?php include ('twitterGet.php'); ?>
             <?php
          // include ('NewsExtract/dailyMail.php');
           //include('NewsExtract/bbcnewsapi.php')
