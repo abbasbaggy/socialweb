@@ -87,8 +87,8 @@ foreach($string['statuses'] as $item){
         // }
         var x =15 ;
         for(var i =0; i< x ;i ++) {
-            x[i].addEventListener("click", function () {
-                copyToClipboard(i);
+            document.getElementById(x).addEventListener("click", function () {
+                copyToClipboard(document.getElementById(x));
             });
 
             function copyToClipboard(element) {
