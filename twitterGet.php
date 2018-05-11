@@ -77,7 +77,7 @@ foreach($string['statuses'] as $item){
 
     <script>
 
-        // var bleh = document.getElementsById("<?php echo $in?>");
+        // var bleh = document.getElementsById("<?//php echo $in?>");
 
         //
         // for (var i = 0 ; i < bleh.length; i++) {
@@ -85,9 +85,8 @@ foreach($string['statuses'] as $item){
         // copyToClipboard(i);
        // });
         // }
-
-        document.getElementsById("<?php echo $i?>").addEventListener("click", function() {
-            copyToClipboard(document.getElementById("<?php echo $in?>"));
+        document.getElementById("<?php echo $in?>").addEventListener("click", function() {
+            copyToClipboard(document.getElementById("<?php echo $i?>"));
         });
         function copyToClipboard(element) {
             var $temp = $("<input>");
