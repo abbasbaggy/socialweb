@@ -75,6 +75,31 @@ foreach($string['statuses'] as $item){
  <span id= "<?php echo $i?>" style="background-color: azure" > <?php   echo "TWEETs:  " . $item['text']. "<br/>" ?> </span>
     <button id = "<?php echo $in?>">Select tweet</button>
 
+    <script>
+
+        // var bleh = document.getElementsById("<?//php echo $in?>");
+
+        //
+        // for (var i = 0 ; i < bleh.length; i++) {
+        // bleh[i].addEventListener("click", function() {
+        // copyToClipboard(i);
+        // });
+        // }
+        var x =15 ;
+        for(var i =0; i< x ;i ++) {
+            document.getElementById(x).addEventListener("click", function () {
+                copyToClipboard(document.getElementById(x));
+            });
+
+            function copyToClipboard(element) {
+                var $temp = $("<input>");
+                $("body").append($temp);
+                $temp.val($(element).text()).select();
+                document.execCommand("copy");
+                $temp.remove();
+            }
+        }
+    </script>
 
 
 
@@ -83,28 +108,4 @@ foreach($string['statuses'] as $item){
 
 ?>
 
-<script>
 
-    // var bleh = document.getElementsById("<?//php echo $in?>");
-
-    //
-    // for (var i = 0 ; i < bleh.length; i++) {
-    // bleh[i].addEventListener("click", function() {
-    // copyToClipboard(i);
-    // });
-    // }
-    var x =15 ;
-    for(var i =0; i< x ;i ++) {
-        document.getElementById(x).addEventListener("click", function () {
-            copyToClipboard(document.getElementById(x));
-        });
-
-        function copyToClipboard(element) {
-            var $temp = $("<input>");
-            $("body").append($temp);
-            $temp.val($(element).text()).select();
-            document.execCommand("copy");
-            $temp.remove();
-        }
-    }
-</script>
