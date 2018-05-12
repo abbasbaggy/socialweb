@@ -8,6 +8,8 @@
 class natural
 {
 
+
+
     public function getSent($text)
     {
 
