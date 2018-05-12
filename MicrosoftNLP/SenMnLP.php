@@ -56,7 +56,7 @@ $result = GetSentiment ($host, $path, $accessKey, $data);
 
 //echo json_encode (json_decode ($result), JSON_PRETTY_PRINT) ."<br/>";
 $sen =  json_decode($result, true);
-
+                                                                                echo $sen;
 
 
 $senti = $sen['documents'][0]['score'];

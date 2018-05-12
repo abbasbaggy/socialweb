@@ -54,7 +54,7 @@ $result = GetKeyPhrases ($host, $path, $accessKey, $data);
 
 //echo json_encode (json_decode ($result), JSON_PRETTY_PRINT);
 $pass = json_decode($result,true);
-
+                                                                            echo $pass;
 /*
 echo "<pre>";
 print_r($pass);
