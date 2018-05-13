@@ -187,8 +187,9 @@ if($result1_arr > 1) {
 
     foreach ($resultse1_arr as $newfre) {
         $newscore = json_decode($newfre, true);
+
         $num += $newscore['documents'][0]['score'];
-        echo $num;
+        echo $newscore['documents'][0]['score'] . "<br/>";
     }
 
     $sentfre = $num / count($resultse1_arr);
