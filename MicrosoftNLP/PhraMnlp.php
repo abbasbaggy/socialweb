@@ -79,10 +79,14 @@ foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
     $query = mysqli_query($con,$datasen);
 
     if(mysqli_num_rows($query)> 0){
-        while ($result1 = mysqli_fetch_array($query) ){
-            // print_r( $result1);
+        for ($w = 1; x < 4 ;$w++){
+            $result1 = mysqli_fetch_array($query);
             $result1_arr[] = $result1;
         }
+       // while ($result1 = mysqli_fetch_array($query) ){
+            // print_r( $result1);
+         //   $result1_arr[] = $result1;
+        //}
     } else {
         echo  "Error" . mysqli_error($con);
         echo "no match found";
