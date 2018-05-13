@@ -76,9 +76,9 @@ require ('../MicrosoftNLP/dbconnect.php');
 foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
     $TStrps = mysqli_real_escape_string($con,$phrase);
     $datasen = "SELECT * FROM `bbcnewstop` WHERE `Title` LIKE '%".$TStrps."%' LIMIT 2  ";
-    //$datasen2 = "SELECT * FROM `bbcnewstop` WHERE `Title` LIKE '%".$TStrps."%' `LIMIT 2`  ";
+
     $query = mysqli_query($con,$datasen);
-   // $query2 = mysqli_query($con,$datasen2);
+
 
     if(mysqli_num_rows($query)> 0){
 
@@ -94,14 +94,14 @@ foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
 
 }
 
-
+/*
 echo "<pre>";
 print_r($result1_arr);
 echo "</pre>";
 
 //print_r($phrase_arr);
 
-/*8888888888888888888888888888888
+
 //$strP = implode(" ",$phrase_arr);
 //echo $strP;
 //require ('../MicrosoftNLP/dbconnect.php');
@@ -136,8 +136,8 @@ foreach ($result1_arr as $new){
     //
     //echo $resultBbc;
 
-}*
-*****************************************************
+}*/
+
 $accessKey1 = '19d10e679abe47d58b67e286c8617776';
 $host1 = 'https://southcentralus.api.cognitive.microsoft.com';
 $path1 = '/text/analytics/v2.0/sentiment';
@@ -195,4 +195,4 @@ if($result1_arr > 1) {
     echo $sentfre;
 } elseif ($result1_arr < 1){
     Echo "Sorry no match found";
-}*/
+}
