@@ -91,14 +91,14 @@ foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
 
 }
 
-/*
+
 echo "<pre>";
 print_r($result1_arr);
 echo "</pre>";
 
 //print_r($phrase_arr);
 
-
+/*8888888888888888888888888888888
 //$strP = implode(" ",$phrase_arr);
 //echo $strP;
 //require ('../MicrosoftNLP/dbconnect.php');
