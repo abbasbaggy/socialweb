@@ -183,18 +183,18 @@ if($result1_arr > 1) {
     //  print_r( $resultse1_arr[$frenum]['documents'][0]['score']) ;
 
 //}
-//echo $num;
+echo "Sentiment from BBc News Similar to above topic <br/>";
 
     foreach ($resultse1_arr as $newfre) {
         $newscore = json_decode($newfre, true);
 
         $num += $newscore['documents'][0]['score'];
-        echo $newscore['documents'][0]['score'] . "<br/>";
+        echo 1+ " ". $newscore['documents'][0]['score'] . "<br/>";
     }
 
     $sentfre = $num / count($resultse1_arr);
-    echo "Comparative Sentiment Freqency of Topic above against BBC News";
+    echo "Comparative Sentiment Freqency of Topic above against BBC News --- ";
     echo $sentfre;
 } elseif ($result1_arr < 1){
-    Echo "Sorry no match found";
+    Echo "Sorry i have no matching data, my resources are limited";
 }
