@@ -82,7 +82,7 @@ foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
 
     if(mysqli_num_rows($query)> 0){
 
-        while ($result1 = mysqli_fetch_array($query2)  ){
+        while ($result1 = mysqli_query($query2)  ){
             // print_r( $result1);
             $result1_arr[] = $result1;
         }
