@@ -175,9 +175,9 @@ if($result1_arr > 1) {
         // echo json_encode (json_decode ($resultse1), JSON_PRETTY_PRINT);
         $resultse1_arr[] = $resultse1;
     }
-    echo "<pre>";
+   /* echo "<pre>";
     print_r($resultse1_arr);
-    echo "</pre>";
+    echo "</pre>";*/
     $num = 0.50000;
 //for ($frenum = 0; count($resultse1_arr) >= $frenum; $frenum++){
     //  print_r( $resultse1_arr[$frenum]['documents'][0]['score']) ;
