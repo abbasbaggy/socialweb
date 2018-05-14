@@ -110,10 +110,11 @@
         </div>
         <div class="col-sm-2 sidenav">
             <div class="well">
-                <p>Source Score</p>
+                <p>Sentiment Score Range</p>
+                <p>"0" Extremely Negative and "1" Extremely Positive  </p>
             </div>
             <div class="well">
-                <p> </p>
+
             </div>
         </div>
     </div>
