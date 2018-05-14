@@ -61,7 +61,7 @@ print_r($pass);
 echo "</pre>";
 */
 foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
-    echo $phrase ."<br/>";
+    echo ":- ". $phrase ."<br/>";
 }
 
 
@@ -189,12 +189,37 @@ echo "Sentiment from BBc News Similar to above topic <br/>";
         $newscore = json_decode($newfre, true);
 
         $num += $newscore['documents'][0]['score'];
-        echo  $newscore['documents'][0]['score'] . "<br/>";
+        echo ":-- ". $newscore['documents'][0]['score'] . "<br/>";
     }
 
     $sentfre = $num / count($resultse1_arr);
     echo "Comparative Sentiment Freqency against BBC News --- ";
-    echo $sentfre;
+    echo $sentfre ."<br/>";
+
+    switch ($sentfre){
+        case ($senti <= 0.20):
+            echo "--Mostly extremely Negative \"<br/>\"";
+            break;
+        case ($senti <= 0.40):
+            echo "--Mostly very Negative \"<br/>\"";
+            break;
+        case ($senti <= 0.49):
+            echo "--Mostly a little negative \"<br/>\"";
+            break;
+        case ($sent = 0.5):
+            echo "--Moslty Neutral \"<br/>\"";
+            break;
+        case ($senti <= 0.59):
+            echo "--Mostly a little positive \"<br/>\"";
+            break;
+        case ($senti <= 0.80):
+            echo "--Mostly very positive \"<br/>\"";
+            break;
+        case ($senti <= 1.0):
+            echo "--Mostly extremely positive \"<br/>\"";
+            break;
+    }
+
 } elseif ($result1_arr < 1){
-    Echo "Sorry i have no matching data, my resources are limited";
+    Echo "Sorry i have no matching data";
 }
