@@ -75,7 +75,7 @@ require ('../MicrosoftNLP/dbconnect.php');
 // LOOP USED TO SEARCH DATABASE USING EXTRACTED KEY PHRASES
 foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
     $TStrps = mysqli_real_escape_string($con,$phrase);
-    $datasen = "SELECT * FROM `bbcnewstop` WHERE `Title` LIKE '%".$TStrps."%' ORDER BY id LIMIT 3  ";
+    $datasen = "SELECT * FROM `bbcnewstop` WHERE `Title` LIKE '%".$TStrps."%' ORDER BY id DESC LIMIT 3  ";
 
     $query = mysqli_query($con,$datasen);
 
