@@ -183,7 +183,7 @@ if($result1_arr > 1) {
     //  print_r( $resultse1_arr[$frenum]['documents'][0]['score']) ;
 
 //}
-echo "Sentiment from BBc News Similar to above topic <br/>";
+echo "Sentiments from BBC News Similar to above topic <br/>";
 
     foreach ($resultse1_arr as $newfre) {
         $newscore = json_decode($newfre, true);
