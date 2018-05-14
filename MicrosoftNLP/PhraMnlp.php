@@ -193,8 +193,8 @@ echo "Sentiment from BBc News Similar to above topic <br/>";
     }
 
     $sentfre = $num / count($resultse1_arr);
-    echo "Comparative Sentiment Freqency against BBC News --- ";
-    echo $sentfre ."<br/>";
+    echo "Comparative Sentiment Freqency against BBC News is--- ";
+    echo $sentfre ;
 
     switch ($sentfre){
         case ($senti <= 0.20):
