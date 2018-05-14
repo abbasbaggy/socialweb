@@ -72,7 +72,7 @@ foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
 
 require ('../MicrosoftNLP/dbconnect.php');
 
-
+// LOOP USED TO SEARCH DATABASE USING EXTRACTED KEY PHRASES
 foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
     $TStrps = mysqli_real_escape_string($con,$phrase);
     $datasen = "SELECT * FROM `bbcnewstop` WHERE `Title` LIKE '%".$TStrps."%' LIMIT 2  ";
@@ -87,8 +87,8 @@ foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
             $result1_arr[] = $result1;
         }
     } else {
-        echo  "Error" . mysqli_error($con);
-        echo "no match found";
+      //  echo  "Error" . mysqli_error($con);
+        //echo "no match found";
 
     }
 
@@ -193,7 +193,7 @@ echo "Sentiment from BBc News Similar to above topic <br/>";
     }
 
     $sentfre = $num / count($resultse1_arr);
-    echo "Comparative Sentiment Freqency of Topic above against BBC News --- ";
+    echo "Comparative Sentiment Freqency against BBC News --- ";
     echo $sentfre;
 } elseif ($result1_arr < 1){
     Echo "Sorry i have no matching data, my resources are limited";
