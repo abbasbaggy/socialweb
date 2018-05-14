@@ -13,11 +13,11 @@ $response= file_get_contents("https://newsapi.org/v2/everything?sources=bbc-news
 $responsearray= json_decode($response,true);
 //die("{$responsearray}");
 
-/*echo "<pre>";
+echo "<pre>";
         print_r($responsearray);
         echo "</pre>";
 
-*/
+
 
 //use select statement to get last store created date in db
 require('NewsExtract/dbconnect.php');

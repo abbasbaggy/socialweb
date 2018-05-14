@@ -189,7 +189,7 @@ echo "Sentiment from BBc News Similar to above topic <br/>";
         $newscore = json_decode($newfre, true);
 
         $num += $newscore['documents'][0]['score'];
-        echo 1+ " ". $newscore['documents'][0]['score'] . "<br/>";
+        echo  $newscore['documents'][0]['score'] . "<br/>";
     }
 
     $sentfre = $num / count($resultse1_arr);
