@@ -50,7 +50,7 @@ $data = array (
     )
 );
 
-print "Please wait a moment for sentiments score to appear . = ";
+print "Please wait a moment for sentiments score to appear  = ";
 
 $result = GetSentiment ($host, $path, $accessKey, $data);
 
@@ -64,6 +64,7 @@ echo "</pre>";
 
 $senti = $sen['documents'][0]['score'];
 echo $senti ."<br/>";
+echo "Sentiment is ";
 
 switch ($senti){
     case ($senti <= 0.20):
