@@ -197,25 +197,25 @@ echo "Sentiments from BBC News Similar to above topic <br/>";
     echo $sentfre ;
 
     switch ($sentfre){
-        case ($senti <= 0.20):
+        case ($sentfre <= 0.20):
             echo "--Mostly extremely Negative \"<br/>\"";
             break;
-        case ($senti <= 0.40):
+        case ($sentfre <= 0.40):
             echo "--Mostly very Negative \"<br/>\"";
             break;
-        case ($senti <= 0.49):
+        case ($sentfre <= 0.49):
             echo "--Mostly a little negative \"<br/>\"";
             break;
-        case ($sent = 0.5):
+        case ($sentfre = 0.5):
             echo "--Moslty Neutral \"<br/>\"";
             break;
-        case ($senti <= 0.59):
+        case ($sentfre <= 0.59):
             echo "--Mostly a little positive \"<br/>\"";
             break;
-        case ($senti <= 0.80):
+        case ($sentfre <= 0.80):
             echo "--Mostly very positive \"<br/>\"";
             break;
-        case ($senti <= 1.0):
+        case ($sentfre <= 1.0):
             echo "--Mostly extremely positive \"<br/>\"";
             break;
     }
