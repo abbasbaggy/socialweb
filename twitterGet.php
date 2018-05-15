@@ -11,7 +11,7 @@
 
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
-
+$user = $_REQUEST['user'];
 require_once('twitter-apiExchange.php');
 /** Set access tokens here - see: https://dev.twitter.com/apps/ **/
 $settings = array(
@@ -30,10 +30,10 @@ $requestMethod = "GET";
 //if (isset($_GET['user']))  {$user = $_GET['user'];}
 
 if (isset($_GET['count'])) {$count = $_GET['count'];} else {$count = 15;}
-//$getfield = "?screen_name=$user&count=$count";
+$getfield = "?screen_name=$user&count=$count20";
 //$getfield = "?q=%23news&result_type&count=$count";;
 //$getfield = "?q=%23news&src=typd&count=$count" - "Authorization: 215707565-rh94TVNw7TNXIeB2B4kyxvOgFQ5eM8YknXAE0ABQ";
-$getfield = "?f=news&vertical=news&q=news&src=typd";
+//$getfield = "?f=news&vertical=news&q=news&src=typd";
 
 
 $twitter = new TwitterAPIExchange($settings);
@@ -44,7 +44,7 @@ $string = json_decode($twitter->setGetfield($getfield)
 if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.</h3><p>Twitter returned the following error message:</p>
 <p><em>".$string[errors][0]["message"]."</em></p>";exit();}
 
-/*
+
 foreach($string as $items)
 {
     echo "Time and Date of Tweet: ". $items['created_at']."<br />";
@@ -54,12 +54,13 @@ foreach($string as $items)
     echo "Followers: ". $items['user']['followers_count']."<br />";
     echo "Friends: ". $items['user']['friends_count']."<br />";
     echo "Listed: ". $items['user']['listed_count']."<br /><hr />";
-}*
+}
+/*
 
 echo "<pre>";
 print_r($string);
 echo "</pre>";
-*/
+*
 $i =0;
 $in = 0;
 foreach($string['statuses'] as $item){
@@ -110,3 +111,4 @@ foreach($string['statuses'] as $item){
         }
     }
 </script>
+*/

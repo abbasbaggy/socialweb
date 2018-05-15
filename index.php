@@ -80,7 +80,7 @@
 
 
                 <?php  include ('twittergettest.php')
-                //include ('twitterGet.php'); ?>
+                 ?>
 
 
         </div>
@@ -119,6 +119,19 @@
                 <p>Sentiment Score Range</p>
                 <p>"0" Extremely Negative and "1" Extremely Positive  </p>
             </div>
+            <?php //include ('twitterGet.php');?>
+
+            <form name="rawdata" action="twitterGet.php" target="tweets" method="get">
+                <textarea id="int" name="user" rows="1" cols="20" >
+
+                </textarea>
+                <input type="submit">
+            </form>
+            <iframe src="" name="tweets" height="150" width="700">
+
+            </iframe>
+
+
 
         </div>
     </div>
