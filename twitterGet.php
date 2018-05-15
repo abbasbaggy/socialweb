@@ -46,69 +46,40 @@ if($string["errors"][0]["message"] != "") {echo "<h3>Sorry, there was a problem.
 
 
 foreach($string as $items)
-{
-    echo "Time and Date of Tweet: ". $items['created_at']."<br />";
-    echo "Tweet: ". $items['text']."<br />";
+{ $i++;
+    echo "Time and Date of Tweet: ". $items['created_at']."<br />";  ?>
+
+    <p><a id="<?php echo $i?>" onclick="myFunct<?php echo $i?>()"  <?php  echo "Tweet: ". $items['text']."<br />" ?> </a> </p>
+
+
+<script>
+
+    function myFunct<?php echo $i?>() {
+        var x = document.getElementById("<?php echo $i?>").text;
+        document.getElementById("int").innerHTML = x;
+        x = null;
+        alert("tweet selected");
+    }
+
+</script>
+
+
+<?php
+
+
+
+
+
     echo "Tweeted by: ". $items['user']['name']."<br />";
     echo "Screen name: ". $items['user']['screen_name']."<br />";
     echo "Followers: ". $items['user']['followers_count']."<br />";
     echo "Friends: ". $items['user']['friends_count']."<br />";
     echo "Listed: ". $items['user']['listed_count']."<br /><hr />";
 }
-/*
-
-echo "<pre>";
-print_r($string);
-echo "</pre>";
-*
-$i =0;
-$in = 0;
-foreach($string['statuses'] as $item){
-    $i++;
-    $in++;
-    echo "Time and Date of Tweet: " . $item['created_at'] . "<br />";
-    echo "User Description :" . $item['user']['description'] . "<br />";
-    echo "name :" . $item['user']['name'] . "<br />";
-    echo "Status count :" . $item['user']['statuses_count'] . "<br />";
-    echo "Screen name :" . $item['user']['screen_name'] . "<br />";
-    echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
-    echo "TWEETs:  " . $item['text']. "<br/>"
-
-
-    ?>
-
-
-
-
-
-    <?php  echo "      " . "<br />";
-}
 
 ?>
 
-<script>
 
-    // var bleh = document.getElementsById("<?//php echo $in?>");
 
-    //
-    // for (var i = 0 ; i < bleh.length; i++) {
-    // bleh[i].addEventListener("click", function() {
-    // copyToClipboard(i);
-    // });
-    // }
-    var x =15 ;
-    for(var i =0; i< x ;i ++) {
-        document.getElementById(x).addEventListener("click", function () {
-            copyToClipboard(document.getElementById(x));
-        });
 
-        function copyToClipboard(element) {
-            var $temp = $("<input>");
-            $("body").append($temp);
-            $temp.val($(element).text()).select();
-            document.execCommand("copy");
-            $temp.remove();
-        }
-    }
-</script>
-*/
+
