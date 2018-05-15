@@ -119,7 +119,7 @@
                 <p>Sentiment Score Range</p>
                 <p>"0" Extremely Negative and "1" Extremely Positive  </p>
             </div>
-            <?php //include ('twitterGet.php');?>
+            <p>Search twitter users</p>
 
             <form name="rawdata" action="twitterGet.php" target="tweets" method="get">
                 <textarea id="int2" name="user" rows="1" cols="20" >
