@@ -178,7 +178,8 @@ if($result1_arr > 1) {
    /* echo "<pre>";
     print_r($resultse1_arr);
     echo "</pre>";*/
-    $num = 0.50000;
+    $numb = 0;
+    $numb1 = 1;
 //for ($frenum = 0; count($resultse1_arr) >= $frenum; $frenum++){
     //  print_r( $resultse1_arr[$frenum]['documents'][0]['score']) ;
 
@@ -188,11 +189,11 @@ echo "Sentiments from BBC News Similar to above topic <br/>";
     foreach ($resultse1_arr as $newfre) {
         $newscore = json_decode($newfre, true);
 
-        $num += $newscore['documents'][0]['score'];
+        $numb += $newscore['documents'][0]['score'];
         echo ":-- ". $newscore['documents'][0]['score'] . "<br/>";
     }
-
-    $sentfre = $num / count($resultse1_arr);
+$numb3 = count($resultse1_arr)- $numb1;
+    $sentfre = $numb / $numb3;
     echo "Comparative Sentiment Freqency against BBC News is--- ";
     echo $sentfre ;
 
