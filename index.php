@@ -84,7 +84,7 @@
 
 
         </div>
-        <div class="col-sm-7 text-left">
+        <div class="col-sm-6 text-left">
             <h1>Welcome</h1>
             <form name="rawdata" action="MicrosoftNLP/LanMnlp.php" target="results" method="get">
                 <textarea id="int" name="data" rows="3" cols="70" >
@@ -114,7 +114,7 @@
 
 
         </div>
-        <div class="col-sm-2 sidenav">
+        <div class="col-sm-3 sidenav">
             <div class="well">
                 <p>Sentiment Score Range</p>
                 <p>"0" Extremely Negative and "1" Extremely Positive  </p>
