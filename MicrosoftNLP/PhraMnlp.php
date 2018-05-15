@@ -221,5 +221,93 @@ echo "Sentiments from BBC News Similar to above topic <br/>";
     }
 
 } elseif ($result1_arr < 1){
-    Echo "Sorry i have no matching data";
+    Echo "Sorry i have no matching data BBC ";
 }
+//END BBC DATABASE SEARCH
+
+
+//START dAILY MAIL SEARCH *****************************
+
+require ('../MicrosoftNLP/dbconnect.php');
+
+// LOOP USED TO SEARCH DATABASE USING EXTRACTED KEY PHRASES
+foreach ($pass['documents'][0]['keyPhrases'] as $phrase){
+    $TStrps2 = mysqli_real_escape_string($con,$phrase);
+    $datasen2 = "SELECT * FROM `dailymail` WHERE `Title` LIKE '%".$TStrps2."%' ORDER BY id DESC LIMIT 3  ";
+
+    $query2 = mysqli_query($con,$datasen2);
+
+
+    if(mysqli_num_rows($query2)> 0){
+
+        while ($result2 = mysqli_fetch_assoc($query2)  ){
+            // print_r( $result1);
+            $result1_arr2[] = $result2;
+        }
+    } else {
+        //  echo  "Error" . mysqli_error($con);
+        //echo "no match found";
+
+    }
+
+}
+
+
+if($result1_arr2 > 1) {
+    for ($renum = 0; count($result1_arr2) >= $renum; $renum++) {
+        $bbcarr2 = $result1_arr2[$renum]['Description'];
+
+        $data2 = array(
+            'documents' => array(
+                array('id' => $renum, 'language' => $lan, 'text' => $bbcarr2)
+            )
+        );
+        $resultse2 = GetSentiment1($host1, $path1, $accessKey1, $data2);
+        // echo json_encode (json_decode ($resultse1), JSON_PRETTY_PRINT);
+        $resultse1_arr2[] = $resultse2;
+    }
+
+
+$num2 = 0.50000;
+
+echo "Sentiments from DailyMail News Similar to above topic <br/>";
+
+foreach ($resultse1_arr2 as $newfre2) {
+    $newscore2 = json_decode($newfre2, true);
+
+    $num2 += $newscore2['documents'][0]['score'];
+    echo ":-- ". $newscore2['documents'][0]['score'] . "<br/>";
+}
+
+$sentfre2 = $num2 / count($resultse1_arr2);
+echo "Comparative Sentiment Freqency against Daily Mail is--- ";
+echo $sentfre2 ;
+
+switch ($sentfre2){
+    case ($sentfre2 <= 0.20):
+        echo "--Mostly extremely Negative \"<br/>\"";
+        break;
+    case ($sentfre2 <= 0.40):
+        echo "--Mostly very Negative \"<br/>\"";
+        break;
+    case ($sentfre2 <= 0.49):
+        echo "--Mostly a little negative \"<br/>\"";
+        break;
+    case ($sentfre2 = 0.5):
+        echo "--Moslty Neutral \"<br/>\"";
+        break;
+    case ($sentfre2 <= 0.59):
+        echo "--Mostly a little positive \"<br/>\"";
+        break;
+    case ($sentfre2 <= 0.80):
+        echo "--Mostly very positive \"<br/>\"";
+        break;
+    case ($sentfre2 <= 1.0):
+        echo "--Mostly extremely positive \"<br/>\"";
+        break;
+}
+
+} elseif ($result1_arr2 < 1){
+    Echo "Sorry i have no matching data DailyMail ";
+}
+
