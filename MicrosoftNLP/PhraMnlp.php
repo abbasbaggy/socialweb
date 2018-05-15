@@ -284,25 +284,25 @@ echo "Comparative Sentiment Freqency against Daily Mail is--- ";
 echo $sentfre2 ;
 
 switch ($sentfre2){
-    case ($sentfre2 <= 0.20):
+    case ($sentfre2 >= 0.00):
         echo "--Mostly extremely Negative \"<br/>\"";
         break;
-    case ($sentfre2 <= 0.40):
+    case ($sentfre2 >= 0.21):
         echo "--Mostly very Negative \"<br/>\"";
         break;
-    case ($sentfre2 <= 0.49):
+    case ($sentfre2 >= 0.41):
         echo "--Mostly a little negative \"<br/>\"";
         break;
     case ($sentfre2 = 0.5):
         echo "--Moslty Neutral \"<br/>\"";
         break;
-    case ($sentfre2 <= 0.59):
+    case ($sentfre2 >= 0.51):
         echo "--Mostly a little positive \"<br/>\"";
         break;
-    case ($sentfre2 <= 0.80):
+    case ($sentfre2 >= 0.61):
         echo "--Mostly very positive \"<br/>\"";
         break;
-    case ($sentfre2 <= 1.0):
+    case ($sentfre2 >= 0.80):
         echo "--Mostly extremely positive \"<br/>\"";
         break;
 }
