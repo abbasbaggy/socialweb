@@ -221,7 +221,7 @@ echo "Sentiments from BBC News Similar to above topic <br/>";
     }
 
 } elseif ($result1_arr < 1){
-    Echo "Sorry i have no matching data BBC ";
+    Echo "Sorry i have no matching data BBC <br/>";
 }
 //END BBC DATABASE SEARCH***********************************
 
