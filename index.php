@@ -74,7 +74,7 @@
         <div class="col-sm-3 sidenav">
 
             <div class="well">
-                <h3>News Tweets</h3>>
+                <h3>News Tweets</h3>
             </div>
 
 
@@ -101,8 +101,8 @@
             </iframe>
 
             <?php
-          include ('NewsExtract/dailyMail.php');
-          include('NewsExtract/bbcnewsapi.php')
+          //include ('NewsExtract/dailyMail.php');
+          //include('NewsExtract/bbcnewsapi.php')
             //include ('MicrosoftNLP/SenMnlp.php');
            // include ('MicrosoftNLP/LanMnlp.php');
            // require('NewsExtract/dbconnect.php');
