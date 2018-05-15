@@ -72,7 +72,13 @@
 <div class="container-fluid text-left">
     <div class="scrollmenu">
         <div class="col-sm-3 sidenav">
-            <p>News Tweets</p>
+
+            <div class="well">
+                <p>News Tweets</p>
+            </div>
+
+
+
                 <?php  include ('twittergettest.php')
                 //include ('twitterGet.php'); ?>
 
@@ -95,8 +101,8 @@
             </iframe>
 
             <?php
-         // include ('NewsExtract/dailyMail.php');
-          //include('NewsExtract/bbcnewsapi.php')
+          include ('NewsExtract/dailyMail.php');
+          include('NewsExtract/bbcnewsapi.php')
             //include ('MicrosoftNLP/SenMnlp.php');
            // include ('MicrosoftNLP/LanMnlp.php');
            // require('NewsExtract/dbconnect.php');
@@ -113,9 +119,7 @@
                 <p>Sentiment Score Range</p>
                 <p>"0" Extremely Negative and "1" Extremely Positive  </p>
             </div>
-            <div class="well">
 
-            </div>
         </div>
     </div>
 </div>
