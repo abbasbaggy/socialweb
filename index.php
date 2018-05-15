@@ -127,7 +127,7 @@
                 </textarea>
                 <input type="submit">
             </form>
-            <iframe src="" name="tweets" height="700" width="150">
+            <iframe src="" name="tweets" height="700" width="300">
 
             </iframe>
 
