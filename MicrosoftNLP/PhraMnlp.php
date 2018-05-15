@@ -278,6 +278,10 @@ foreach ($resultse1_arr2 as $newfre2) {
     $num2 += $newscore2['documents'][0]['score'];
     echo ":-- ". $newscore2['documents'][0]['score'] . "<br/>";
 }
+    $newscore2 = json_decode($newfre2, true);
+foreach($newscore2['documents'][0]['score'] as $score){
+    echo $score;
+}
 
 $sentfre2 = $num2 / count($resultse1_arr2);
 echo "Comparative Sentiment Freqency against Daily Mail is--- ";
