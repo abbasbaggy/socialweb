@@ -72,7 +72,7 @@ foreach($string['statuses'] as $item){
     echo "Screen name :" . $item['user']['screen_name'] . "<br />";
     echo "favourites count :" . $item['user']['favourites_count'] . "<br />";
     ?>
-   <p><a id="<?php echo $i?>" href ="sample">  <?php  echo "TWEETs:  " . $item['text']. "<br/>" ?> </a> </p>
+   <p><a id="<?php echo $i?>" href ="#">  <?php  echo "TWEETs:  " . $item['text']. "<br/>" ?> </a> </p>
     <button onclick="myFunction<?php echo $i?>()">Select tweet</button>
 
     <script>
