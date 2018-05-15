@@ -74,7 +74,7 @@
         <div class="col-sm-3 sidenav">
 
             <div class="well">
-                <p>News Tweets</p>
+                <h3>News Tweets</h3>>
             </div>
 
 
