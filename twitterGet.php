@@ -49,7 +49,7 @@ foreach($string as $items)
 { $i++;
     echo "Time and Date of Tweet: ". $items['created_at']."<br />";  ?>
 
-    <a id="<?php echo $i?>" onclick="myFunct<?php echo $i?>()" href="" <?php  echo "Tweet: ". $items['text']."<br />" ?> </a>
+    <p><a id="<?php echo $i?>"  href="" <?php  echo "Tweet: ". $items['text']."<br />" ?> </a> </p>
 
 
 <script>
