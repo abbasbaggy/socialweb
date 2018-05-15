@@ -223,10 +223,10 @@ echo "Sentiments from BBC News Similar to above topic <br/>";
 } elseif ($result1_arr < 1){
     Echo "Sorry i have no matching data BBC ";
 }
-//END BBC DATABASE SEARCH
+//END BBC DATABASE SEARCH***********************************
 
 
-//START dAILY MAIL SEARCH *****************************
+//START dAILY MAIL SEARCH **********************************
 
 require ('../MicrosoftNLP/dbconnect.php');
 
@@ -296,13 +296,13 @@ switch ($sentfre2){
     case ($sentfre2 == 0.5):
         echo "--Moslty Neutral \"<br/>\"";
         break;
-    case ($sentfre2 >= 0.51):
+    case ($sentfre2 <= 0.59):
         echo "--Mostly a little positive \"<br/>\"";
         break;
-    case ($sentfre2 >= 0.60):
+    case ($sentfre2 <= 0.80):
         echo "--Mostly very positive \"<br/>\"";
         break;
-    case ($sentfre2 >= 0.80):
+    case ($sentfre2 >= 0.81):
         echo "--Mostly extremely positive \"<br/>\"";
         break;
 }
