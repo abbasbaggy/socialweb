@@ -122,7 +122,7 @@
             <?php //include ('twitterGet.php');?>
 
             <form name="rawdata" action="twitterGet.php" target="tweets" method="get">
-                <textarea id="int" name="user" rows="1" cols="20" >
+                <textarea id="int2" name="user" rows="1" cols="20" >
 
                 </textarea>
                 <input type="submit">
