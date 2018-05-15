@@ -7,8 +7,8 @@
  * code part from microsoft and also adapted to meet project specification
  */
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
 
 $array = $_REQUEST['data'];
 $lan = $_SESSION['language'];

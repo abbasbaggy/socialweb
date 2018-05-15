@@ -9,8 +9,8 @@
  * Time: 23:42
  */
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
 
 require_once('twitter-apiExchange.php');
 /** Set access tokens here - see: https://dev.twitter.com/apps/ **/

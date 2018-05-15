@@ -81,6 +81,7 @@ foreach($string['statuses'] as $item){
             var x = document.getElementById("<?php echo $i?>").text;
             document.getElementById("int").innerHTML = x;
             x = null;
+            alert("tweet selected");
         }
 
     </script>
