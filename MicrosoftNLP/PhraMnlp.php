@@ -199,25 +199,25 @@ $numb3 = count($resultse1_arr)- $numb1;
 
     switch ($sentfre){
         case ($sentfre <= 0.20):
-            echo "--Mostly extremely Negative \"<br/>\"";
+            echo "--Mostly extremely Negative <br/>";
             break;
         case ($sentfre <= 0.40):
-            echo "--Mostly very Negative \"<br/>\"";
+            echo "--Mostly very Negative <br/>";
             break;
         case ($sentfre <= 0.49):
-            echo "--Mostly a little negative \"<br/>\"";
+            echo "--Mostly a little negative <br/>";
             break;
-        case ($sentfre = 0.5):
-            echo "--Moslty Neutral \"<br/>\"";
+        case ($sentfre == 0.5):
+            echo "--Moslty Neutral <br/>";
             break;
         case ($sentfre <= 0.59):
-            echo "--Mostly a little positive \"<br/>\"";
+            echo "--Mostly a little positive <br/>";
             break;
         case ($sentfre <= 0.80):
-            echo "--Mostly very positive \"<br/>\"";
+            echo "--Mostly very positive <br/>";
             break;
         case ($sentfre >= 0.81):
-            echo "--Mostly extremely positive \"<br/>\"";
+            echo "--Mostly extremely positive <br/>";
             break;
     }
 
@@ -288,25 +288,25 @@ echo $sentfre2 ;
 
 switch ($sentfre2){
     case ($sentfre2 <= 0.20):
-        echo "--Mostly extremely Negative \"<br/>\"";
+        echo "--Mostly extremely Negative <br/>";
         break;
     case ($sentfre2 <= 0.40):
-        echo "--Mostly very Negative \"<br/>\"";
+        echo "--Mostly very Negative <br/>";
         break;
     case ($sentfre2 <= 0.49):
-        echo "--Mostly a little negative \"<br/>\"";
+        echo "--Mostly a little negative <br/>";
         break;
     case ($sentfre2 == 0.5):
-        echo "--Moslty Neutral \"<br/>\"";
+        echo "--Moslty Neutral <br/>";
         break;
     case ($sentfre2 <= 0.59):
-        echo "--Mostly a little positive \"<br/>\"";
+        echo "--Mostly a little positive <br/>";
         break;
-    case ($sentfre2 <= 0.80):
-        echo "--Mostly very positive \"<br/>\"";
+    case $sentfre2 <= 0.80:
+        echo "--Mostly very positive <br/>";
         break;
     case ($sentfre2 >= 0.81):
-        echo "--Mostly extremely positive \"<br/>\"";
+        echo "--Mostly extremely positive <br/>";
         break;
 }
 
