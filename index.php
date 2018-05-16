@@ -101,8 +101,8 @@
             </iframe>
 
             <?php
-          include ('NewsExtract/dailyMail.php');
-          include('NewsExtract/bbcnewsapi.php')
+          //include ('NewsExtract/dailyMail.php');
+          //include('NewsExtract/bbcnewsapi.php')
             //include ('MicrosoftNLP/SenMnlp.php');
            // include ('MicrosoftNLP/LanMnlp.php');
            // require('NewsExtract/dbconnect.php');
@@ -144,7 +144,7 @@
 
 
 <footer class="container-fluid text-center">
-    <p>Footer Text</p>
+    <p>(C) Abbas Yusuff</p>
 </footer>
 </body>
 
