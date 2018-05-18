@@ -13,6 +13,7 @@ $responsearray= json_decode($response,true);
 
 
 $query='';
+$inTime = date('m/d/y h:i:s', time());
 foreach ($responsearray as $item)
 
 {
@@ -22,8 +23,8 @@ foreach ($responsearray as $item)
         $tit = mysqli_real_escape_string($con,$row['title']);
         $des = mysqli_real_escape_string($con,$row['description']);
 
-        $query = "INSERT INTO `bbcnewstop`(`Published`,`Title`,`Description`) VALUES
-                  ('$pub',' $tit ',' .$des ');";
+        $query = "INSERT INTO `Aljazeera`(`Published`,`Title`,`Description`,`inTime`) VALUES
+                  ('$pub',' $tit ',' .$des ','$inTime');";
         mysqli_query($con, $query);
 
 

@@ -28,8 +28,7 @@ class natural
 
             $data = json_encode($data);
 
-            // NOTE: Use the key 'http' even if you are making an HTTPS request. See:
-            // http://php.net/manual/en/function.stream-context-create.php
+
             $options = array(
                 'http' => array(
                     'header' => $headers,

@@ -21,7 +21,7 @@ foreach ($responsearray as $item)
         $tit = mysqli_real_escape_string($con,$row['title']);
         $des = mysqli_real_escape_string($con,$row['description']);
 
-        $query = "INSERT INTO `bbcnewstop`(`Published`,`Title`,`Description`) VALUES
+        $query = "INSERT INTO `cnnn`(`Published`,`Title`,`Description`) VALUES
                   ('$pub',' $tit ',' .$des ');";
         mysqli_query($con, $query);
 

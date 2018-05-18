@@ -8,24 +8,14 @@
 
 $array = $_REQUEST['data'];
 
-// NOTE: Be sure to uncomment the following line in your php.ini file.
-// ;extension=php_openssl.dll
 
-// **********************************************
-// *** Update or verify the following values. ***
-// **********************************************
 
 // Replace the accessKey string value with your valid access key.
 $accessKey = '19d10e679abe47d58b67e286c8617776';
 
-// Replace or verify the region.
 
-// You must use the same region in your REST API call as you used to obtain your access keys.
-// For example, if you obtained your access keys from the westus region, replace
-// "westcentralus" in the URI below with "westus".
 
-// NOTE: Free trial access keys are generated in the westcentralus region, so if you are using
-// a free trial access key, you should not need to change this region.
+
 $host = 'https://southcentralus.api.cognitive.microsoft.com';
 $path = '/text/analytics/v2.0/languages';
 
@@ -36,8 +26,7 @@ function DetectLanguage ($host, $path, $key, $data) {
 
     $data = json_encode ($data);
 
-    // NOTE: Use the key 'http' even if you are making an HTTPS request. See:
-    // http://php.net/manual/en/function.stream-context-create.php
+
     $options = array (
         'http' => array (
             'header' => $headers,

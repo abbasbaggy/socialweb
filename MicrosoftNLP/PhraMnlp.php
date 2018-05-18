@@ -4,7 +4,7 @@
  * User: Abbas
  * Date: 15/04/2018
  * Time: 14:40
- * code part from microsoft and also adapted to meet project specification
+ * code adpted form microsoft and also adapted to meet project specification
  */
 
 //error_reporting(E_ALL);
@@ -28,8 +28,7 @@ function GetKeyPhrases ($host, $path, $key, $data) {
 
     $data = json_encode ($data);
 
-    // NOTE: Use the key 'http' even if you are making an HTTPS request. See:
-    // http://php.net/manual/en/function.stream-context-create.php
+
     $options = array (
         'http' => array (
             'header' => $headers,
@@ -104,24 +103,7 @@ echo "</pre>";
 
 //$strP = implode(" ",$phrase_arr);
 //echo $strP;
-//require ('../MicrosoftNLP/dbconnect.php');
 
-//mysqli_select_db($con,`bbcnewstop`) or die(mysqli_error($con));
-
-//$TStrp = mysqli_real_escape_string($con,$strP);
-//$datas = "SELECT * FROM `bbcnewstop` WHERE (`Title` LIKE '%.$TStrp.%' limit 10) ";
-
-//$query = mysqli_query($con,$datas);
-
-/*if(mysqli_num_rows($query)> 0){
-    while ($result1 = mysqli_fetch_array($query) ){
-       // print_r( $result1);
-        $result1_arr[] = $result1;
-    }
-} else{
-    echo  "Error" . mysqli_error($con);
-    echo "no match found";
-}
 /
 echo "<pre>";
 print_r($result1_arr);
